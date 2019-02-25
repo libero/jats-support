@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@specific-use is ignored."?>
+<?expected-error line="9" message="<front> is ignored." node="//front"?>
+<?expected-error line="10" message="<article-meta> is ignored." node="//article-meta"?>
+
+<article specific-use="web-only">
+    <front>
+        <article-meta/>
+    </front>
+</article>

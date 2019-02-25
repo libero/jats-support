@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error line="7" message="<citation-alternatives> is ignored." node="/citation-alternatives"?>
+<?expected-error line="8" message="<mixed-citation> is ignored." node="//mixed-citation"?>
+
+<citation-alternatives>
+    <mixed-citation/>
+</citation-alternatives>

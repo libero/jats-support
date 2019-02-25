@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error line="12" message="<alt-title> is ignored." node="//alt-title"?>
+
+<article>
+
+    <front>
+        <article-meta>
+            <title-group>
+                <article-title>Article Title</article-title>
+                <alt-title/>
+            </title-group>
+        </article-meta>
+    </front>
+
+</article>

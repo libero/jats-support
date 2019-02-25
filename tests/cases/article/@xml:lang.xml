@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error line="8" message="<front> is ignored." node="//front"?>
+<?expected-error line="9" message="<article-meta> is ignored." node="//article-meta"?>
+
+<article xml:lang="fr">
+    <front>
+        <article-meta/>
+    </front>
+</article>

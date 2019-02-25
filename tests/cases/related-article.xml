@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@related-article-type is ignored."?>
+<?expected-error line="7" message="<related-article> is ignored." node="/related-article"?>
+
+<related-article related-article-type=""/>

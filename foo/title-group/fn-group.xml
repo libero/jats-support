@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error line="13" message="<fn-group> is ignored." node="//fn-group"?>
+<?expected-error line="14" message="<x> is ignored." node="//x"?>
+
+<article>
+
+    <front>
+        <article-meta>
+            <title-group>
+                <article-title>Article Title</article-title>
+                <fn-group>
+                    <x />
+                </fn-group>
+            </title-group>
+        </article-meta>
+    </front>
+
+</article>

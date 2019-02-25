@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error line="7" message="<sub-article> is ignored." node="/sub-article"?>
+<?expected-error line="8" message="<front-stub> is ignored." node="//front-stub"?>
+
+<sub-article>
+    <front-stub/>
+</sub-article>
