@@ -24,6 +24,7 @@
         "platform": {
             "php": "7.3.0"
         },
+        "secure-http": false,
         "sort-packages": true
     },
     "repositories": [
