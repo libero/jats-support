@@ -15,7 +15,6 @@ use Libero\XmlValidator\Failure;
 use Libero\XmlValidator\RelaxNgValidator;
 use Libero\XmlValidator\SchematronValidator;
 use Libero\XmlValidator\ValidationFailed;
-use Libero\XmlValidator\XmlSchemaValidator;
 use Libero\XmlValidator\XmlValidator;
 use LogicException;
 use PHPUnit\Framework\TestCase;
@@ -50,23 +49,7 @@ final class SchemaTest extends TestCase
             } catch (ValidationFailed $e) {
                 $this->fail(
                     "Document is not considered valid:\n".
-                    implode(
-                        PHP_EOL,
-                        array_map(
-                            function (Failure $failure) : string {
-                                if (!$failure->getNode() instanceof DOMNode) {
-                                    if (!is_int($failure->getLine())) {
-                                        return $failure->getMessage();
-                                    }
-
-                                    return sprintf('%s (line %s)', $failure->getMessage(), $failure->getLine());
-                                }
-
-                                return sprintf('%s (%s)', $failure->getMessage(), $failure->getNode()->getNodePath());
-                            },
-                            $e->getFailures()
-                        )
-                    )
+                    implode(PHP_EOL, array_map([$this, 'stringifyFailure'], $e->getFailures()))
                 );
             }
 
@@ -118,8 +101,6 @@ final class SchemaTest extends TestCase
                 switch ($parsed['schematypens']) {
                     case 'http://relaxng.org/ns/structure/1.0':
                         return new RelaxNgValidator($schema);
-                    case 'http://www.w3.org/2001/XMLSchema':
-                        return new XmlSchemaValidator($schema);
                     case 'http://purl.oclc.org/dsdl/schematron':
                         return new SchematronValidator($schema);
                     default:
@@ -180,5 +161,18 @@ final class SchemaTest extends TestCase
                 );
             }
         );
+    }
+
+    private function stringifyFailure(Failure $failure) : string
+    {
+        if (!$failure->getNode() instanceof DOMNode && !is_int($failure->getLine())) {
+            return $failure->getMessage();
+        }
+
+        if (!$failure->getNode() instanceof DOMNode) {
+            return sprintf('%s (line %s)', $failure->getMessage(), $failure->getLine());
+        }
+
+        return sprintf('%s (%s)', $failure->getMessage(), $failure->getNode()->getNodePath());
     }
 }
