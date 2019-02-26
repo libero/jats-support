@@ -156,7 +156,7 @@ final class SchemaTest extends TestCase
 
                 return new Failure(
                     $parsed['message'],
-                    isset($parsed['line']) ? (int) $parsed['line'] : null,
+                    isset($parsed['line']) ? (int) $parsed['line'] : (isset($node) ? $node->getLineNo() : null),
                     $node ?? null
                 );
             }

@@ -2,8 +2,8 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@dtd-version is ignored."?>
-<?expected-error line="9" message="<front> is ignored." node="//front"?>
-<?expected-error line="10" message="<article-meta> is ignored." node="//article-meta"?>
+<?expected-error message="<front> is ignored." node="//front"?>
+<?expected-error message="<article-meta> is ignored." node="//article-meta"?>
 
 <article dtd-version="1.1">
     <front>

@@ -2,6 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@xlink:href is ignored."?>
-<?expected-error line="7" message="<media> is ignored." node="/media"?>
+<?expected-error message="<media> is ignored." node="/media"?>
 
 <media xlink:href="" xmlns:xlink="http://www.w3.org/1999/xlink"/>

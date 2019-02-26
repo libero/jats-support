@@ -2,6 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@count is ignored."?>
-<?expected-error line="7" message="<table-count> is ignored." node="/table-count"?>
+<?expected-error message="<table-count> is ignored." node="/table-count"?>
 
 <table-count count="0"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error line="7" message="<compound-subject> is ignored." node="/compound-subject"?>
-<?expected-error line="8" message="<compound-subject-part> is ignored." node="//compound-subject-part"?>
+<?expected-error message="<compound-subject> is ignored." node="/compound-subject"?>
+<?expected-error message="<compound-subject-part> is ignored." node="//compound-subject-part"?>
 
 <compound-subject>
     <compound-subject-part/>

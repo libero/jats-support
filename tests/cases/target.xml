@@ -2,6 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@id is ignored."?>
-<?expected-error line="7" message="<target> is ignored." node="/target"?>
+<?expected-error message="<target> is ignored." node="/target"?>
 
 <target id="id"/>
