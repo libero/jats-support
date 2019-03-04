@@ -6,7 +6,7 @@
         <rule context="@*">
             <assert test="
                 name()='xml:lang'
-            ">
+            " role="warn">
                 @<name/> is ignored.
             </assert>
         </rule>
@@ -16,7 +16,7 @@
         <rule context="*">
             <assert test="
                 name()='article'
-            ">
+            " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
         </rule>
