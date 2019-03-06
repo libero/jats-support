@@ -1,0 +1,10 @@
+parameters:
+    ignoreErrors:
+        - '~expects array|Traversable, \(DOMNodeList&iterable<FluentDOM\\DOM\\Node>\)|float|string given$~'
+    level: max
+    paths:
+        - tests
+
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
