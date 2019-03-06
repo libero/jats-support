@@ -16,6 +16,10 @@
         <rule context="*">
             <assert test="
                 name()='article'
+                or name()='bold'
+                or name()='italic'
+                or name()='sub'
+                or name()='sup'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
