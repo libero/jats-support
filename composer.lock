@@ -335,16 +335,16 @@
         },
         {
             "name": "libero/xml-validator",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libero/xml-validator.git",
-                "reference": "a9e70e2019f3ba027f0daf77a260c3e9b72db54c"
+                "reference": "3280f3572b7eaf4c978bbccd6ddb7e94e30a8092"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libero/xml-validator/zipball/a9e70e2019f3ba027f0daf77a260c3e9b72db54c",
-                "reference": "a9e70e2019f3ba027f0daf77a260c3e9b72db54c",
+                "url": "https://api.github.com/repos/libero/xml-validator/zipball/3280f3572b7eaf4c978bbccd6ddb7e94e30a8092",
+                "reference": "3280f3572b7eaf4c978bbccd6ddb7e94e30a8092",
                 "shasum": ""
             },
             "require": {
@@ -353,8 +353,9 @@
                 "php": "^7.2"
             },
             "require-dev": {
+                "cpliakas/git-wrapper": "^2.0",
                 "ext-xsl": "*",
-                "libero/coding-standard": "^0.2",
+                "libero/coding-standard": "^0.3",
                 "phpstan/phpstan": "^0.10",
                 "phpstan/phpstan-phpunit": "^0.10",
                 "phpunit/phpunit": "^7.2",
@@ -379,7 +380,7 @@
                 "MIT"
             ],
             "description": "XML validator",
-            "time": "2018-11-08T09:27:18+00:00"
+            "time": "2019-03-06T13:35:14+00:00"
         },
         {
             "name": "lstrojny/functional-php",
