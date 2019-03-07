@@ -30,6 +30,7 @@ use function is_readable;
 use function preg_match_all;
 use function sprintf;
 use function str_replace;
+use function usort;
 use const PHP_EOL;
 use const PREG_SET_ORDER;
 
@@ -60,8 +61,37 @@ final class SchemaTest extends TestCase
             $validator->validate($input);
             $this->fail('Document is considered valid when it is not');
         } catch (ValidationFailed $e) {
-            $this->assertEquals($expected, $e->getFailures());
+            $this->assertEquals($expected, $this->normaliseFailuresOrder($e->getFailures()));
         }
+    }
+
+    /**
+     * @param array<Failure> $failures
+     *
+     * @return array<Failure>
+     */
+    private function normaliseFailuresOrder(array $failures) : array
+    {
+        usort(
+            $failures,
+            function (Failure $a, Failure $b) {
+                if ($a->getLine() !== $b->getLine()) {
+                    return $a->getLine() <=> $b->getLine();
+                }
+
+                if (!$a->getNode() instanceof DOMNode || !$b->getNode() instanceof DOMNode) {
+                    return $a->getNode() instanceof DOMNode <=> $b->getNode() instanceof DOMNode;
+                }
+
+                if ($a->getNode()->getNodePath() !== $b->getNode()->getNodePath()) {
+                    return $a->getNode()->getNodePath() <=> $b->getNode()->getNodePath();
+                }
+
+                return $a->getMessage() <=> $b->getMessage();
+            }
+        );
+
+        return $failures;
     }
 
     public function fileProvider() : iterable
@@ -140,26 +170,28 @@ final class SchemaTest extends TestCase
 
     private function findExpectedFailures(Document $dom, SplFileInfo $file) : array
     {
-        return map(
-            $dom('/processing-instruction("expected-error")'),
-            function (ProcessingInstruction $instruction) use ($dom, $file) : Failure {
-                $parsed = $this->parseProcessingInstruction($instruction, $file);
+        return $this->normaliseFailuresOrder(
+            map(
+                $dom('/processing-instruction("expected-error")'),
+                function (ProcessingInstruction $instruction) use ($dom, $file) : Failure {
+                    $parsed = $this->parseProcessingInstruction($instruction, $file);
 
-                if (isset($parsed['node'])) {
-                    $nodes = $dom->xpath()->evaluate($parsed['node'], null, true);
-                    if (!$nodes instanceof DOMNodeList || !$node = $nodes->item(0)) {
-                        throw new LogicException(
-                            "Failed to match {$parsed['node']} in {$file->getRelativePathname()}"
-                        );
+                    if (isset($parsed['node'])) {
+                        $nodes = $dom->xpath()->evaluate($parsed['node'], null, true);
+                        if (!$nodes instanceof DOMNodeList || !$node = $nodes->item(0)) {
+                            throw new LogicException(
+                                "Failed to match {$parsed['node']} in {$file->getRelativePathname()}"
+                            );
+                        }
                     }
-                }
 
-                return new Failure(
-                    $parsed['message'],
-                    isset($parsed['line']) ? (int) $parsed['line'] : (isset($node) ? $node->getLineNo() : null),
-                    $node ?? null
-                );
-            }
+                    return new Failure(
+                        $parsed['message'],
+                        isset($parsed['line']) ? (int) $parsed['line'] : (isset($node) ? $node->getLineNo() : null),
+                        $node ?? null
+                    );
+                }
+            )
         );
     }
 
