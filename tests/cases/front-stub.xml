@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <front-stub> is ignored." node="//kwd-group"?>
 
 <front-stub>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </front-stub>

@@ -5,6 +5,9 @@
 <?expected-error message="<media> is ignored." node="/media"?>
 <?expected-error message="<kwd-group> in <media> is ignored." node="//kwd-group"?>
 
-<media xlink:href="" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <kwd-group/>
+<media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </media>

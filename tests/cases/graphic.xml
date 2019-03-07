@@ -5,6 +5,9 @@
 <?expected-error message="<graphic> is ignored." node="/graphic"?>
 <?expected-error message="<kwd-group> in <graphic> is ignored." node="//kwd-group"?>
 
-<graphic xlink:href="" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <kwd-group/>
+<graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </graphic>

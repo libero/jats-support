@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <sec-meta> is ignored." node="//kwd-group"?>
 
 <sec-meta>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </sec-meta>

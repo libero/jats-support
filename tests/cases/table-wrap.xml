@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <table-wrap> is ignored." node="//kwd-group"?>
 
 <table-wrap>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </table-wrap>

@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <app-group> is ignored." node="//kwd-group"?>
 
 <app-group>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </app-group>

@@ -6,6 +6,9 @@
 <?expected-error message="<kwd-group> in <chem-struct-wrap> is ignored." node="//kwd-group"?>
 
 <chem-struct-wrap>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
     <textual-form/>
 </chem-struct-wrap>

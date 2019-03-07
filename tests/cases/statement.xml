@@ -6,6 +6,9 @@
 <?expected-error message="<kwd-group> in <statement> is ignored." node="//kwd-group"?>
 
 <statement>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
     <p/>
 </statement>

@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <fig> is ignored." node="//kwd-group"?>
 
 <fig>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </fig>

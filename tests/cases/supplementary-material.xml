@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
 
 <supplementary-material>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </supplementary-material>

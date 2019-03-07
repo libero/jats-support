@@ -5,5 +5,8 @@
 <?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
 
 <disp-formula>
-    <kwd-group/>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </disp-formula>
