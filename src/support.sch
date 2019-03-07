@@ -35,6 +35,15 @@
         </rule>
     </pattern>
 
+    <pattern id="front-parent">
+        <rule context="front[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="title-group-parent">
         <rule context="title-group[parent::*]">
             <let name="parent" value="name(..)"/>
