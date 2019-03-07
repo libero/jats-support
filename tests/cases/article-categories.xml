@@ -3,4 +3,8 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<article-categories> is ignored." node="/article-categories"?>
 
-<article-categories/>
+<article-categories>
+    <subj-group subj-group-type="heading">
+        <subject/>
+    </subj-group>
+</article-categories>
