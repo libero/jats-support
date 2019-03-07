@@ -3,6 +3,7 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<speech> is ignored." node="/speech"?>
 <?expected-error message="<speaker> is ignored." node="//speaker"?>
+<?expected-error message="<p> in <speech> is ignored." node="//p"?>
 
 <speech>
     <speaker/>
