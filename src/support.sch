@@ -46,7 +46,9 @@
 
     <pattern id="article-meta-title-group">
         <rule context="article-meta" role="error">
-            <assert test="title-group">A &lt;title-group&gt; is required in &lt;article-meta&gt;.</assert>
+            <assert test="title-group">
+                &lt;<name/>&gt; requires a &lt;title-group&gt;.
+            </assert>
         </rule>
     </pattern>
 
