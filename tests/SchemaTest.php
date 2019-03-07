@@ -24,13 +24,13 @@ use function array_map;
 use function array_reduce;
 use function count;
 use function Functional\map;
+use function Functional\sort;
 use function implode;
 use function is_int;
 use function is_readable;
 use function preg_match_all;
 use function sprintf;
 use function str_replace;
-use function usort;
 use const PHP_EOL;
 use const PREG_SET_ORDER;
 
@@ -63,35 +63,6 @@ final class SchemaTest extends TestCase
         } catch (ValidationFailed $e) {
             $this->assertEquals($expected, $this->normaliseFailuresOrder($e->getFailures()));
         }
-    }
-
-    /**
-     * @param array<Failure> $failures
-     *
-     * @return array<Failure>
-     */
-    private function normaliseFailuresOrder(array $failures) : array
-    {
-        usort(
-            $failures,
-            function (Failure $a, Failure $b) {
-                if ($a->getLine() !== $b->getLine()) {
-                    return $a->getLine() <=> $b->getLine();
-                }
-
-                if (!$a->getNode() instanceof DOMNode || !$b->getNode() instanceof DOMNode) {
-                    return $a->getNode() instanceof DOMNode <=> $b->getNode() instanceof DOMNode;
-                }
-
-                if ($a->getNode()->getNodePath() !== $b->getNode()->getNodePath()) {
-                    return $a->getNode()->getNodePath() <=> $b->getNode()->getNodePath();
-                }
-
-                return $a->getMessage() <=> $b->getMessage();
-            }
-        );
-
-        return $failures;
     }
 
     public function fileProvider() : iterable
@@ -206,5 +177,32 @@ final class SchemaTest extends TestCase
         }
 
         return sprintf('%s (%s)', $failure->getMessage(), $failure->getNode()->getNodePath());
+    }
+
+    /**
+     * @param array<Failure> $failures
+     *
+     * @return array<Failure>
+     */
+    private function normaliseFailuresOrder(array $failures) : array
+    {
+        return sort(
+            $failures,
+            function (Failure $a, Failure $b) {
+                if ($a->getLine() !== $b->getLine()) {
+                    return $a->getLine() <=> $b->getLine();
+                }
+
+                if (!$a->getNode() instanceof DOMNode || !$b->getNode() instanceof DOMNode) {
+                    return $a->getNode() instanceof DOMNode <=> $b->getNode() instanceof DOMNode;
+                }
+
+                if ($a->getNode()->getNodePath() !== $b->getNode()->getNodePath()) {
+                    return $a->getNode()->getNodePath() <=> $b->getNode()->getNodePath();
+                }
+
+                return $a->getMessage() <=> $b->getMessage();
+            }
+        );
     }
 }
