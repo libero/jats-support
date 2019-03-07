@@ -26,7 +26,7 @@
         </rule>
     </pattern>
 
-    <pattern id="p-parent">
+    <pattern id="p_parent">
         <rule context="p[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
@@ -38,7 +38,7 @@
         </rule>
     </pattern>
 
-    <pattern id="sec-parent">
+    <pattern id="sec_parent">
         <rule context="sec[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
