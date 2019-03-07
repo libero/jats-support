@@ -3,7 +3,9 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<statement> is ignored." node="/statement"?>
 <?expected-error message="<p> is ignored." node="//p"?>
+<?expected-error message="<kwd-group> in <statement> is ignored." node="//kwd-group"?>
 
 <statement>
+    <kwd-group/>
     <p/>
 </statement>

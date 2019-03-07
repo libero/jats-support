@@ -3,4 +3,9 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<article-meta> is ignored." node="/article-meta"?>
 
-<article-meta/>
+<article-meta>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
+</article-meta>

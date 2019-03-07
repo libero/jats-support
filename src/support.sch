@@ -30,13 +30,13 @@
         <rule context="kwd-group[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
-                &lt;<name/>&gt; in a &lt;<value-of select="$parent"/>&gt; is ignored.
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
 
     <pattern id="kwd-group-kwd">
-        <rule context="kwd-group">
+        <rule context="kwd-group[parent::article-meta or not(parent::*)]">
             <assert test="kwd" role="warn">
                 &lt;<name/>&gt; without any &lt;kwd&gt; is ignored.
             </assert>
@@ -44,12 +44,12 @@
     </pattern>
 
     <pattern id="kwd-group">
-        <rule context="kwd-group[not(@kwd-group-type)]">
+        <rule context="kwd-group[parent::article-meta or not(parent::*) and not(@kwd-group-type)]">
             <assert test="title" role="warn">
                 &lt;<name/>&gt; is ignored if there is no &lt;title&gt; or @kwd-group-type.
             </assert>
         </rule>
-        <rule context="kwd-group[not(title)]">
+        <rule context="kwd-group[parent::article-meta or not(parent::*) and not(title)]">
             <assert test="
                 @kwd-group-type='author-keywords'
                 or @kwd-group-type='research-organism'

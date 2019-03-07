@@ -3,7 +3,9 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<chem-struct-wrap> is ignored." node="/chem-struct-wrap"?>
 <?expected-error message="<textual-form> is ignored." node="//textual-form"?>
+<?expected-error message="<kwd-group> in <chem-struct-wrap> is ignored." node="//kwd-group"?>
 
 <chem-struct-wrap>
+    <kwd-group/>
     <textual-form/>
 </chem-struct-wrap>
