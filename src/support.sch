@@ -26,28 +26,11 @@
         </rule>
     </pattern>
 
-    <pattern id="kwd-parent">
+    <pattern id="kwd_parent">
         <rule context="kwd[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='kwd-group'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="kwd-group-parent">
-        <rule context="kwd-group[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="$parent='article-meta'" role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="kwd-group-kwd">
-        <rule context="kwd-group">
-            <assert test="kwd" role="warn">
-                &lt;<name/>&gt; without any &lt;kwd&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -64,6 +47,23 @@
                 or @kwd-group-type='research-organism'
             " role="warn">
                 &lt;<name/> kwd-group-type="<value-of select="@kwd-group-type"/>"&gt; is ignored if there is no &lt;title&gt;.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd-group_kwd">
+        <rule context="kwd-group">
+            <assert test="kwd" role="warn">
+                &lt;<name/>&gt; without any &lt;kwd&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd-group_parent">
+        <rule context="kwd-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
