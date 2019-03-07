@@ -26,7 +26,15 @@
         </rule>
     </pattern>
 
-    <pattern id="article-title-parent">
+    <pattern id="article-meta_title-group">
+        <rule context="article-meta" role="error">
+            <assert test="title-group">
+                &lt;<name/>&gt; requires a &lt;title-group&gt;.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="article-title_parent">
         <rule context="article-title[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='title-group'" role="warn">
@@ -35,7 +43,7 @@
         </rule>
     </pattern>
 
-    <pattern id="front-parent">
+    <pattern id="front_parent">
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
@@ -44,19 +52,11 @@
         </rule>
     </pattern>
 
-    <pattern id="title-group-parent">
+    <pattern id="title-group_parent">
         <rule context="title-group[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="article-meta-title-group">
-        <rule context="article-meta" role="error">
-            <assert test="title-group">
-                &lt;<name/>&gt; requires a &lt;title-group&gt;.
             </assert>
         </rule>
     </pattern>
