@@ -2,5 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<related-object> is ignored." node="/related-object"?>
+<?expected-error message="<article-title> in <related-object> is ignored." node="//article-title"?>
 
-<related-object/>
+<related-object>
+    <article-title/>
+</related-object>

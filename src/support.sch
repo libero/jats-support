@@ -26,6 +26,24 @@
         </rule>
     </pattern>
 
+    <pattern id="article-title-parent">
+        <rule context="article-title[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='title-group'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="title-group-parent">
+        <rule context="title-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="article-meta-title-group">
         <rule context="article-meta" role="error">
             <assert test="title-group">A &lt;title-group&gt; is required in &lt;article-meta&gt;.</assert>
