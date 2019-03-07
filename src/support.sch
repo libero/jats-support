@@ -35,15 +35,10 @@
     </pattern>
 
     <pattern id="kwd-group">
-        <rule context="kwd-group[not(title)][not(@kwd-group-type)]">
-            <assert test="
-                title
-                or @kwd-group-type
-            " role="warn">
-                &lt;<name/>&gt; must have a @kwd-group-type or a &lt;title&gt;.
-            </assert>
-        </rule>
         <rule context="kwd-group[not(title)]">
+            <report test="not(@kwd-group-type)" role="warn">
+                &lt;<name/>&gt; must have a @kwd-group-type or a &lt;title&gt;.
+            </report>
             <assert test="
                 @kwd-group-type='author-keywords'
                 or @kwd-group-type='research-organism'
