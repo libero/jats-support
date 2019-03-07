@@ -25,23 +25,6 @@
         </rule>
     </pattern>
 
-    <pattern id="subj-group-parent">
-        <rule context="subj-group[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="$parent='article-categories'" role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="subj-group-subject">
-        <rule context="subj-group">
-            <assert test="subject" role="warn">
-                &lt;<name/>&gt; without any &lt;subject&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
     <pattern id="subj-group">
         <rule context="subj-group[not(@subj-group-type)]">
             <assert test="true" role="warn">
@@ -53,6 +36,23 @@
                 @subj-group-type='heading'
             " role="warn">
                 &lt;<name/> subj-group-type="<value-of select="@subj-group-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="subj-group_parent">
+        <rule context="subj-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-categories'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="subj-group_subject">
+        <rule context="subj-group">
+            <assert test="subject" role="warn">
+                &lt;<name/>&gt; without any &lt;subject&gt; is ignored.
             </assert>
         </rule>
     </pattern>
