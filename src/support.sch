@@ -26,6 +26,15 @@
         </rule>
     </pattern>
 
+    <pattern id="kwd-group-parent">
+        <rule context="kwd-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in a &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="kwd-group-kwd">
         <rule context="kwd-group">
             <assert test="kwd" role="warn">
