@@ -18,7 +18,11 @@
                 name()='article'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='bold'
                 or name()='front'
+                or name()='italic'
+                or name()='sub'
+                or name()='sup'
                 or name()='title-group'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
