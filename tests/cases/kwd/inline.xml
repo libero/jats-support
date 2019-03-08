@@ -4,4 +4,8 @@
 
 <kwd>
     Text
+    <bold>Bold</bold>
+    <italic>Italic</italic>
+    <sub>Sub</sub>
+    <sup>Sup</sup>
 </kwd>
