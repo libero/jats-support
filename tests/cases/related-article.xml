@@ -3,5 +3,8 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<related-article> is ignored." node="/related-article"?>
 <?expected-error message="@related-article-type is ignored." node="//@related-article-type"?>
+<?expected-error message="<article-title> in <related-article> is ignored." node="//article-title"?>
 
-<related-article related-article-type=""/>
+<related-article related-article-type="">
+    <article-title/>
+</related-article>
