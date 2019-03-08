@@ -2,12 +2,10 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<article xml:lang="fr">
-    <front>
-        <article-meta>
-            <title-group>
-                <article-title/>
-            </title-group>
-        </article-meta>
-    </front>
-</article>
+<article-title>
+    Text
+    <bold>Bold</bold>
+    <italic>Italic</italic>
+    <sub>Sub</sub>
+    <sup>Sup</sup>
+</article-title>

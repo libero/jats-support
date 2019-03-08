@@ -3,12 +3,6 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@xml:base is ignored." node="//@xml:base"?>
 
-<article xml:base="http://example.com/">
-    <front>
-        <article-meta>
-            <title-group>
-                <article-title/>
-            </title-group>
-        </article-meta>
-    </front>
-</article>
+<title-group xml:base="http://example.com/">
+    <article-title/>
+</title-group>

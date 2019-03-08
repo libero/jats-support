@@ -3,12 +3,6 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@id is ignored." node="//@id"?>
 
-<article id="id">
-    <front>
-        <article-meta>
-            <title-group>
-                <article-title/>
-            </title-group>
-        </article-meta>
-    </front>
-</article>
+<title-group id="id">
+    <article-title/>
+</title-group>

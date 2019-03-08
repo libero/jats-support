@@ -2,11 +2,13 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@specific-use is ignored." node="//@specific-use"?>
-<?expected-error message="<front> is ignored." node="//front"?>
-<?expected-error message="<article-meta> is ignored." node="//article-meta"?>
 
 <article specific-use="web-only">
     <front>
-        <article-meta/>
+        <article-meta>
+            <title-group>
+                <article-title/>
+            </title-group>
+        </article-meta>
     </front>
 </article>
