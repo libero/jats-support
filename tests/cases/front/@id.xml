@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@id is ignored." node="//@id"?>
+
+<front id="id">
+    <article-meta>
+        <title-group>
+            <article-title/>
+        </title-group>
+    </article-meta>
+</front>

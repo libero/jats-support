@@ -2,5 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<front-stub> is ignored." node="/front-stub"?>
+<?expected-error message="<title-group> in <front-stub> is ignored." node="//title-group"?>
 
-<front-stub/>
+<front-stub>
+    <title-group>
+        <article-title/>
+    </title-group>
+</front-stub>
