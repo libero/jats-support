@@ -2,8 +2,16 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<sub-article> is ignored." node="/sub-article"?>
-<?expected-error message="<front-stub> is ignored." node="//front-stub"?>
+<?expected-error message="<front> in <sub-article> is ignored." node="//front"?>
+<?expected-error message="<body> in <sub-article> is ignored." node="//body"?>
 
 <sub-article>
-    <front-stub/>
+    <front>
+        <article-meta>
+            <title-group>
+                <article-title/>
+            </title-group>
+        </article-meta>
+    </front>
+    <body/>
 </sub-article>
