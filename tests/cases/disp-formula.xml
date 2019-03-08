@@ -2,5 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<disp-formula> is ignored." node="/disp-formula"?>
+<?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
 
-<disp-formula/>
+<disp-formula>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
+</disp-formula>

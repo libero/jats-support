@@ -4,10 +4,15 @@
 <?expected-error message="<front-stub> is ignored." node="/front-stub"?>
 <?expected-error message="<article-categories> in <front-stub> is ignored." node="//article-categories"?>
 <?expected-error message="<title-group> in <front-stub> is ignored." node="//title-group"?>
+<?expected-error message="<kwd-group> in <front-stub> is ignored." node="//kwd-group"?>
 
 <front-stub>
     <article-categories/>
     <title-group>
         <article-title/>
     </title-group>
+    <kwd-group>
+        <title/>
+        <kwd/>
+    </kwd-group>
 </front-stub>

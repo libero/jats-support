@@ -5,7 +5,8 @@
     <pattern id="attribute-whitelist">
         <rule context="@*">
             <assert test="
-                name()='subj-group-type'
+                name()='kwd-group-type'
+                or name()='subj-group-type'
                 or name()='xml:lang'
             " role="warn">
                 @<name/> is ignored.
@@ -24,6 +25,8 @@
                 or name()='bold'
                 or name()='front'
                 or name()='italic'
+                or name()='kwd'
+                or name()='kwd-group'
                 or name()='p'
                 or name()='sec'
                 or name()='sub'
@@ -79,6 +82,48 @@
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd_parent">
+        <rule context="kwd[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='kwd-group'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd-group">
+        <rule context="kwd-group[not(@kwd-group-type)]">
+            <assert test="title" role="warn">
+                &lt;<name/>&gt; is ignored if there is no &lt;title&gt; or @kwd-group-type.
+            </assert>
+        </rule>
+        <rule context="kwd-group">
+            <assert test="
+                @kwd-group-type='author-keywords'
+                or @kwd-group-type='research-organism'
+            " role="warn">
+                &lt;<name/> kwd-group-type="<value-of select="@kwd-group-type"/>"&gt; is ignored if there is no &lt;title&gt;.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd-group_kwd">
+        <rule context="kwd-group">
+            <assert test="kwd" role="warn">
+                &lt;<name/>&gt; without any &lt;kwd&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="kwd-group_parent">
+        <rule context="kwd-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -144,7 +189,8 @@
         <rule context="title[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
-                $parent='sec'
+                $parent='kwd-group'
+                or $parent='sec'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
