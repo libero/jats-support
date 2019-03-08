@@ -95,6 +95,17 @@
         </rule>
     </pattern>
 
+    <pattern id="title_parent">
+        <rule context="title[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="title-group_parent">
         <rule context="title-group[parent::*]">
             <let name="parent" value="name(..)"/>

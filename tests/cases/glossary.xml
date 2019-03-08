@@ -2,8 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<glossary> is ignored." node="/glossary"?>
+<?expected-error message="<title> in <glossary> is ignored." node="//title"?>
 <?expected-error message="<p> in <glossary> is ignored." node="//p"?>
 
 <glossary>
+    <title/>
     <p/>
 </glossary>
