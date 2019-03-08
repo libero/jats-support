@@ -18,11 +18,15 @@
                 name()='article'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='body'
                 or name()='bold'
                 or name()='front'
                 or name()='italic'
+                or name()='p'
+                or name()='sec'
                 or name()='sub'
                 or name()='sup'
+                or name()='title'
                 or name()='title-group'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
@@ -47,10 +51,56 @@
         </rule>
     </pattern>
 
+    <pattern id="body_parent">
+        <rule context="body[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='article'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="front_parent">
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="p_parent">
+        <rule context="p[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='body'
+                or $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="sec_parent">
+        <rule context="sec[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='body'
+                or $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="title_parent">
+        <rule context="title[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='sec'
+            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
