@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@xlink:href is ignored." node="//@xlink:href"?>
 <?expected-error message="<graphic> is ignored." node="/graphic"?>
+<?expected-error message="@xlink:href is ignored." node="//@xlink:href"?>
 <?expected-error message="<kwd-group> in <graphic> is ignored." node="//kwd-group"?>
 
 <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="">

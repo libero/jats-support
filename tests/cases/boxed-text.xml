@@ -2,5 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<boxed-text> is ignored." node="/boxed-text"?>
+<?expected-error message="<p> in <boxed-text> is ignored." node="//p"?>
+<?expected-error message="<sec> in <boxed-text> is ignored." node="//sec"?>
 
-<boxed-text/>
+<boxed-text>
+    <p/>
+    <sec/>
+</boxed-text>
