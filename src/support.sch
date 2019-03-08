@@ -17,6 +17,7 @@
         <rule context="*">
             <assert test="
                 name()='article'
+                or name()='article-categories'
                 or name()='article-meta'
                 or name()='article-title'
                 or name()='body'
@@ -33,6 +34,15 @@
                 or name()='title-group'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="article-categories_parent">
+        <rule context="article-categories[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
