@@ -11,7 +11,7 @@
         "ext-dom": "*",
         "ext-xsl": "*",
         "fluentdom/fluentdom": "^7.1",
-        "jats/schema": "^1.1",
+        "jats/schema": "^1.2",
         "libero/coding-standard": "^0.4",
         "libero/xml-validator": "^0.2",
         "lstrojny/functional-php": "^1.9",
@@ -32,9 +32,9 @@
             "type": "package",
             "package": {
                 "name": "jats/schema",
-                "version": "1.1",
+                "version": "1.2",
                 "dist": {
-                    "url": "ftp://ftp.ncbi.nih.gov/pub/jats/archiving/1.1/rng/JATS-Archiving-1-1-MathML3-DTD-RNG.zip",
+                    "url": "ftp://ftp.ncbi.nih.gov/pub/jats/archiving/1.2/rng/JATS-Archiving-1-2-MathML3-RNG.zip",
                     "type": "zip"
                 }
             }

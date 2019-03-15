@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0151b1c8711617353dafd5cc582522b8",
+    "content-hash": "e7e1cd3bed9658577de315916209e02e",
     "packages": [],
     "packages-dev": [
         {
@@ -228,10 +228,10 @@
         },
         {
             "name": "jats/schema",
-            "version": "1.1.0",
+            "version": "1.2",
             "dist": {
                 "type": "zip",
-                "url": "ftp://ftp.ncbi.nih.gov/pub/jats/archiving/1.1/rng/JATS-Archiving-1-1-MathML3-DTD-RNG.zip"
+                "url": "ftp://ftp.ncbi.nih.gov/pub/jats/archiving/1.2/rng/JATS-Archiving-1-2-MathML3-RNG.zip"
             },
             "type": "library"
         },

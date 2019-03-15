@@ -3,7 +3,7 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@dtd-version is ignored." node="//@dtd-version"?>
 
-<article dtd-version="1.1">
+<article dtd-version="1.2">
     <front>
         <article-meta>
             <title-group>
