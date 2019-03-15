@@ -3,6 +3,6 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<index-term-range-end> is ignored." node="/index-term-range-end"?>
 <?expected-error message="@rid is ignored." node="//@rid"?>
-<?expected-error message="IDREF attribute rid references an unknown ID \"foo\"" line="8"?>
+<?expected-error message="IDREF attribute rid references an unknown ID \"rid\"" line="8"?>
 
-<index-term-range-end rid="foo"/>
+<index-term-range-end rid="rid"/>
