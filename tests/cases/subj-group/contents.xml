@@ -3,13 +3,18 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<subj-group> in <subj-group> is ignored." node="/subj-group/subj-group"?>
 <?expected-error message="<subj-group> in <subj-group> is ignored." node="/subj-group/subj-group/subj-group"?>
+<?expected-error message="<subj-group> without any <subject> is ignored." node="/subj-group/subj-group/subj-group"?>
+<?expected-error message="<compound-subject> is ignored." node="//compound-subject"?>
+<?expected-error message="<compound-subject-part> is ignored." node="//compound-subject-part"?>
 
 <subj-group subj-group-type="heading">
     <subject/>
     <subj-group subj-group-type="heading">
         <subject/>
         <subj-group subj-group-type="heading">
-            <subject/>
+            <compound-subject>
+                <compound-subject-part/>
+            </compound-subject>
         </subj-group>
     </subj-group>
 </subj-group>

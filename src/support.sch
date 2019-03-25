@@ -49,6 +49,9 @@
             " role="warn">
                 @<name/>="<value-of select="current()"/>" is ignored.
             </assert>
+            <assert test="count(parent::article[front/article-meta/article-categories/subj-group[@subj-group-type='display-channel']/subject])=0" role="warn">
+                @<name/> is ignored if there is a &lt;subj-group subj-group-type="display-channel"&gt;.
+            </assert>
         </rule>
     </pattern>
 
@@ -181,7 +184,8 @@
         </rule>
         <rule context="subj-group">
             <assert test="
-                @subj-group-type='heading'
+                @subj-group-type='display-channel'
+                or @subj-group-type='heading'
             " role="warn">
                 &lt;<name/> subj-group-type="<value-of select="@subj-group-type"/>"&gt; is ignored.
             </assert>
@@ -201,6 +205,11 @@
         <rule context="subj-group">
             <assert test="subject" role="warn">
                 &lt;<name/>&gt; without any &lt;subject&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="subj-group[@subj-group-type='display-channel']/subject">
+            <assert test="count(preceding-sibling::subject)=0" role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="name(..)"/> subj-group-type="<value-of select="../@subj-group-type"/>"&gt; is ignored.
             </assert>
         </rule>
     </pattern>
