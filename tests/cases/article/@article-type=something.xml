@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@article-type is ignored." node="//@article-type"?>
+<?expected-error message="@article-type=\"something\" is ignored." node="//@article-type"?>
 
-<article article-type="research-article">
+<article article-type="something">
     <front>
         <article-meta>
             <title-group>
