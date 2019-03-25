@@ -30,6 +30,8 @@
                 <ref name="article-id"/>
                 <ref name="article-meta"/>
                 <ref name="article-title"/>
+                <ref name="article-version"/>
+                <ref name="article-version-alternatives"/>
                 <ref name="attrib"/>
                 <ref name="author-comment"/>
                 <ref name="author-notes"/>
@@ -68,6 +70,7 @@
                 <ref name="contrib"/>
                 <ref name="contrib-group"/>
                 <ref name="contrib-id"/>
+                <ref name="contributed-resource-group"/>
                 <ref name="copyright-holder"/>
                 <ref name="copyright-statement"/>
                 <ref name="copyright-year"/>
@@ -96,6 +99,8 @@
                 <ref name="equation-count"/>
                 <ref name="era"/>
                 <ref name="etal"/>
+                <ref name="event"/>
+                <ref name="event-desc"/>
                 <ref name="ext-link"/>
                 <ref name="fax"/>
                 <ref name="fig"/>
@@ -119,8 +124,11 @@
                 <ref name="graphic"/>
                 <ref name="history"/>
                 <ref name="hr"/>
+                <ref name="index-term"/>
+                <ref name="index-term-range-end"/>
                 <ref name="inline-formula"/>
                 <ref name="inline-graphic"/>
+                <ref name="inline-media"/>
                 <ref name="inline-supplementary-material"/>
                 <ref name="institution"/>
                 <ref name="institution-id"/>
@@ -187,6 +195,8 @@
                 <ref name="private-char"/>
                 <ref name="product"/>
                 <ref name="pub-date"/>
+                <ref name="pub-date-not-available"/>
+                <ref name="pub-history"/>
                 <ref name="pub-id"/>
                 <ref name="publisher"/>
                 <ref name="publisher-loc"/>
@@ -197,6 +207,10 @@
                 <ref name="ref-list"/>
                 <ref name="related-article"/>
                 <ref name="related-object"/>
+                <ref name="resource-group"/>
+                <ref name="resource-id"/>
+                <ref name="resource-name"/>
+                <ref name="resource-wrap"/>
                 <ref name="response"/>
                 <ref name="role"/>
                 <ref name="roman"/>
@@ -208,6 +222,8 @@
                 <ref name="season"/>
                 <ref name="sec"/>
                 <ref name="sec-meta"/>
+                <ref name="see"/>
+                <ref name="see-also"/>
                 <ref name="self-uri"/>
                 <ref name="series"/>
                 <ref name="series-text"/>
@@ -236,6 +252,9 @@
                 <ref name="sup"/>
                 <ref name="supplement"/>
                 <ref name="supplementary-material"/>
+                <ref name="support-description"/>
+                <ref name="support-group"/>
+                <ref name="support-source"/>
                 <ref name="surname"/>
                 <ref name="table"/>
                 <ref name="table-count"/>
