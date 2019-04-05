@@ -2,5 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<event> is ignored." node="/event"?>
+<?expected-error message="<pub-date> in <event> is ignored." node="//pub-date"?>
 
-<event/>
+<event>
+    <pub-date date-type="pub" iso-8601-date="2000-01-02"/>
+</event>

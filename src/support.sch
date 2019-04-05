@@ -6,6 +6,8 @@
         <rule context="@*">
             <assert test="
                 name()='article-type'
+                or name()='date-type'
+                or name()='iso-8601-date'
                 or name()='kwd-group-type'
                 or name()='subj-group-type'
                 or name()='xml:lang'
@@ -24,11 +26,14 @@
                 or name()='article-title'
                 or name()='body'
                 or name()='bold'
+                or name()='day'
                 or name()='front'
                 or name()='italic'
                 or name()='kwd'
                 or name()='kwd-group'
+                or name()='month'
                 or name()='p'
+                or name()='pub-date'
                 or name()='sec'
                 or name()='sub'
                 or name()='subj-group'
@@ -36,6 +41,7 @@
                 or name()='sup'
                 or name()='title'
                 or name()='title-group'
+                or name()='year'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -101,11 +107,38 @@
         </rule>
     </pattern>
 
+    <pattern id="date-type_parent">
+        <rule context="@date-type[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='pub-date'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="day_parent">
+        <rule context="day[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='pub-date'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="front_parent">
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="iso-8601-date_parent">
+        <rule context="@iso-8601-date[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='pub-date'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -152,12 +185,67 @@
         </rule>
     </pattern>
 
+    <pattern id="month_parent">
+        <rule context="month[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='pub-date'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="p_parent">
         <rule context="p[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
                 $parent='body'
                 or $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="pub-date">
+        <rule context="pub-date[not(@date-type)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt; without a @date-type is ignored.
+            </assert>
+        </rule>
+        <rule context="pub-date[not(@date-type='pub')]">
+            <assert test="true" role="warn">
+                &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="pub-date[
+            not(@iso-8601-date)
+            or
+            not(
+                (string-length(@iso-8601-date)=10 or substring(@iso-8601-date, 11, 1)='T')
+                and
+                substring(@iso-8601-date, 5, 1)='-' and substring(@iso-8601-date, 8, 1)='-'
+            )
+        ]">
+            <assert test="number(year) and number(month) and number(day)" role="warn">
+                &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored if there is no @iso-8601-date, nor numbers in &lt;year&gt;, &lt;month&gt; and &lt;day&gt;.
+            </assert>
+        </rule>
+        <rule context="@iso-8601-date[parent::pub-date]">
+            <assert test="
+                (string-length(.)=10 or substring(., 11, 1)='T')
+                and
+                substring(., 5, 1)='-' and substring(., 8, 1)='-'
+            " role="warn">
+                @<name/>="<value-of select="."/>" is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="pub-date_parent">
+        <rule context="pub-date[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='article-meta'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -230,6 +318,15 @@
         <rule context="title-group[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="year_parent">
+        <rule context="year[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='pub-date'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
