@@ -9,7 +9,7 @@
 <?expected-error message="<year> in <date> is ignored." node="//year"?>
 
 <date date-type="pub" iso-8601-date="2000-01-02">
-    <day/>
-    <month/>
-    <year/>
+    <day>1</day>
+    <month>1</month>
+    <year>2000</year>
 </date>

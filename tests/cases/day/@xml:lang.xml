@@ -2,4 +2,4 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<day xml:lang="fr"/>
+<day xml:lang="fr">1</day>

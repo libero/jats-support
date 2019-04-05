@@ -8,7 +8,7 @@
 <?expected-error message="<day> in <date-in-citation> is ignored." node="//day"?>
 
 <date-in-citation iso-8601-date="2000-01-02">
-    <year/>
-    <month/>
-    <day/>
+    <year>2000</year>
+    <month>1</month>
+    <day>1</day>
 </date-in-citation>

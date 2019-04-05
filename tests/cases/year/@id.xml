@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@id is ignored." node="//@id"?>
 
-<year id="id"/>
+<year id="id">2000</year>

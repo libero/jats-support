@@ -2,4 +2,4 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<year xml:lang="fr"/>
+<year xml:lang="fr">2000</year>

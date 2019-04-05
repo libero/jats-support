@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@xml:base is ignored." node="//@xml:base"?>
 
-<month xml:base="http://example.com/"/>
+<month xml:base="http://example.com/">1</month>

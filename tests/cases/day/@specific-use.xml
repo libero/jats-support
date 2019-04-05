@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@specific-use is ignored." node="//@specific-use"?>
 
-<day specific-use="web-only"/>
+<day specific-use="web-only">1</day>

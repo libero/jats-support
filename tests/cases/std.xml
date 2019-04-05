@@ -7,7 +7,7 @@
 <?expected-error message="<day> in <std> is ignored." node="//day"?>
 
 <std>
-    <year/>
-    <month/>
-    <day/>
+    <year>2000</year>
+    <month>1</month>
+    <day>1</day>
 </std>

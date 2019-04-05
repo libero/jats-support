@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@iso-8601-date on <year> is ignored." node="//@iso-8601-date"?>
 
-<year iso-8601-date="2000"/>
+<year iso-8601-date="2000">2000</year>

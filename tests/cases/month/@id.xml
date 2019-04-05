@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@id is ignored." node="//@id"?>
 
-<month id="id"/>
+<month id="id">1</month>

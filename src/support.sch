@@ -116,6 +116,19 @@
         </rule>
     </pattern>
 
+    <pattern id="day">
+        <rule context="day[not(number(.)=.)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="day[number(.)=.]">
+            <assert test="count(preceding-sibling::day[number(.)=.])=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="day_parent">
         <rule context="day[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -185,6 +198,19 @@
         </rule>
     </pattern>
 
+    <pattern id="month">
+        <rule context="month[not(number(.)=.)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="month[number(.)=.]">
+            <assert test="count(preceding-sibling::month[number(.)=.])=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="month_parent">
         <rule context="month[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -226,7 +252,7 @@
                 substring(@iso-8601-date, 5, 1)='-' and substring(@iso-8601-date, 8, 1)='-'
             )
         ]">
-            <assert test="number(year) and number(month) and number(day)" role="warn">
+            <assert test="year[number(.)=.] and month[number(.)=.] and day[number(.)=.]" role="warn">
                 &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored if there is no @iso-8601-date, nor numbers in &lt;year&gt;, &lt;month&gt; and &lt;day&gt;.
             </assert>
         </rule>
@@ -319,6 +345,19 @@
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="year">
+        <rule context="year[not(number(.)=.)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="year[number(.)=.]">
+            <assert test="count(preceding-sibling::year[number(.)=.])=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
