@@ -117,12 +117,10 @@
     </pattern>
 
     <pattern id="day">
-        <rule context="day[not(number(.)=.)]">
-            <assert test="true" role="warn">
+        <rule context="day">
+            <assert test="number(.)=." role="warn">
                 &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
             </assert>
-        </rule>
-        <rule context="day[number(.)=.]">
             <assert test="count(preceding-sibling::day[number(.)=.])=0" role="warn">
                 Extra &lt;<name/>&gt; is ignored.
             </assert>
@@ -199,12 +197,10 @@
     </pattern>
 
     <pattern id="month">
-        <rule context="month[not(number(.)=.)]">
-            <assert test="true" role="warn">
+        <rule context="month">
+            <assert test="number(.)=." role="warn">
                 &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
             </assert>
-        </rule>
-        <rule context="month[number(.)=.]">
             <assert test="count(preceding-sibling::month[number(.)=.])=0" role="warn">
                 Extra &lt;<name/>&gt; is ignored.
             </assert>
@@ -350,12 +346,10 @@
     </pattern>
 
     <pattern id="year">
-        <rule context="year[not(number(.)=.)]">
-            <assert test="true" role="warn">
+        <rule context="year">
+            <assert test="number(.)=." role="warn">
                 &lt;<name/>&gt;<value-of select="."/>&lt;/<name/>&gt; is ignored.
             </assert>
-        </rule>
-        <rule context="year[number(.)=.]">
             <assert test="count(preceding-sibling::year[number(.)=.])=0" role="warn">
                 Extra &lt;<name/>&gt; is ignored.
             </assert>
