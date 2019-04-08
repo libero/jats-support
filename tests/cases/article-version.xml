@@ -2,5 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<article-version> is ignored." node="/article-version"?>
+<?expected-error message="@iso-8601-date on <article-version> is ignored." node="//@iso-8601-date"?>
 
-<article-version/>
+<article-version iso-8601-date="2000-01-02"/>

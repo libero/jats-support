@@ -3,7 +3,13 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<element-citation> is ignored." node="/element-citation"?>
 <?expected-error message="<article-title> in <element-citation> is ignored." node="//article-title"?>
+<?expected-error message="<year> in <element-citation> is ignored." node="//year"?>
+<?expected-error message="<month> in <element-citation> is ignored." node="//month"?>
+<?expected-error message="<day> in <element-citation> is ignored." node="//day"?>
 
 <element-citation>
     <article-title/>
+    <year>2000</year>
+    <month>1</month>
+    <day>1</day>
 </element-citation>

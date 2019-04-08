@@ -4,7 +4,13 @@
 <?expected-error message="<related-article> is ignored." node="/related-article"?>
 <?expected-error message="@related-article-type is ignored." node="//@related-article-type"?>
 <?expected-error message="<article-title> in <related-article> is ignored." node="//article-title"?>
+<?expected-error message="<year> in <related-article> is ignored." node="//year"?>
+<?expected-error message="<month> in <related-article> is ignored." node="//month"?>
+<?expected-error message="<day> in <related-article> is ignored." node="//day"?>
 
 <related-article related-article-type="">
     <article-title/>
+    <year>2000</year>
+    <month>1</month>
+    <day>1</day>
 </related-article>

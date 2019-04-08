@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="<month>January</month> is ignored." node="//month[1]"?>
+<?expected-error message="Extra <month> is ignored." node="//month[3]"?>
+<?expected-error message="<day>Second</day> is ignored." node="//day[1]"?>
+<?expected-error message="Extra <day> is ignored." node="//day[3]"?>
+<?expected-error message="<year>Two Thousand</year> is ignored." node="//year[1]"?>
+<?expected-error message="Extra <year> is ignored." node="//year[3]"?>
+
+<pub-date date-type="pub">
+    <month>January</month>
+    <month>01</month>
+    <month>01</month>
+    <day>Second</day>
+    <day>02</day>
+    <day>02</day>
+    <year>Two Thousand</year>
+    <year>2000</year>
+    <year>2000</year>
+</pub-date>

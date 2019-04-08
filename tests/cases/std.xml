@@ -2,5 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<std> is ignored." node="/std"?>
+<?expected-error message="<year> in <std> is ignored." node="//year"?>
+<?expected-error message="<month> in <std> is ignored." node="//month"?>
+<?expected-error message="<day> in <std> is ignored." node="//day"?>
 
-<std/>
+<std>
+    <year>2000</year>
+    <month>1</month>
+    <day>1</day>
+</std>
