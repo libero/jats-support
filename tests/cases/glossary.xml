@@ -4,8 +4,14 @@
 <?expected-error message="<glossary> is ignored." node="/glossary"?>
 <?expected-error message="<title> in <glossary> is ignored." node="//title"?>
 <?expected-error message="<p> in <glossary> is ignored." node="//p"?>
+<?expected-error message="<fig> in <glossary> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <glossary> is ignored." node="(//graphic)[2]"?>
 
-<glossary>
+<glossary xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </glossary>

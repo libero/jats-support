@@ -2,13 +2,18 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<supplementary-material> is ignored." node="/supplementary-material"?>
+<?expected-error message="@xlink:href on <supplementary-material> is ignored." node="//@xlink:href"?>
+<?expected-error message="@mimetype on <supplementary-material> is ignored." node="//@mimetype"?>
+<?expected-error message="@mime-subtype on <supplementary-material> is ignored." node="//@mime-subtype"?>
 <?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
 <?expected-error message="<p> in <supplementary-material> is ignored." node="//p"?>
+<?expected-error message="<graphic> in <supplementary-material> is ignored." node="//graphic"?>
 
-<supplementary-material>
+<supplementary-material xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/text.txt" mimetype="text" mime-subtype="plain">
     <kwd-group>
         <title/>
         <kwd/>
     </kwd-group>
     <p/>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </supplementary-material>

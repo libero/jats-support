@@ -2,6 +2,8 @@
 
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt">
 
+    <ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
+
     <pattern id="attribute-whitelist">
         <rule context="@*">
             <assert test="
@@ -9,7 +11,10 @@
                 or name()='date-type'
                 or name()='iso-8601-date'
                 or name()='kwd-group-type'
+                or name()='mimetype'
+                or name()='mime-subtype'
                 or name()='subj-group-type'
+                or name()='xlink:href'
                 or name()='xml:lang'
             " role="warn">
                 @<name/> is ignored.
@@ -27,7 +32,9 @@
                 or name()='body'
                 or name()='bold'
                 or name()='day'
+                or name()='fig'
                 or name()='front'
+                or name()='graphic'
                 or name()='italic'
                 or name()='kwd'
                 or name()='kwd-group'
@@ -136,10 +143,61 @@
         </rule>
     </pattern>
 
+    <pattern id="fig">
+        <rule context="fig">
+            <assert test="graphic[(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3))]" role="warn">
+                &lt;<name/>&gt; without a JPEG &lt;graphic&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="fig_parent">
+        <rule context="fig[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='body'
+                or $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="front_parent">
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="graphic">
+        <rule context="graphic[not(starts-with(@xlink:href, 'http://') or starts-with(@xlink:href, 'https://'))]" role="warn">
+            <assert test="true">
+                &lt;<name/>&gt; without an absolute HTTP @xlink:href is ignored.
+            </assert>
+        </rule>
+        <rule context="graphic[not((@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3)))]" role="warn">
+            <assert test="true">
+                &lt;<name/>&gt; is ignored if it is not a JPEG.
+            </assert>
+        </rule>
+        <rule context="graphic">
+            <assert test="count(preceding-sibling::graphic[(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3))])=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="graphic_parent">
+        <rule context="graphic[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='body'
+                or $parent='fig'
+                or $parent='sec'
+            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -192,6 +250,24 @@
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="mimetype_parent">
+        <rule context="@mimetype[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='graphic'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="mime-subtype_parent">
+        <rule context="@mime-subtype[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='graphic'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -341,6 +417,15 @@
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="xlink:href_parent">
+        <rule context="@xlink:href[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='graphic'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>

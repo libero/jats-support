@@ -2,5 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<award-group> is ignored." node="/award-group"?>
+<?expected-error message="@xlink:href on <award-group> is ignored." node="//@xlink:href"?>
 
-<award-group/>
+<award-group xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/"/>

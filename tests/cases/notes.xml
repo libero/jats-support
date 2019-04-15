@@ -4,10 +4,16 @@
 <?expected-error message="<notes> is ignored." node="/notes"?>
 <?expected-error message="<title> in <notes> is ignored." node="//title"?>
 <?expected-error message="<p> in <notes> is ignored." node="//p"?>
+<?expected-error message="<fig> in <notes> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <notes> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <notes> is ignored." node="//sec"?>
 
-<notes>
+<notes xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
 </notes>

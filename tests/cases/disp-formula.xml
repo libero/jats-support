@@ -3,10 +3,12 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<disp-formula> is ignored." node="/disp-formula"?>
 <?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
+<?expected-error message="<graphic> in <disp-formula> is ignored." node="//graphic"?>
 
-<disp-formula>
+<disp-formula xmlns:xlink="http://www.w3.org/1999/xlink">
     <kwd-group>
         <title/>
         <kwd/>
     </kwd-group>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </disp-formula>

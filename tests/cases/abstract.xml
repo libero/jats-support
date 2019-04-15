@@ -4,10 +4,16 @@
 <?expected-error message="<abstract> is ignored." node="/abstract"?>
 <?expected-error message="<title> in <abstract> is ignored." node="//title"?>
 <?expected-error message="<p> in <abstract> is ignored." node="//p"?>
+<?expected-error message="<fig> in <abstract> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <abstract> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <abstract> is ignored." node="//sec"?>
 
-<abstract>
+<abstract xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
 </abstract>

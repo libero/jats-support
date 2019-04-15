@@ -2,5 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<see> is ignored." node="/see"?>
+<?expected-error message="<graphic> in <see> is ignored." node="//graphic"?>
 
-<see/>
+<see xmlns:xlink="http://www.w3.org/1999/xlink">
+    <graphic xlink:href="https://example.com/image.jpg"/>
+</see>

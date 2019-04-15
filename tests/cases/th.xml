@@ -3,7 +3,9 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<th> is ignored." node="/th"?>
 <?expected-error message="<p> in <th> is ignored." node="//p"?>
+<?expected-error message="<graphic> in <th> is ignored." node="//graphic"?>
 
-<th>
+<th xmlns:xlink="http://www.w3.org/1999/xlink">
     <p/>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </th>
