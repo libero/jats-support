@@ -15,6 +15,7 @@
                 or name()='mime-subtype'
                 or name()='subj-group-type'
                 or name()='xlink:href'
+                or name()='xml:base'
                 or name()='xml:lang'
             " role="warn">
                 @<name/> is ignored.
@@ -173,7 +174,7 @@
     </pattern>
 
     <pattern id="graphic">
-        <rule context="graphic[not(starts-with(@xlink:href, 'http://') or starts-with(@xlink:href, 'https://'))]" role="warn">
+        <rule context="graphic[not(starts-with(@xlink:href, 'http://') or starts-with(@xlink:href, 'https://') or (ancestor-or-self::*[starts-with(@xml:base, 'http://')]) or (ancestor-or-self::*[starts-with(@xml:base, 'https://')]))]" role="warn">
             <assert test="true">
                 &lt;<name/>&gt; without an absolute HTTP @xlink:href is ignored.
             </assert>
