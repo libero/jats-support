@@ -26,7 +26,8 @@
     <pattern id="element-whitelist">
         <rule context="*">
             <assert test="
-                name()='article'
+                name()='alt-text'
+                or name()='article'
                 or name()='article-categories'
                 or name()='article-meta'
                 or name()='article-title'
@@ -52,6 +53,23 @@
                 or name()='year'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="alt-text">
+        <rule context="alt-text">
+            <assert test="count(preceding-sibling::alt-text)=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="alt-text_parent">
+        <rule context="alt-text[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='graphic'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>

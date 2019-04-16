@@ -6,6 +6,7 @@
 <?expected-error message="@mimetype on <supplementary-material> is ignored." node="//@mimetype"?>
 <?expected-error message="@mime-subtype on <supplementary-material> is ignored." node="//@mime-subtype"?>
 <?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
+<?expected-error message="<alt-text> in <supplementary-material> is ignored." node="//alt-text"?>
 <?expected-error message="<p> in <supplementary-material> is ignored." node="//p"?>
 <?expected-error message="<graphic> in <supplementary-material> is ignored." node="//graphic"?>
 
@@ -14,6 +15,7 @@
         <title/>
         <kwd/>
     </kwd-group>
+    <alt-text/>
     <p/>
     <graphic xlink:href="https://example.com/image.jpg"/>
 </supplementary-material>

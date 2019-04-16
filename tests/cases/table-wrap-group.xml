@@ -3,6 +3,7 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<table-wrap-group> is ignored." node="/table-wrap-group"?>
 <?expected-error message="<kwd-group> in <table-wrap-group> is ignored." node="//kwd-group"?>
+<?expected-error message="<alt-text> in <table-wrap-group> is ignored." node="//alt-text"?>
 <?expected-error message="<table-wrap> is ignored." node="//table-wrap"?>
 
 <table-wrap-group>
@@ -10,5 +11,6 @@
         <title/>
         <kwd/>
     </kwd-group>
+    <alt-text/>
     <table-wrap/>
 </table-wrap-group>

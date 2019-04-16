@@ -5,5 +5,8 @@
 <?expected-error message="@xlink:href on <inline-media> is ignored." node="//@xlink:href"?>
 <?expected-error message="@mimetype on <inline-media> is ignored." node="//@mimetype"?>
 <?expected-error message="@mime-subtype on <inline-media> is ignored." node="//@mime-subtype"?>
+<?expected-error message="<alt-text> in <inline-media> is ignored." node="//alt-text"?>
 
-<inline-media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.example.com/audio.mp3" mimetype="audio" mime-subtype="mp3"/>
+<inline-media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.example.com/audio.mp3" mimetype="audio" mime-subtype="mp3">
+    <alt-text/>
+</inline-media>

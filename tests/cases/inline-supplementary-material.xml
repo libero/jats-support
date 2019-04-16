@@ -5,5 +5,8 @@
 <?expected-error message="@xlink:href on <inline-supplementary-material> is ignored." node="//@xlink:href"?>
 <?expected-error message="@mimetype on <inline-supplementary-material> is ignored." node="//@mimetype"?>
 <?expected-error message="@mime-subtype on <inline-supplementary-material> is ignored." node="//@mime-subtype"?>
+<?expected-error message="<alt-text> in <inline-supplementary-material> is ignored." node="//alt-text"?>
 
-<inline-supplementary-material xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/text.txt" mimetype="text" mime-subtype="plain"/>
+<inline-supplementary-material xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/text.txt" mimetype="text" mime-subtype="plain">
+    <alt-text/>
+</inline-supplementary-material>

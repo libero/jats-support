@@ -4,6 +4,7 @@
 <?expected-error message="<disp-formula> is ignored." node="/disp-formula"?>
 <?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
 <?expected-error message="<graphic> in <disp-formula> is ignored." node="//graphic"?>
+<?expected-error message="<alt-text> in <disp-formula> is ignored." node="//alt-text"?>
 
 <disp-formula xmlns:xlink="http://www.w3.org/1999/xlink">
     <kwd-group>
@@ -11,4 +12,5 @@
         <kwd/>
     </kwd-group>
     <graphic xlink:href="https://example.com/image.jpg"/>
+    <alt-text/>
 </disp-formula>
