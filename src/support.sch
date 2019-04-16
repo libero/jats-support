@@ -164,7 +164,15 @@
 
     <pattern id="fig">
         <rule context="fig">
-            <assert test="graphic[(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3))]" role="warn">
+            <assert test="
+                graphic[
+                    (@mimetype='image' and @mime-subtype='jpeg')
+                    or
+                    ('.jpg'=translate(substring(@xlink:href, string-length(@xlink:href)-3), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+                    or
+                    ('.jpeg'=translate(substring(@xlink:href, string-length(@xlink:href)-4), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+                ]
+            " role="warn">
                 &lt;<name/>&gt; without a JPEG &lt;graphic&gt; is ignored.
             </assert>
         </rule>
@@ -197,13 +205,28 @@
                 &lt;<name/>&gt; without an absolute HTTP @xlink:href is ignored.
             </assert>
         </rule>
-        <rule context="graphic[not((@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3)))]" role="warn">
+        <rule context="
+            graphic[not(
+                (@mimetype='image' and @mime-subtype='jpeg')
+                or
+                ('.jpg'=translate(substring(@xlink:href, string-length(@xlink:href)-3), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+                or
+                ('.jpeg'=translate(substring(@xlink:href, string-length(@xlink:href)-4), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+            )]
+        " role="warn">
             <assert test="true">
                 &lt;<name/>&gt; is ignored if it is not a JPEG.
             </assert>
         </rule>
         <rule context="graphic">
-            <assert test="count(preceding-sibling::graphic[(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=substring(@xlink:href, string-length(@xlink:href)-3))])=0" role="warn">
+            <assert test="
+                count(preceding-sibling::graphic[
+                    (@mimetype='image' and @mime-subtype='jpeg')
+                    or
+                    ('.jpg'=translate(substring(@xlink:href, string-length(@xlink:href)-3), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+                    or
+                    ('.jpeg'=translate(substring(@xlink:href, string-length(@xlink:href)-4), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))
+                ])=0" role="warn">
                 Extra &lt;<name/>&gt; is ignored.
             </assert>
         </rule>

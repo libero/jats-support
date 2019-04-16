@@ -18,5 +18,5 @@
     <graphic xlink:href="https://example.com/image.tif"/>
     <graphic xlink:href="https://example.com/image" mimetype="image" mime-subtype="tiff"/>
     <graphic xlink:href="https://example.com/image.jpg"/>
-    <graphic xlink:href="https://example.com/other-image.jpg"/>
+    <graphic xlink:href="https://example.com/other-image.JPEG"/>
 </fig>
