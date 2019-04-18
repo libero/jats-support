@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="<fig> in <p> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <p> is ignored." node="(//graphic)[2]"?>
 
-<p>
+<p xmlns:xlink="http://www.w3.org/1999/xlink">
     Text
     <bold>Bold</bold>
     <italic>Italic</italic>
     <sub>Sub</sub>
     <sup>Sup</sup>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </p>

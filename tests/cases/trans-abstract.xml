@@ -4,10 +4,16 @@
 <?expected-error message="<trans-abstract> is ignored." node="/trans-abstract"?>
 <?expected-error message="<title> in <trans-abstract> is ignored." node="//title"?>
 <?expected-error message="<p> in <trans-abstract> is ignored." node="//p"?>
+<?expected-error message="<fig> in <trans-abstract> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <trans-abstract> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <trans-abstract> is ignored." node="//sec"?>
 
-<trans-abstract>
+<trans-abstract xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
 </trans-abstract>

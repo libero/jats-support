@@ -2,8 +2,12 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<sec>
+<sec xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
 </sec>

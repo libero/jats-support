@@ -3,12 +3,16 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<chem-struct-wrap> is ignored." node="/chem-struct-wrap"?>
 <?expected-error message="<kwd-group> in <chem-struct-wrap> is ignored." node="//kwd-group"?>
+<?expected-error message="<alt-text> in <chem-struct-wrap> is ignored." node="//alt-text"?>
 <?expected-error message="<textual-form> is ignored." node="//textual-form"?>
+<?expected-error message="<graphic> in <chem-struct-wrap> is ignored." node="//graphic"?>
 
-<chem-struct-wrap>
+<chem-struct-wrap xmlns:xlink="http://www.w3.org/1999/xlink">
     <kwd-group>
         <title/>
         <kwd/>
     </kwd-group>
+    <alt-text/>
     <textual-form/>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </chem-struct-wrap>

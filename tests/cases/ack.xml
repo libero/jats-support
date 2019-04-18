@@ -4,10 +4,16 @@
 <?expected-error message="<ack> is ignored." node="/ack"?>
 <?expected-error message="<title> in <ack> is ignored." node="//title"?>
 <?expected-error message="<p> in <ack> is ignored." node="//p"?>
+<?expected-error message="<fig> in <ack> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <ack> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <ack> is ignored." node="//sec"?>
 
-<ack>
+<ack xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
 </ack>

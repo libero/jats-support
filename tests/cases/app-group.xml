@@ -5,12 +5,18 @@
 <?expected-error message="<title> in <app-group> is ignored." node="//title"?>
 <?expected-error message="<kwd-group> in <app-group> is ignored." node="//kwd-group"?>
 <?expected-error message="<p> in <app-group> is ignored." node="//p"?>
+<?expected-error message="<fig> in <app-group> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <app-group> is ignored." node="(//graphic)[2]"?>
 
-<app-group>
+<app-group xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <kwd-group>
         <title/>
         <kwd/>
     </kwd-group>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </app-group>

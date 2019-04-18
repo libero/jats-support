@@ -4,8 +4,14 @@
 <?expected-error message="<disp-quote> is ignored." node="/disp-quote"?>
 <?expected-error message="<title> in <disp-quote> is ignored." node="//title"?>
 <?expected-error message="<p> in <disp-quote> is ignored." node="//p"?>
+<?expected-error message="<fig> in <disp-quote> is ignored." node="//fig"?>
+<?expected-error message="<graphic> in <disp-quote> is ignored." node="(//graphic)[2]"?>
 
-<disp-quote>
+<disp-quote xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>
+    <fig>
+        <graphic xlink:href="https://example.com/image.jpg"/>
+    </fig>
+    <graphic xlink:href="https://example.com/image.jpg"/>
 </disp-quote>

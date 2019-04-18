@@ -3,10 +3,12 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<disp-formula-group> is ignored." node="/disp-formula-group"?>
 <?expected-error message="<kwd-group> in <disp-formula-group> is ignored." node="//kwd-group"?>
+<?expected-error message="<alt-text> in <disp-formula-group> is ignored." node="//alt-text"?>
 
 <disp-formula-group>
     <kwd-group>
         <title/>
         <kwd/>
     </kwd-group>
+    <alt-text/>
 </disp-formula-group>
