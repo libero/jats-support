@@ -5,12 +5,14 @@
 <?expected-error message="@xlink:href on <supplementary-material> is ignored." node="//@xlink:href"?>
 <?expected-error message="@mimetype on <supplementary-material> is ignored." node="//@mimetype"?>
 <?expected-error message="@mime-subtype on <supplementary-material> is ignored." node="//@mime-subtype"?>
+<?expected-error message="<caption> in <supplementary-material> is ignored." node="//caption"?>
 <?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <supplementary-material> is ignored." node="//alt-text"?>
 <?expected-error message="<p> in <supplementary-material> is ignored." node="//p"?>
 <?expected-error message="<graphic> in <supplementary-material> is ignored." node="//graphic"?>
 
 <supplementary-material xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/text.txt" mimetype="text" mime-subtype="plain">
+    <caption/>
     <kwd-group>
         <title/>
         <kwd/>
