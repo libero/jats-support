@@ -9,6 +9,7 @@
 <?expected-error message="Extra <graphic> is ignored." node="//graphic[4]"?>
 
 <fig xmlns:xlink="http://www.w3.org/1999/xlink">
+    <caption/>
     <kwd-group>
         <title/>
         <kwd/>

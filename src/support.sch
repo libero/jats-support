@@ -33,6 +33,7 @@
                 or name()='article-title'
                 or name()='body'
                 or name()='bold'
+                or name()='caption'
                 or name()='day'
                 or name()='fig'
                 or name()='front'
@@ -127,6 +128,17 @@
             <let name="parent" value="name(..)"/>
             <assert test="
                 $parent='article'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="caption_parent">
+        <rule context="caption[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='fig'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -339,6 +351,7 @@
             <let name="parent" value="name(..)"/>
             <assert test="
                 $parent='body'
+                or $parent='caption'
                 or $parent='sec'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
@@ -446,7 +459,8 @@
         <rule context="title[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
-                $parent='kwd-group'
+                $parent='caption'
+                or $parent='kwd-group'
                 or $parent='sec'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
