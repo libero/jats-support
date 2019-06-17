@@ -8,10 +8,14 @@
 <?expected-error message="<year> in <related-article> is ignored." node="//year"?>
 <?expected-error message="<month> in <related-article> is ignored." node="//month"?>
 <?expected-error message="<day> in <related-article> is ignored." node="//day"?>
+<?expected-error message="<name> in <related-article> is ignored." node="//name"?>
 
 <related-article xmlns:xlink="http://www.w3.org/1999/xlink" related-article-type="" xlink:href="https://example.com/">
     <article-title/>
     <year>2000</year>
     <month>1</month>
     <day>1</day>
+    <name>
+        <given-names/>
+    </name>
 </related-article>

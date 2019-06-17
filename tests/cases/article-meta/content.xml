@@ -7,5 +7,8 @@
     <title-group>
         <article-title/>
     </title-group>
+    <contrib-group>
+        <contrib contrib-type="author"/>
+    </contrib-group>
     <pub-date date-type="pub" iso-8601-date="2000-01-02"/>
 </article-meta>

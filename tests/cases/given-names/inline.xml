@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="<bold> in <given-names> is ignored." node="//bold"?>
+<?expected-error message="<italic> in <given-names> is ignored." node="//italic"?>
+<?expected-error message="<sub> in <given-names> is ignored." node="//sub"?>
+<?expected-error message="<sup> in <given-names> is ignored." node="//sup"?>
+
+<given-names>
+    Text
+    <bold>Bold</bold>
+    <italic>Italic</italic>
+    <sub>Sub</sub>
+    <sup>Sup</sup>
+</given-names>
