@@ -3,4 +3,4 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@content-type is ignored." node="//@content-type"?>
 
-<prefix content-type="content-type"/>
+<prefix content-type="prefix"/>
