@@ -142,21 +142,6 @@
         </rule>
     </pattern>
 
-    <pattern id="bold_parent">
-        <rule context="bold[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="
-                $parent!='aff'
-                and $parent!='given-names'
-                and $parent!='prefix'
-                and $parent!='suffix'
-                and $parent!='surname'
-            " role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
     <pattern id="body_parent">
         <rule context="body[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -336,21 +321,6 @@
             <let name="parent" value="name(..)"/>
             <assert test="$parent='pub-date'" role="warn">
                 @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="italic_parent">
-        <rule context="italic[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="
-                $parent!='aff'
-                and $parent!='given-names'
-                and $parent!='prefix'
-                and $parent!='suffix'
-                and $parent!='surname'
-            " role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -541,21 +511,6 @@
         </rule>
     </pattern>
 
-    <pattern id="sub_parent">
-        <rule context="sub[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="
-                $parent!='aff'
-                and $parent!='given-names'
-                and $parent!='prefix'
-                and $parent!='suffix'
-                and $parent!='surname'
-            " role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
     <pattern id="subj-group">
         <rule context="subj-group[not(@subj-group-type)]">
             <assert test="true" role="warn">
@@ -598,21 +553,6 @@
         <rule context="suffix[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='name'" role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
-    <pattern id="sup_parent">
-        <rule context="sup[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="
-                $parent!='aff'
-                and $parent!='given-names'
-                and $parent!='prefix'
-                and $parent!='suffix'
-                and $parent!='surname'
-            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
