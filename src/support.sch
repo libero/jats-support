@@ -607,18 +607,6 @@
         </rule>
     </pattern>
 
-    <pattern id="xml:lang_parent">
-        <rule context="@xml:lang[parent::*]">
-            <let name="parent" value="name(..)"/>
-            <assert test="
-                $parent!='prefix'
-                and $parent!='suffix'
-            " role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
-
     <pattern id="year">
         <rule context="year">
             <assert test="number(.)=." role="warn">
