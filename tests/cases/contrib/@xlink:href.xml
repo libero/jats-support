@@ -3,4 +3,8 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@xlink:href on <contrib> is ignored." node="//@xlink:href"?>
 
-<contrib xmlns:xlink="http://www.w3.org/1999/xlink" contrib-type="author" xlink:href="http://example.com"/>
+<contrib xmlns:xlink="http://www.w3.org/1999/xlink" contrib-type="author" xlink:href="http://example.com">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

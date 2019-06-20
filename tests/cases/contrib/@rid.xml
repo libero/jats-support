@@ -5,4 +5,8 @@
 <?expected-error message="IDREFS attribute rid references an unknown ID \"rid\"" line="8"?>
 <?expected-error message="IDREFS attribute rid references an unknown ID \"rid\"" line="8"?>
 
-<contrib contrib-type="author" rid="rid"/>
+<contrib contrib-type="author" rid="rid">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

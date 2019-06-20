@@ -3,4 +3,8 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@deceased is ignored." node="//@deceased"?>
 
-<contrib contrib-type="author" deceased="no"/>
+<contrib contrib-type="author" deceased="no">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

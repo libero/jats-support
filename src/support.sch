@@ -175,6 +175,11 @@
                 &lt;<name/> contrib-type="<value-of select="@contrib-type"/>"&gt; is ignored.
             </assert>
         </rule>
+        <rule context="contrib[not(name)]">
+            <assert test="title" role="warn">
+                &lt;<name/>&gt; is ignored if there is no &lt;name&gt;.
+            </assert>
+        </rule>
     </pattern>
 
     <pattern id="contrib_parent">

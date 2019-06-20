@@ -4,5 +4,9 @@
 <?expected-error message="@specific-use is ignored." node="//@specific-use"?>
 
 <contrib-group specific-use="web-only">
-    <contrib contrib-type="author"/>
+    <contrib contrib-type="author">
+        <name>
+            <given-names/>
+        </name>
+    </contrib>
 </contrib-group>

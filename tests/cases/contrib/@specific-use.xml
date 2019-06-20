@@ -3,4 +3,8 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@specific-use is ignored." node="//@specific-use"?>
 
-<contrib contrib-type="author" specific-use="web-only"/>
+<contrib contrib-type="author" specific-use="web-only">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

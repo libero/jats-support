@@ -8,6 +8,10 @@
 <supplement>
     <title/>
     <contrib-group>
-        <contrib contrib-type="author"/>
+        <contrib contrib-type="author">
+            <name>
+                <given-names/>
+            </name>
+        </contrib>
     </contrib-group>
 </supplement>

@@ -4,5 +4,9 @@
 <?expected-error message="@content-type is ignored." node="//@content-type"?>
 
 <contrib-group content-type="contrib-group">
-    <contrib contrib-type="author"/>
+    <contrib contrib-type="author">
+        <name>
+            <given-names/>
+        </name>
+    </contrib>
 </contrib-group>

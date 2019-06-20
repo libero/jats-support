@@ -3,4 +3,8 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="@id is ignored." node="//@id"?>
 
-<contrib contrib-type="author" id="id"/>
+<contrib contrib-type="author" id="id">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

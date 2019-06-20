@@ -8,7 +8,11 @@
 
 <collab xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <contrib-group>
-        <contrib contrib-type="author"/>
+        <contrib contrib-type="author">
+            <name>
+                <given-names/>
+            </name>
+        </contrib>
     </contrib-group>
     <aff/>
 </collab>
