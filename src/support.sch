@@ -8,11 +8,13 @@
         <rule context="@*">
             <assert test="
                 name()='article-type'
+                or name()='contrib-type'
                 or name()='date-type'
                 or name()='iso-8601-date'
                 or name()='kwd-group-type'
                 or name()='mimetype'
                 or name()='mime-subtype'
+                or name()='name-style'
                 or name()='subj-group-type'
                 or name()='xlink:href'
                 or name()='xml:base'
@@ -26,7 +28,8 @@
     <pattern id="element-whitelist">
         <rule context="*">
             <assert test="
-                name()='alt-text'
+                name()='aff'
+                or name()='alt-text'
                 or name()='article'
                 or name()='article-categories'
                 or name()='article-meta'
@@ -34,26 +37,42 @@
                 or name()='body'
                 or name()='bold'
                 or name()='caption'
+                or name()='contrib'
+                or name()='contrib-group'
                 or name()='day'
                 or name()='fig'
                 or name()='front'
+                or name()='given-names'
                 or name()='graphic'
                 or name()='italic'
                 or name()='kwd'
                 or name()='kwd-group'
                 or name()='month'
+                or name()='name'
                 or name()='p'
+                or name()='prefix'
                 or name()='pub-date'
                 or name()='sec'
                 or name()='sub'
                 or name()='subj-group'
                 or name()='subject'
+                or name()='suffix'
                 or name()='sup'
+                or name()='surname'
                 or name()='title'
                 or name()='title-group'
                 or name()='year'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="aff_parent">
+        <rule context="aff[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='contrib'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -145,6 +164,42 @@
         </rule>
     </pattern>
 
+    <pattern id="contrib">
+        <rule context="contrib[not(@contrib-type)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt; without a @contrib-type is ignored.
+            </assert>
+        </rule>
+        <rule context="contrib[not(@contrib-type='author')]">
+            <assert test="true" role="warn">
+                &lt;<name/> contrib-type="<value-of select="@contrib-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="contrib[not(name)]">
+            <assert test="title" role="warn">
+                &lt;<name/>&gt; is ignored if there is no &lt;name&gt;.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="contrib_parent">
+        <rule context="contrib[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='contrib-group'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="contrib-group_parent">
+        <rule context="contrib-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="date-type_parent">
         <rule context="@date-type[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -206,6 +261,15 @@
         <rule context="front[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='article'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="given-names_parent">
+        <rule context="given-names[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='name'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -346,6 +410,32 @@
         </rule>
     </pattern>
 
+    <pattern id="name">
+        <rule context="name">
+            <assert test="count(preceding-sibling::name)=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="name_parent">
+        <rule context="name[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='contrib'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="name-style_parent">
+        <rule context="@name-style[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='name'" role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="p_parent">
         <rule context="p[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -354,6 +444,15 @@
                 or $parent='caption'
                 or $parent='sec'
             " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="prefix_parent">
+        <rule context="prefix[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='name'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -451,6 +550,33 @@
         <rule context="subj-group[@subj-group-type='display-channel']/subject">
             <assert test="count(preceding-sibling::subject)=0" role="warn">
                 Extra &lt;<name/>&gt; in &lt;<value-of select="name(..)"/> subj-group-type="<value-of select="../@subj-group-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="suffix_parent">
+        <rule context="suffix[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='name'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="surname_given-only">
+        <rule context="surname[parent::name[@name-style='given-only']]">
+            <let name="parent" value="name(..)"/>
+            <assert test="true" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/> name-style="given-only"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="surname_parent">
+        <rule context="surname[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='name'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>

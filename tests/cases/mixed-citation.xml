@@ -7,10 +7,14 @@
 <?expected-error message="<year> in <mixed-citation> is ignored." node="//year"?>
 <?expected-error message="<month> in <mixed-citation> is ignored." node="//month"?>
 <?expected-error message="<day> in <mixed-citation> is ignored." node="//day"?>
+<?expected-error message="<name> in <mixed-citation> is ignored." node="//name"?>
 
 <mixed-citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <article-title/>
     <year>2000</year>
     <month>1</month>
     <day>1</day>
+    <name>
+        <given-names/>
+    </name>
 </mixed-citation>

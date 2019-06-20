@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@xlink:show is ignored." node="//@xlink:show"?>
+
+<contrib xmlns:xlink="http://www.w3.org/1999/xlink" contrib-type="author" xlink:show="embed">
+    <name>
+        <given-names/>
+    </name>
+</contrib>

@@ -3,7 +3,15 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<supplement> is ignored." node="/supplement"?>
 <?expected-error message="<title> in <supplement> is ignored." node="//title"?>
+<?expected-error message="<contrib-group> in <supplement> is ignored." node="//contrib-group"?>
 
 <supplement>
     <title/>
+    <contrib-group>
+        <contrib contrib-type="author">
+            <name>
+                <given-names/>
+            </name>
+        </contrib>
+    </contrib-group>
 </supplement>
