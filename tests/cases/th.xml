@@ -2,10 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<th> is ignored." node="/th"?>
+<?expected-error message="@content-type on <th> is ignored." node="//@content-type"?>
 <?expected-error message="<p> in <th> is ignored." node="//p"?>
 <?expected-error message="<graphic> in <th> is ignored." node="//graphic"?>
 
-<th xmlns:xlink="http://www.w3.org/1999/xlink">
+<th xmlns:xlink="http://www.w3.org/1999/xlink" content-type="th">
     <p/>
     <graphic xlink:href="https://example.com/image.jpg"/>
 </th>

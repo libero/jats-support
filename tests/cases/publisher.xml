@@ -2,8 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<publisher> is ignored." node="/publisher"?>
+<?expected-error message="@content-type on <publisher> is ignored." node="//@content-type"?>
 <?expected-error message="<publisher-name> is ignored." node="//publisher-name"?>
 
-<publisher>
+<publisher content-type="publisher">
     <publisher-name/>
 </publisher>
