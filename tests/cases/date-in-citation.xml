@@ -3,11 +3,12 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<date-in-citation> is ignored." node="/date-in-citation"?>
 <?expected-error message="@iso-8601-date on <date-in-citation> is ignored." node="//@iso-8601-date"?>
+<?expected-error message="@content-type on <date-in-citation> is ignored." node="//@content-type"?>
 <?expected-error message="<year> in <date-in-citation> is ignored." node="//year"?>
 <?expected-error message="<month> in <date-in-citation> is ignored." node="//month"?>
 <?expected-error message="<day> in <date-in-citation> is ignored." node="//day"?>
 
-<date-in-citation iso-8601-date="2000-01-02">
+<date-in-citation iso-8601-date="2000-01-02" content-type="date-in-citation">
     <year>2000</year>
     <month>1</month>
     <day>1</day>

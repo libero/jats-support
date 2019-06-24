@@ -2,8 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<inline-formula> is ignored." node="/inline-formula"?>
+<?expected-error message="@content-type on <inline-formula> is ignored." node="//@content-type"?>
 <?expected-error message="<alt-text> in <inline-formula> is ignored." node="//alt-text"?>
 
-<inline-formula>
+<inline-formula content-type="inline-formula">
     <alt-text/>
 </inline-formula>

@@ -4,8 +4,9 @@
 <?expected-error message="<journal-meta> is ignored." node="/journal-meta"?>
 <?expected-error message="<contrib-group> in <journal-meta> is ignored." node="//contrib-group"?>
 <?expected-error message="<aff> in <journal-meta> is ignored." node="//aff"?>
+<?expected-error message="<self-uri> in <journal-meta> is ignored." node="//self-uri"?>
 
-<journal-meta>
+<journal-meta xmlns:xlink="http://www.w3.org/1999/xlink">
     <contrib-group>
         <contrib contrib-type="author">
             <name>
@@ -14,4 +15,5 @@
         </contrib>
     </contrib-group>
     <aff/>
+    <self-uri xlink:href="https://example.com/file.pdf" content-type="pdf"/>
 </journal-meta>

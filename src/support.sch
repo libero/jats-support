@@ -8,6 +8,7 @@
         <rule context="@*">
             <assert test="
                 name()='article-type'
+                or name()='content-type'
                 or name()='contrib-type'
                 or name()='date-type'
                 or name()='iso-8601-date'
@@ -53,6 +54,7 @@
                 or name()='prefix'
                 or name()='pub-date'
                 or name()='sec'
+                or name()='self-uri'
                 or name()='sub'
                 or name()='subj-group'
                 or name()='subject'
@@ -160,6 +162,17 @@
                 $parent='fig'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="content-type_parent">
+        <rule context="@content-type[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='self-uri'
+            " role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -516,6 +529,47 @@
         </rule>
     </pattern>
 
+    <pattern id="self-uri">
+        <rule context="self-uri[not(@content-type)]" role="warn">
+            <assert test="true">
+                &lt;<name/>&gt; without a @content-type is ignored.
+            </assert>
+        </rule>
+        <rule context="self-uri[not(@content-type='pdf')]" role="warn">
+            <assert test="true">
+                &lt;<name/> content-type="<value-of select="@content-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="self-uri[not(starts-with(@xlink:href, 'http://') or starts-with(@xlink:href, 'https://') or (ancestor-or-self::*[starts-with(@xml:base, 'http://')]) or (ancestor-or-self::*[starts-with(@xml:base, 'https://')]))]" role="warn">
+            <assert test="true">
+                &lt;<name/>&gt; without an absolute HTTP @xlink:href is ignored.
+            </assert>
+        </rule>
+        <rule context="self-uri">
+            <let name="content-type" value="@content-type"/>
+            <assert test="count(preceding-sibling::self-uri[@content-type=$content-type])=0" role="warn">
+                Extra &lt;<name/> content-type="<value-of select="$content-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="self-uri_content">
+        <rule context="self-uri[child::node()]" role="warn">
+            <assert test="true">
+                Content inside &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="self-uri_parent">
+        <rule context="self-uri[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="subj-group">
         <rule context="subj-group[not(@subj-group-type)]">
             <assert test="true" role="warn">
@@ -606,7 +660,10 @@
     <pattern id="xlink:href_parent">
         <rule context="@xlink:href[parent::*]">
             <let name="parent" value="name(..)"/>
-            <assert test="$parent='graphic'" role="warn">
+            <assert test="
+                $parent='graphic'
+                or $parent='self-uri'
+            " role="warn">
                 @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>

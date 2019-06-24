@@ -3,13 +3,14 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<bio> is ignored." node="/bio"?>
 <?expected-error message="@xlink:href on <bio> is ignored." node="/bio/@xlink:href"?>
+<?expected-error message="@content-type on <bio> is ignored." node="//@content-type"?>
 <?expected-error message="<title> in <bio> is ignored." node="//title"?>
 <?expected-error message="<p> in <bio> is ignored." node="//p"?>
 <?expected-error message="<fig> in <bio> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <bio> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <bio> is ignored." node="//sec"?>
 
-<bio xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
+<bio xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/" content-type="bio">
     <title/>
     <p/>
     <fig>

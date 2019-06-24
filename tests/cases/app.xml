@@ -2,13 +2,14 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<app> is ignored." node="/app"?>
+<?expected-error message="@content-type on <app> is ignored." node="//@content-type"?>
 <?expected-error message="<title> in <app> is ignored." node="//title"?>
 <?expected-error message="<p> in <app> is ignored." node="//p"?>
 <?expected-error message="<fig> in <app> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <app> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <app> is ignored." node="//sec"?>
 
-<app xmlns:xlink="http://www.w3.org/1999/xlink">
+<app xmlns:xlink="http://www.w3.org/1999/xlink" content-type="app">
     <title/>
     <p/>
     <fig>

@@ -4,5 +4,6 @@
 <?expected-error message="<article-version> is ignored." node="/article-version"?>
 <?expected-error message="@iso-8601-date on <article-version> is ignored." node="//@iso-8601-date"?>
 <?expected-error message="@xlink:href on <article-version> is ignored." node="//@xlink:href"?>
+<?expected-error message="@content-type on <article-version> is ignored." node="//@content-type"?>
 
-<article-version xmlns:xlink="http://www.w3.org/1999/xlink" iso-8601-date="2000-01-02" xlink:href="https://example.com/"/>
+<article-version xmlns:xlink="http://www.w3.org/1999/xlink" iso-8601-date="2000-01-02" xlink:href="https://example.com/" content-type="article-version"/>

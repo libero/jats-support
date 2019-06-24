@@ -3,11 +3,12 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<string-date> is ignored." node="/string-date"?>
 <?expected-error message="@iso-8601-date on <string-date> is ignored." node="//@iso-8601-date"?>
+<?expected-error message="@content-type on <string-date> is ignored." node="//@content-type"?>
 <?expected-error message="<year> in <string-date> is ignored." node="//year"?>
 <?expected-error message="<month> in <string-date> is ignored." node="//month"?>
 <?expected-error message="<day> in <string-date> is ignored." node="//day"?>
 
-<string-date iso-8601-date="2000-01-02">
+<string-date iso-8601-date="2000-01-02" content-type="string-date">
     <year>2000</year>
     <month>1</month>
     <day>1</day>
