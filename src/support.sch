@@ -16,6 +16,8 @@
                 or name()='mimetype'
                 or name()='mime-subtype'
                 or name()='name-style'
+                or name()='person-group-type'
+                or name()='pub-id-type'
                 or name()='subj-group-type'
                 or name()='xlink:href'
                 or name()='xml:base'
@@ -35,12 +37,14 @@
                 or name()='article-categories'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='back'
                 or name()='body'
                 or name()='bold'
                 or name()='caption'
                 or name()='contrib'
                 or name()='contrib-group'
                 or name()='day'
+                or name()='element-citation'
                 or name()='fig'
                 or name()='front'
                 or name()='given-names'
@@ -51,10 +55,15 @@
                 or name()='month'
                 or name()='name'
                 or name()='p'
+                or name()='person-group'
                 or name()='prefix'
                 or name()='pub-date'
+                or name()='pub-id'
+                or name()='ref'
+                or name()='ref-list'
                 or name()='sec'
                 or name()='self-uri'
+                or name()='source'
                 or name()='sub'
                 or name()='subj-group'
                 or name()='subject'
@@ -135,10 +144,32 @@
         </rule>
     </pattern>
 
+    <pattern id="article-title">
+        <rule context="article-title">
+            <assert test="count(preceding-sibling::article-title)=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="article-title_parent">
         <rule context="article-title[parent::*]">
             <let name="parent" value="name(..)"/>
-            <assert test="$parent='title-group'" role="warn">
+            <assert test="
+                $parent='element-citation'
+                or $parent='title-group'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="back_parent">
+        <rule context="back[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='article'
+            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -149,6 +180,17 @@
             <let name="parent" value="name(..)"/>
             <assert test="
                 $parent='article'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="bold_parent">
+        <rule context="bold[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent!='element-citation'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -237,6 +279,25 @@
         <rule context="day[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="$parent='pub-date'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="element-citation">
+        <rule context="element-citation">
+            <assert test="article-title" role="warn">
+                &lt;<name/>&gt; without an &lt;article-title&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="element-citation_parent">
+        <rule context="element-citation[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='ref'
+            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -343,6 +404,17 @@
         </rule>
     </pattern>
 
+    <pattern id="italic_parent">
+        <rule context="italic[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent!='element-citation'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="kwd_parent">
         <rule context="kwd[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -434,7 +506,10 @@
     <pattern id="name_parent">
         <rule context="name[parent::*]">
             <let name="parent" value="name(..)"/>
-            <assert test="$parent='contrib'" role="warn">
+            <assert test="
+                $parent='contrib'
+                or $parent='person-group'
+            " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -456,6 +531,30 @@
                 $parent='body'
                 or $parent='caption'
                 or $parent='sec'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="person-group">
+        <rule context="person-group[not(@person-group-type)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt; without a @person-group-type is ignored.
+            </assert>
+        </rule>
+        <rule context="person-group[not(@person-group-type='author')]">
+            <assert test="true" role="warn">
+                &lt;<name/> person-group-type="<value-of select="@person-group-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="person-group_parent">
+        <rule context="person-group[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='element-citation'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -517,6 +616,58 @@
         </rule>
     </pattern>
 
+    <pattern id="pub-id">
+        <rule context="pub-id[not(@pub-id-type)]">
+            <assert test="true" role="warn">
+                &lt;<name/>&gt; without a @pub-id-type is ignored.
+            </assert>
+        </rule>
+        <rule context="pub-id[not(@pub-id-type='doi')]">
+            <assert test="true" role="warn">
+                &lt;<name/> pub-id-type="<value-of select="@pub-id-type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+        <rule context="pub-id">
+            <let name="type" value="@pub-id-type"/>
+            <assert test="count(preceding-sibling::pub-id[@pub-id-type=$type])=0" role="warn">
+                Extra &lt;<name/> pub-id-type="<value-of select="$type"/>"&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="pub-id_parent">
+        <rule context="pub-id[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='element-citation'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="pub-id-type_parent">
+        <rule context="@pub-id-type[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='pub-id'
+            " role="warn">
+                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="ref-list_parent">
+        <rule context="ref-list[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='back'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="sec_parent">
         <rule context="sec[parent::*]">
             <let name="parent" value="name(..)"/>
@@ -570,6 +721,36 @@
         </rule>
     </pattern>
 
+    <pattern id="source">
+        <rule context="source">
+            <assert test="count(preceding-sibling::source)=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="source_parent">
+        <rule context="source[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent='element-citation'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="sub_parent">
+        <rule context="sub[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent!='element-citation'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="subj-group">
         <rule context="subj-group[not(@subj-group-type)]">
             <assert test="true" role="warn">
@@ -617,6 +798,17 @@
         </rule>
     </pattern>
 
+    <pattern id="sup_parent">
+        <rule context="sup[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent!='element-citation'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
     <pattern id="surname_given-only">
         <rule context="surname[parent::name[@name-style='given-only']]">
             <let name="parent" value="name(..)"/>
@@ -641,6 +833,7 @@
             <assert test="
                 $parent='caption'
                 or $parent='kwd-group'
+                or $parent='ref-list'
                 or $parent='sec'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.

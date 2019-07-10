@@ -3,6 +3,7 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<fig> in <p> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <p> is ignored." node="(//graphic)[2]"?>
+<?expected-error message="<element-citation> in <p> is ignored." node="//element-citation"?>
 
 <p xmlns:xlink="http://www.w3.org/1999/xlink">
     Text
@@ -14,4 +15,7 @@
         <graphic xlink:href="https://example.com/image.jpg"/>
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
+    <element-citation>
+        <article-title/>
+    </element-citation>
 </p>
