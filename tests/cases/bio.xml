@@ -9,6 +9,7 @@
 <?expected-error message="<fig> in <bio> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <bio> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <bio> is ignored." node="//sec"?>
+<?expected-error message="<ref-list> in <bio> is ignored." node="//ref-list"?>
 
 <bio xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/" content-type="bio">
     <title/>
@@ -18,4 +19,5 @@
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
+    <ref-list/>
 </bio>

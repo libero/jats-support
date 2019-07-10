@@ -7,6 +7,7 @@
 <?expected-error message="<fig> in <notes> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <notes> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <notes> is ignored." node="//sec"?>
+<?expected-error message="<ref-list> in <notes> is ignored." node="//ref-list"?>
 
 <notes xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
@@ -16,4 +17,5 @@
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
+    <ref-list/>
 </notes>

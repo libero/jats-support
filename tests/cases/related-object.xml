@@ -4,6 +4,9 @@
 <?expected-error message="<related-object> is ignored." node="/related-object"?>
 <?expected-error message="@xlink:href on <related-object> is ignored." node="//@xlink:href"?>
 <?expected-error message="<article-title> in <related-object> is ignored." node="//article-title"?>
+<?expected-error message="<source> in <related-object> is ignored." node="//source"?>
+<?expected-error message="<person-group> in <related-object> is ignored." node="//person-group"?>
+<?expected-error message="<pub-id> in <related-object> is ignored." node="//pub-id"?>
 <?expected-error message="<year> in <related-object> is ignored." node="//year"?>
 <?expected-error message="<month> in <related-object> is ignored." node="//month"?>
 <?expected-error message="<day> in <related-object> is ignored." node="//day"?>
@@ -11,6 +14,9 @@
 
 <related-object xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <article-title/>
+    <source/>
+    <person-group person-group-type="author"/>
+    <pub-id pub-id-type="doi"/>
     <year>2000</year>
     <month>1</month>
     <day>1</day>

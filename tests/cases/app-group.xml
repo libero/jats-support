@@ -8,6 +8,7 @@
 <?expected-error message="<p> in <app-group> is ignored." node="//p"?>
 <?expected-error message="<fig> in <app-group> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <app-group> is ignored." node="(//graphic)[2]"?>
+<?expected-error message="<ref-list> in <app-group> is ignored." node="//ref-list"?>
 
 <app-group xmlns:xlink="http://www.w3.org/1999/xlink" content-type="app-group">
     <title/>
@@ -20,4 +21,5 @@
         <graphic xlink:href="https://example.com/image.jpg"/>
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
+    <ref-list/>
 </app-group>

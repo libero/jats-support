@@ -2,8 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<citation-alternatives> is ignored." node="/citation-alternatives"?>
-<?expected-error message="<mixed-citation> is ignored." node="//mixed-citation"?>
+<?expected-error message="<element-citation> in <citation-alternatives> is ignored." node="//element-citation"?>
 
 <citation-alternatives>
-    <mixed-citation/>
+    <element-citation>
+        <article-title/>
+    </element-citation>
 </citation-alternatives>

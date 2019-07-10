@@ -5,6 +5,7 @@
 <?expected-error message="@article-type on <sub-article> is ignored." node="//@article-type"?>
 <?expected-error message="<front> in <sub-article> is ignored." node="//front"?>
 <?expected-error message="<body> in <sub-article> is ignored." node="//body"?>
+<?expected-error message="<back> in <sub-article> is ignored." node="//back"?>
 
 <sub-article article-type="research-article">
     <front>
@@ -15,4 +16,5 @@
         </article-meta>
     </front>
     <body/>
+    <back/>
 </sub-article>
