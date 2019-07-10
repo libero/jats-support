@@ -20,6 +20,7 @@ use LogicException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
+use Traversable;
 use function array_map;
 use function array_reduce;
 use function count;
@@ -28,6 +29,7 @@ use function Functional\sort;
 use function implode;
 use function is_int;
 use function is_readable;
+use function iterator_to_array;
 use function preg_match_all;
 use function sprintf;
 use function str_replace;
@@ -74,7 +76,7 @@ final class SchemaTest extends TestCase
         return iterator_to_array($this->extractSchemas($files));
     }
 
-    private function extractSchemas(Finder $files) : iterable
+    private function extractSchemas(Finder $files) : Traversable
     {
         foreach ($files as $file) {
             $input = FluentDOM::load($file->getPathname(), 'text/xml', [Options::ALLOW_FILE => true]);
