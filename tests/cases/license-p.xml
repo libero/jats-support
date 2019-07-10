@@ -5,10 +5,14 @@
 <?expected-error message="@content-type on <license-p> is ignored." node="//@content-type"?>
 <?expected-error message="<fig> in <license-p> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <license-p> is ignored." node="(//graphic)[2]"?>
+<?expected-error message="<element-citation> in <license-p> is ignored." node="//element-citation"?>
 
 <license-p xmlns:xlink="http://www.w3.org/1999/xlink" content-type="license-p">
     <fig>
         <graphic xlink:href="https://example.com/image.jpg"/>
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
+    <element-citation>
+        <article-title/>
+    </element-citation>
 </license-p>

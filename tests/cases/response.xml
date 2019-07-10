@@ -4,6 +4,7 @@
 <?expected-error message="<response> is ignored." node="/response"?>
 <?expected-error message="<front> in <response> is ignored." node="//front"?>
 <?expected-error message="<body> in <response> is ignored." node="//body"?>
+<?expected-error message="<back> in <response> is ignored." node="//back"?>
 
 <response>
     <front>
@@ -14,4 +15,5 @@
         </article-meta>
     </front>
     <body/>
+    <back/>
 </response>

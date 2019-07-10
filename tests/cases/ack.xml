@@ -8,6 +8,7 @@
 <?expected-error message="<fig> in <ack> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <ack> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<sec> in <ack> is ignored." node="//sec"?>
+<?expected-error message="<ref-list> in <ack> is ignored." node="//ref-list"?>
 
 <ack xmlns:xlink="http://www.w3.org/1999/xlink" content-type="ack">
     <title/>
@@ -17,4 +18,5 @@
     </fig>
     <graphic xlink:href="https://example.com/image.jpg"/>
     <sec/>
+    <ref-list/>
 </ack>

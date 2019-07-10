@@ -5,6 +5,9 @@
 <?expected-error message="@related-article-type is ignored." node="//@related-article-type"?>
 <?expected-error message="@xlink:href on <related-article> is ignored." node="//@xlink:href"?>
 <?expected-error message="<article-title> in <related-article> is ignored." node="//article-title"?>
+<?expected-error message="<source> in <related-article> is ignored." node="//source"?>
+<?expected-error message="<person-group> in <related-article> is ignored." node="//person-group"?>
+<?expected-error message="<pub-id> in <related-article> is ignored." node="//pub-id"?>
 <?expected-error message="<year> in <related-article> is ignored." node="//year"?>
 <?expected-error message="<month> in <related-article> is ignored." node="//month"?>
 <?expected-error message="<day> in <related-article> is ignored." node="//day"?>
@@ -12,6 +15,9 @@
 
 <related-article xmlns:xlink="http://www.w3.org/1999/xlink" related-article-type="" xlink:href="https://example.com/">
     <article-title/>
+    <source/>
+    <person-group person-group-type="author"/>
+    <pub-id pub-id-type="doi"/>
     <year>2000</year>
     <month>1</month>
     <day>1</day>

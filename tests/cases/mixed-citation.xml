@@ -4,17 +4,23 @@
 <?expected-error message="<mixed-citation> is ignored." node="/mixed-citation"?>
 <?expected-error message="@xlink:href on <mixed-citation> is ignored." node="//@xlink:href"?>
 <?expected-error message="<article-title> in <mixed-citation> is ignored." node="//article-title"?>
-<?expected-error message="<year> in <mixed-citation> is ignored." node="//year"?>
-<?expected-error message="<month> in <mixed-citation> is ignored." node="//month"?>
 <?expected-error message="<day> in <mixed-citation> is ignored." node="//day"?>
+<?expected-error message="<month> in <mixed-citation> is ignored." node="//month"?>
 <?expected-error message="<name> in <mixed-citation> is ignored." node="//name"?>
+<?expected-error message="<person-group> in <mixed-citation> is ignored." node="//person-group"?>
+<?expected-error message="<pub-id> in <mixed-citation> is ignored." node="//pub-id"?>
+<?expected-error message="<source> in <mixed-citation> is ignored." node="//source"?>
+<?expected-error message="<year> in <mixed-citation> is ignored." node="//year"?>
 
 <mixed-citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <article-title/>
-    <year>2000</year>
-    <month>1</month>
-    <day>1</day>
+    <day>01</day>
+    <month>01</month>
     <name>
         <given-names/>
     </name>
+    <person-group person-group-type="author"/>
+    <pub-id pub-id-type="doi"/>
+    <source/>
+    <year>2000</year>
 </mixed-citation>
