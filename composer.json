@@ -10,6 +10,7 @@
         "php": "^7.3",
         "ext-dom": "*",
         "ext-xsl": "*",
+        "brianium/paratest": "^3.0",
         "fluentdom/fluentdom": "^7.1",
         "jats/schema": "^1.2",
         "libero/coding-standard": "^0.4",

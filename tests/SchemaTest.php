@@ -65,13 +65,13 @@ final class SchemaTest extends TestCase
         }
     }
 
-    public function fileProvider() : iterable
+    public function fileProvider() : array
     {
         $files = Finder::create()->files()
             ->name('*.xml')
             ->in(__DIR__.'/cases');
 
-        return $this->extractSchemas($files);
+        return iterator_to_array($this->extractSchemas($files));
     }
 
     private function extractSchemas(Finder $files) : iterable
