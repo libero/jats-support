@@ -45,6 +45,7 @@
                 or name()='contrib-group'
                 or name()='day'
                 or name()='element-citation'
+                or name()='ext-link'
                 or name()='fig'
                 or name()='front'
                 or name()='given-names'
@@ -297,6 +298,30 @@
             <let name="parent" value="name(..)"/>
             <assert test="
                 $parent='ref'
+            " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="ext-link">
+        <rule context="ext-link[not(contains(@xlink:href, ':') or ancestor-or-self::*[contains(@xml:base, ':')])]" role="warn">
+            <assert test="true">
+                &lt;<name/>&gt; without an absolute @xlink:href is ignored.
+            </assert>
+        </rule>
+    </pattern>
+
+    <pattern id="ext-link_parent">
+        <rule context="ext-link[parent::*]">
+            <let name="parent" value="name(..)"/>
+            <assert test="
+                $parent!='article-meta'
+                and $parent!='contrib'
+                and $parent!='contrib-group'
+                and $parent!='element-citation'
+                and $parent!='fig'
+                and $parent!='graphic'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -854,7 +879,8 @@
         <rule context="@xlink:href[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
-                $parent='graphic'
+                $parent='ext-link'
+                or $parent='graphic'
                 or $parent='self-uri'
             " role="warn">
                 @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
