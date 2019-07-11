@@ -2,8 +2,9 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="Extra <name> is ignored." node="//name[2]"?>
+<?expected-error message="<ext-link> in <contrib> is ignored." node="//ext-link"?>
 
-<contrib contrib-type="author">
+<contrib xmlns:xlink="http://www.w3.org/1999/xlink" contrib-type="author">
     <name>
         <given-names/>
     </name>
@@ -12,4 +13,5 @@
     </name>
     <aff/>
     <aff/>
+    <ext-link xlink:href="http://example.com/">Link</ext-link>
 </contrib>
