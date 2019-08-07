@@ -883,7 +883,7 @@
         </rule>
     </pattern>
 
-    <pattern id="xlink_href_parent">
+    <pattern id="xlink-href_parent">
         <rule context="@xlink:href[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
