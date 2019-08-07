@@ -5,6 +5,7 @@
 <?expected-error message="<italic> in <element-citation> is ignored." node="//italic"?>
 <?expected-error message="Extra <article-title> is ignored." node="//article-title[2]"?>
 <?expected-error message="<day> in <element-citation> is ignored." node="//day"?>
+<?expected-error message="<ext-link> in <element-citation> is ignored." node="//ext-link"?>
 <?expected-error message="<month> in <element-citation> is ignored." node="//month"?>
 <?expected-error message="<name> in <element-citation> is ignored." node="//name"?>
 <?expected-error message="Extra <pub-id pub-id-type=\"doi\"> is ignored." node="//pub-id[@pub-id-type='doi'][2]"?>
@@ -13,12 +14,13 @@
 <?expected-error message="<sub> in <element-citation> is ignored." node="//sub"?>
 <?expected-error message="<sup> in <element-citation> is ignored." node="//sup"?>
 
-<element-citation>
+<element-citation xmlns:xlink="http://www.w3.org/1999/xlink">
     <bold/>
     <italic/>
     <article-title/>
     <article-title/>
     <day>01</day>
+    <ext-link xlink:href="http://example.com/">Link</ext-link>
     <month>01</month>
     <name>
         <given-names/>

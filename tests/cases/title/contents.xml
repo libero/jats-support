@@ -3,8 +3,9 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<element-citation> in <title> is ignored." node="//element-citation"?>
 
-<title>
+<title xmlns:xlink="http://www.w3.org/1999/xlink">
     Text
+    <ext-link xlink:href="http://example.com/">Link</ext-link>
     <bold>Bold</bold>
     <italic>Italic</italic>
     <sub>Sub</sub>

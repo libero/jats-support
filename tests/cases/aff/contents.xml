@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<ext-link> in <contrib-group> is ignored." node="//ext-link"?>
 
-<contrib-group xmlns:xlink="http://www.w3.org/1999/xlink">
-    <contrib contrib-type="author">
-        <name>
-            <given-names/>
-        </name>
-    </contrib>
+<aff xmlns:xlink="http://www.w3.org/1999/xlink">
+    Text
     <ext-link xlink:href="http://example.com/">Link</ext-link>
-</contrib-group>
+    <bold>Bold</bold>
+    <italic>Italic</italic>
+    <sub>Sub</sub>
+    <sup>Sup</sup>
+</aff>

@@ -1,0 +1,4 @@
+* @libero/php-reviewers
+/src/ @libero/xml-reviewers
+/tests/ @libero/xml-reviewers
+*.php @libero/php-reviewers

@@ -3,6 +3,7 @@
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<kwd-group> in <fig> is ignored." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <fig> is ignored." node="//alt-text"?>
+<?expected-error message="<ext-link> in <fig> is ignored." node="//ext-link"?>
 <?expected-error message="<p> in <fig> is ignored." node="//p"?>
 <?expected-error message="<graphic> is ignored if it is not a JPEG." node="//graphic[1]"?>
 <?expected-error message="<graphic> is ignored if it is not a JPEG." node="(//graphic)[2]"?>
@@ -15,6 +16,7 @@
         <kwd/>
     </kwd-group>
     <alt-text/>
+    <ext-link xlink:href="http://example.com/">Link</ext-link>
     <p/>
     <graphic xlink:href="https://example.com/image.tif"/>
     <graphic xlink:href="https://example.com/image" mimetype="image" mime-subtype="tiff"/>
