@@ -152,6 +152,14 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="title-group">
+        <rule context="title-group" role="error">
+            <assert test="article-title">
+                &lt;<name/>&gt; requires a &lt;article-title&gt;.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="article-title_parent">
         <rule context="article-title[parent::*]">
@@ -875,7 +883,7 @@
         </rule>
     </pattern>
 
-    <pattern id="xlink:href_parent">
+    <pattern id="xlink_href_parent">
         <rule context="@xlink:href[parent::*]">
             <let name="parent" value="name(..)"/>
             <assert test="
