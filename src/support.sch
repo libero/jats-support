@@ -914,7 +914,7 @@
                 &lt;article-id&gt; <value-of select="article-id[@pub-id-type='publisher-id']"/> is used as article-id.
             </report>
             <report test="not(article-id[@pub-id-type='publisher-id']) and article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]" role="info">
-                &lt;article-id&gt; <value-of select="article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]"/> is used as article-id.
+                &lt;article-id&gt; <value-of select="article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')][1]"/> is used as article-id.
             </report>
             <report test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and elocation-id" role="info">
                 &lt;elocation-id&gt; <value-of select="elocation-id"/> is used as article-id.
