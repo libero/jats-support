@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="support.sch">
+    <x:scenario label="demo-01">
+
+        <x:scenario label="year">
+            <x:scenario label="year-assert-1">
+                <x:scenario label="pass">
+                    <x:context>
+                        <year>1999</year>
+                    </x:context>
+                    <x:expect-valid/>
+                </x:scenario>
+                <x:scenario label="fail">
+                    <x:context>
+                        <year>Nineteen-ninety-nine</year>
+                    </x:context>
+                    <x:expect-assert id="year-assert-1" role="warn"/>
+                </x:scenario>
+            </x:scenario>
+            <x:scenario label="year-assert-2">
+                <x:scenario label="pass">
+                    <x:context>
+                        <pub-date>
+                            <year>1999</year>
+                        </pub-date>
+                    </x:context>
+                    <x:expect-valid/>
+                </x:scenario>
+                <x:scenario label="fail">
+                    <x:context>
+                        <element-citation>
+                            <year>1999</year>
+                            <year>2000</year>
+                        </element-citation>
+                    </x:context>
+                    <x:expect-assert id="year-assert-2" role="warn"/>
+                </x:scenario>
+            </x:scenario>
+        </x:scenario>
+
+        <x:scenario label="year_parent">
+            <x:scenario label="pass">
+                <x:context>
+                    <pub-date>
+                        <year>1999</year>
+                    </pub-date>
+                </x:context>
+                <x:expect-valid/>
+            </x:scenario>
+            <x:scenario label="fail">
+                <x:context>
+                    <element-citation>
+                        <year>1999</year>
+                    </element-citation>
+                </x:context>
+                <x:expect-assert id="year_parent-assert-1" role="warn"/>
+            </x:scenario>
+        </x:scenario>
+
+        <x:scenario label="article-id logic">
+            <x:scenario label="article-id logic 1">
+                <x:context>
+                    <article>
+                        <front>
+                            <article-meta>
+                                <article-id pub-id-type="publisher-id">00666</article-id>
+                            </article-meta>
+                        </front>
+                    </article>
+                </x:context>
+                <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+                <x:expect-report id="article-id-logic-report-1" role="info"/>
+            </x:scenario>
+
+            <x:scenario label="article-id logic 2">
+                <x:context>
+                    <article>
+                        <front>
+                            <article-meta>
+                                <article-id pub-id-type="pmc">not this</article-id>
+                                <article-id pub-id-type="doi">not this</article-id>
+                                <article-id pub-id-type="manuscript">00666</article-id>
+                            </article-meta>
+                        </front>
+                    </article>
+                </x:context>
+                <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+                <x:expect-report id="article-id-logic-report-2" role="info"/>
+            </x:scenario>
+
+            <x:scenario label="article-id logic 3">
+                <x:context>
+                    <article>
+                        <front>
+                            <article-meta>
+                                <article-id pub-id-type="pmc">not this</article-id>
+                                <article-id pub-id-type="doi">not this</article-id>
+                                <elocation-id>00666</elocation-id>
+                            </article-meta>
+                        </front>
+                    </article>
+                </x:context>
+                <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+                <x:expect-report id="article-id-logic-report-3" role="info"/>
+            </x:scenario>
+
+            <x:scenario label="article-id logic 4">
+                <x:context>
+                    <article>
+                        <front>
+                            <article-meta>
+                                <article-id pub-id-type="pmc">not this</article-id>
+                                <article-id pub-id-type="doi">00666</article-id>
+                            </article-meta>
+                        </front>
+                    </article>
+                </x:context>
+                <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+                <x:expect-report id="article-id-logic-report-4" role="info"/>
+            </x:scenario>
+
+            <x:scenario label="article-id logic 5">
+                <x:context>
+                    <article>
+                        <front>
+                            <article-meta>
+                                <article-id pub-id-type="pmc">not this</article-id>
+                            </article-meta>
+                        </front>
+                    </article>
+                </x:context>
+                <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+                <x:expect-report id="article-id-logic-report-5" role="error"/>
+            </x:scenario>
+        </x:scenario>
+    </x:scenario>
+</x:description>
