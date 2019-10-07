@@ -1,0 +1,882 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src/schematron.sch">
+  <x:scenario label="attribute-whitelist-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="attribute-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="attribute-whitelist-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="attribute-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-whitelist-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="element-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-whitelist-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="aff_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="aff_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="aff_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alt-text-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="alt-text-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alt-text-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="alt-text-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alt-text_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="alt-text_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alt-text_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="alt-text_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alternatives_child-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="alternatives_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alternatives_child-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="alternatives_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alternatives-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="alternatives-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="alternatives-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="alternatives-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-type-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-type-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-type-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-type-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-type_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-categories_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-categories_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-categories_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-categories_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-meta_title-group-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-meta_title-group-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="article-meta_title-group-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-meta_title-group-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="article-title-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-title-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-title-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-title-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-title_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="article-title_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-title_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="article-title_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="back_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="back_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="back_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="back_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="body_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="body_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="body_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="body_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="bold_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="bold_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="bold_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="bold_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="caption_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="caption_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="caption_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="content-type_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="content-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="content-type_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="content-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-group-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-group-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-group-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="contrib-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="contrib-group-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="contrib-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="date-type_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="date-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="date-type_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="date-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="day-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="day-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="day-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="day-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="day_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="day_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="day_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="disp-formula_child-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="disp-formula_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="disp-formula_child-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="disp-formula_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="disp-formula_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="disp-formula_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="disp-formula_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="disp-formula_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-citation-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="element-citation-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-citation-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="element-citation-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-citation_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="element-citation_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="element-citation_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="element-citation_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="ext-link-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="ext-link-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="ext-link-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="ext-link-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="ext-link_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="ext-link_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="ext-link_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="ext-link_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="fig-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="fig-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="fig-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="fig-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="fig_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="fig_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="fig_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="front_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="front_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="front_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="front_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="given-names_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="given-names_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="given-names_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="given-names_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="graphic-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="graphic-assert-2" role=""/>
+  </x:scenario>
+  <x:scenario label="graphic-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="graphic-assert-2" role=""/>
+  </x:scenario>
+  <x:scenario label="graphic-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="graphic-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="graphic-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="graphic-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="graphic_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="graphic_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="graphic_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="iso-8601-date_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="iso-8601-date_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="inline-formula_child-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="inline-formula_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="inline-formula_child-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="inline-formula_child-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="inline-formula_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="inline-formula_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="inline-formula_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="inline-formula_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="italic_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="italic_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="italic_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="italic_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="kwd_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="kwd-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="kwd-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="kwd-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="kwd-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group_kwd-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="kwd-group_kwd-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group_kwd-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="kwd-group_kwd-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-4-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="kwd-group-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="kwd-group-assert-4-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="label_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="label_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="label_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="label_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mimetype_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="mimetype_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mimetype_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mime-subtype_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="mime-subtype_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mime-subtype_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_descendants-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="mmlmath_descendants-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_descendants-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="mmlmath_descendants-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="mmlmath_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="mmlmath_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_attributes-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="mmlmath_attributes-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="mmlmath_attributes-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="mmlmath_attributes-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="month-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="month-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="month-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="month-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="month-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="month-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="month-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="name-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="name-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="name-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="name-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-style_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="name-style_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="name-style_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="name-style_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="p_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="p_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="p_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="p_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="person-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="person-group-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="person-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="person-group-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="person-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="person-group_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="person-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="prefix_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="prefix_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="prefix_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-date-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-date-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-date-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-date-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-date-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-date-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-4-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-date-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date-assert-4-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-date-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-date_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-date_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-id-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-id-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-id-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-id-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-id-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-id-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-id_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-type_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="pub-id-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="pub-id-type_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="pub-id-type_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="ref-list_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="ref-list_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="ref-list_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sec_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="sec_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sec_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="self-uri-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="self-uri-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="self-uri-assert-2" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="self-uri-assert-2" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-4-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="self-uri-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="self-uri-assert-4-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="self-uri-assert-4" role="warn"/>
+  </x:scenario>
+  <x:scenario label="self-uri_content-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="self-uri_content-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri_content-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="self-uri_content-assert-1" role=""/>
+  </x:scenario>
+  <x:scenario label="self-uri_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="self-uri_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="self-uri_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="source-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="source-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="source-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="source-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="source-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="source-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="source-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="source-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sub_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="sub_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sub_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="sub_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group-report-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="subj-group-report-1" role="info"/>
+  </x:scenario>
+  <x:scenario label="subj-group-report-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="subj-group-report-1" role="info"/>
+  </x:scenario>
+  <x:scenario label="subj-group-report-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="subj-group-report-2" role="info"/>
+  </x:scenario>
+  <x:scenario label="subj-group-report-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="subj-group-report-2" role="info"/>
+  </x:scenario>
+  <x:scenario label="subj-group_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="subj-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group_subject-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="subj-group_subject-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group_subject-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="subj-group_subject-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group_subject-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="subj-group_subject-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="subj-group_subject-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="subj-group_subject-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="suffix_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="suffix_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="suffix_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sup_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="sup_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="sup_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="sup_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="surname_given-only-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="surname_given-only-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="surname_given-only-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="surname_given-only-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="surname_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="surname_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="surname_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="tex-math_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="tex-math_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="tex-math_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="tex-math_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="tex-math_child-report-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="tex-math_child-report-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="tex-math_child-report-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="tex-math_child-report-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="title_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="title_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="title_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="title_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="title-group_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="title-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="title-group_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="title-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="xlink-href_parent-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="xlink-href_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="xlink-href_parent-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="year-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="year-assert-1" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="year-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="year-assert-2" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-assert id="year-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="year-assert-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-assert id="year-assert-3" role="warn"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-1-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="article-id-logic-report-1" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-1-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="article-id-logic-report-1" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-2-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="article-id-logic-report-2" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-2-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="article-id-logic-report-2" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-3-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="article-id-logic-report-3" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-3-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="article-id-logic-report-3" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-4-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="article-id-logic-report-4" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-4-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="article-id-logic-report-4" role="info"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-5-pass">
+    <x:context href="./cases/pass.xml"/>
+    <x:expect-not-report id="article-id-logic-report-5" role="error"/>
+  </x:scenario>
+  <x:scenario label="article-id-logic-report-5-fail">
+    <x:context href="./cases/fail.xml"/>
+    <x:expect-report id="article-id-logic-report-5" role="error"/>
+  </x:scenario>
+</x:description>
