@@ -43,8 +43,6 @@
                 or name()='frame'
                 or name()='groupalign'
                 or name()='height'
-                or name()='id'
-                or name()='id'
                 or name()='indentalign'
                 or name()='indenttarget'
                 or name()='iso-8601-date'
@@ -235,6 +233,15 @@
         </rule>
     </pattern>
     
+    <pattern id="article-id">
+        <rule context="article-id">
+            <let name="parent" value="name(..)"/>
+            <assert id="article-id-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="article-id-logic">
         <rule context="article-meta">
             <report id="article-id-logic-report-1" test="article-id[@pub-id-type='publisher-id']" role="info">
@@ -335,12 +342,12 @@
 
     <pattern id="contrib">
         <rule context="contrib[not(@contrib-type)]">
-            <assert id="contrib-assert-1" test="true()" role="warn">
+            <assert id="contrib-assert-1" test="true" role="warn">
                 &lt;<name/>&gt; without a @contrib-type is ignored.
             </assert>
         </rule>
         <rule context="contrib[not(@contrib-type='author')]">
-            <assert id="contrib-assert-2" test="true()" role="warn">
+            <assert id="contrib-assert-2" test="true" role="warn">
                 &lt;<name/> contrib-type="<value-of select="@contrib-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -407,7 +414,7 @@
     <pattern id="disp-formula_parent">
         <rule context="disp-formula">
             <let name="parent" value="name(..)"/>
-            <assert id="disp-formula_parent-assert-1" test="$parent='p' or $parent='th' or $parent='td' or $parent='body' or $parent='sec' or $parent='app' or $parent='disp-quote' or $parent='boxed-text'" role="warn">
+            <assert id="disp-formula_parent-assert-1" test="$parent='p' or $parent='body' or $parent='sec' or $parent='app' or $parent='disp-quote' or $parent='boxed-text'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -558,14 +565,6 @@
             </assert>
         </rule>
     </pattern>
-
-    <pattern id="kwd-group-1">
-        <rule context="kwd-group[not(@kwd-group-type)]">
-            <assert id="kwd-group-assert-1" test="title" role="warn">
-                &lt;<name/>&gt; is ignored if there is no &lt;title&gt; or @kwd-group-type.
-            </assert>
-        </rule>
-    </pattern>
     
     <pattern id="kwd-group-2">
         <rule context="kwd-group">
@@ -573,6 +572,7 @@
             <assert id="kwd-group-assert-2" test="
                 @kwd-group-type='author-keywords'
                 or @kwd-group-type='research-organism'
+                or child::title
             " role="warn">
                 &lt;<name/>&gt; is ignored if there is no &lt;title&gt;.
             </assert>
@@ -786,14 +786,12 @@
 
     <pattern id="person-group-1">
         <rule context="person-group[not(@person-group-type)]">
-            <assert id="person-group-assert-1" test="true()" role="warn">
+            <assert id="person-group-assert-1" test="true" role="warn">
                 &lt;<name/>&gt; without a @person-group-type is ignored.
             </assert>
         </rule>
-    </pattern>
-    <pattern id="person-group-2">
         <rule context="person-group[not(@person-group-type='author')]">
-            <assert id="person-group-assert-2" test="true()" role="warn">
+            <assert id="person-group-assert-2" test="true" role="warn">
                 &lt;<name/> person-group-type="<value-of select="@person-group-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -821,12 +819,12 @@
 
     <pattern id="pub-date">
         <rule context="pub-date[not(@date-type)]">
-            <assert id="pub-date-assert-1" test="true()" role="warn">
+            <assert id="pub-date-assert-1" test="true" role="warn">
                 &lt;<name/>&gt; without a @date-type is ignored.
             </assert>
         </rule>
         <rule context="pub-date[not(@date-type='pub')]">
-            <assert id="pub-date-assert-2" test="true()" role="warn">
+            <assert id="pub-date-assert-2" test="true" role="warn">
                 &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -867,12 +865,12 @@
 
     <pattern id="pub-id">
         <rule context="pub-id[not(@pub-id-type)]">
-            <assert id="pub-id-assert-1" test="true()" role="warn">
+            <assert id="pub-id-assert-1" test="true" role="warn">
                 &lt;<name/>&gt; without a @pub-id-type is ignored.
             </assert>
         </rule>
         <rule context="pub-id[not(@pub-id-type='doi')]">
-            <assert id="pub-id-assert-2" test="true()" role="warn">
+            <assert id="pub-id-assert-2" test="true" role="warn">
                 &lt;<name/> pub-id-type="<value-of select="@pub-id-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -932,12 +930,12 @@
 
     <pattern id="self-uri">
         <rule context="self-uri[not(@content-type)]" role="warn">
-            <assert id="self-uri-assert-1" test="true()">
+            <assert id="self-uri-assert-1" test="true">
                 &lt;<name/>&gt; without a @content-type is ignored.
             </assert>
         </rule>
         <rule context="self-uri[not(@content-type='pdf')]" role="warn">
-            <assert id="self-uri-assert-2" test="true()">
+            <assert id="self-uri-assert-2" test="true">
                 &lt;<name/> content-type="<value-of select="@content-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -951,7 +949,7 @@
 
     <pattern id="self-uri_content">
         <rule context="self-uri[child::node()]" role="warn">
-            <assert id="self-uri_content-assert-1" test="true()">
+            <assert id="self-uri_content-assert-1" test="true">
                 Content inside &lt;<name/>&gt; is ignored.
             </assert>
         </rule>
@@ -1049,7 +1047,7 @@
     <pattern id="surname_given-only">
         <rule context="surname[parent::name[@name-style='given-only']]">
             <let name="parent" value="name(..)"/>
-            <assert id="surname_given-only-assert-1" test="true()" role="warn">
+            <assert id="surname_given-only-assert-1" test="true" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/> name-style="given-only"&gt; is ignored.
             </assert>
         </rule>

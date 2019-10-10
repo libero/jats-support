@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<bold> in <element-citation> is ignored." node="//bold"?>
@@ -13,7 +12,8 @@
 <?expected-error message="<year> in <element-citation> is ignored." node="//year"?>
 <?expected-error message="<sub> in <element-citation> is ignored." node="//sub"?>
 <?expected-error message="<sup> in <element-citation> is ignored." node="//sup"?>
-
+<?expected-error message="<element-citation> in <> is ignored." node="/element-citation"?>
+ 
 <element-citation xmlns:xlink="http://www.w3.org/1999/xlink">
     <bold/>
     <italic/>

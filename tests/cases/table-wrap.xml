@@ -5,6 +5,7 @@
 <?expected-error message="@content-type on <table-wrap> is ignored." node="//@content-type"?>
 <?expected-error message="<caption> in <table-wrap> is ignored." node="//caption"?>
 <?expected-error message="<kwd-group> in <table-wrap> is ignored." node="//kwd-group"?>
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <table-wrap> is ignored." node="//alt-text"?>
 <?expected-error message="<graphic> in <table-wrap> is ignored." node="//graphic"?>
 

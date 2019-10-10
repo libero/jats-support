@@ -4,6 +4,7 @@
 <?expected-error message="<statement> is ignored." node="/statement"?>
 <?expected-error message="@content-type on <statement> is ignored." node="//@content-type"?>
 <?expected-error message="<title> in <statement> is ignored." node="//title"?>
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<kwd-group> in <statement> is ignored." node="//kwd-group"?>
 <?expected-error message="<p> in <statement> is ignored." node="//p"?>
 

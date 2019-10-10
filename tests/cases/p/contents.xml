@@ -4,6 +4,7 @@
 <?expected-error message="<fig> in <p> is ignored." node="//fig"?>
 <?expected-error message="<graphic> in <p> is ignored." node="(//graphic)[2]"?>
 <?expected-error message="<element-citation> in <p> is ignored." node="//element-citation"?>
+<?expected-error message="<p> in <> is ignored." node="//p"?>
 
 <p xmlns:xlink="http://www.w3.org/1999/xlink">
     Text

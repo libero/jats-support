@@ -4,6 +4,7 @@
 <?expected-error message="<sec-meta> is ignored." node="/sec-meta"?>
 <?expected-error message="<contrib-group> in <sec-meta> is ignored." node="//contrib-group"?>
 <?expected-error message="<kwd-group> in <sec-meta> is ignored." node="//kwd-group"?>
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 
 <sec-meta>
     <contrib-group>

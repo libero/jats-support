@@ -8,6 +8,7 @@
 <?expected-error message="@content-type on <supplementary-material> is ignored." node="//@content-type"?>
 <?expected-error message="<caption> in <supplementary-material> is ignored." node="//caption"?>
 <?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <supplementary-material> is ignored." node="//alt-text"?>
 <?expected-error message="<p> in <supplementary-material> is ignored." node="//p"?>
 <?expected-error message="<graphic> in <supplementary-material> is ignored." node="//graphic"?>

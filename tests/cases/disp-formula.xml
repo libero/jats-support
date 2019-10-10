@@ -4,8 +4,11 @@
 <?expected-error message="<disp-formula> is ignored." node="/disp-formula"?>
 <?expected-error message="@content-type on <disp-formula> is ignored." node="//@content-type"?>
 <?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
+<?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<graphic> in <disp-formula> is ignored." node="//graphic"?>
 <?expected-error message="<alt-text> in <disp-formula> is ignored." node="//alt-text"?>
+<?expected-error message="<disp-formula> in <> is ignored." node="/disp-formula"?>
 
 <disp-formula xmlns:xlink="http://www.w3.org/1999/xlink" content-type="disp-formula">
     <kwd-group>
