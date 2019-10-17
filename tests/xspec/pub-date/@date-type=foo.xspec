@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="pub-date/@date-type=foo">
+    <x:context href="../../cases/pub-date/@date-type=foo"/>
+    <x:expect-report id="pub-date-assert-2" role="warn"/>
+    <x:expect-report id="pub-date_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

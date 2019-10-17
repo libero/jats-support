@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="contrib-group/content">
+    <x:context href="../../cases/contrib-group/content"/>
+    <x:expect-report id="contrib-group-assert-1" role="warn"/>
+    <x:expect-report id="ext-link-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

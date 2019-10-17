@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="alt-text/@xml:lang">
+    <x:context href="../../cases/alt-text/@xml:lang"/>
+    <x:expect-report id="alt-text-assert-2" role="warn"/>
+  </x:scenario>
+</x:description>

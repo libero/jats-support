@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="element-citation/@publisher-type">
+    <x:context href="../../cases/element-citation/@publisher-type"/>
+    <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    <x:expect-report id="element-citation-assert-2" role="warn"/>
+  </x:scenario>
+</x:description>

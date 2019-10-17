@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="subj-group/@subj-group-type=heading">
+    <x:context href="../../cases/subj-group/@subj-group-type=heading"/>
+    <x:expect-report id="subj-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

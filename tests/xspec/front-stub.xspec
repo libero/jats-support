@@ -1,0 +1,13 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="front-stub">
+    <x:context href="../../cases/front-stub"/>
+    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
+    <x:expect-report id="aff_parent-assert-1" role="warn"/>
+    <x:expect-report id="article-categories_parent-assert-1" role="warn"/>
+    <x:expect-report id="contrib-group-assert-1" role="warn"/>
+    <x:expect-report id="kwd-group-assert-4" role="warn"/>
+    <x:expect-report id="pub-date_parent-assert-1" role="warn"/>
+    <x:expect-report id="self-uri_parent-assert-1" role="warn"/>
+    <x:expect-report id="title-group_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

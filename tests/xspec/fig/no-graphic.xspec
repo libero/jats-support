@@ -1,0 +1,8 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="fig/no-graphic">
+    <x:context href="../../cases/fig/no-graphic"/>
+    <x:expect-report id="fig-assert-1" role="warn"/>
+    <x:expect-report id="fig_parent-assert-1" role="warn"/>
+    <x:expect-report id="graphic-assert-2" role=""/>
+  </x:scenario>
+</x:description>

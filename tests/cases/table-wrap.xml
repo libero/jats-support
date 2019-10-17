@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<table-wrap> is ignored." node="/table-wrap"?>
+<?expected-error message="<table-wrap> in <> is ignored." node="/table-wrap"?>
 <?expected-error message="@content-type on <table-wrap> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <table-wrap> is ignored." node="//caption"?>
 <?expected-error message="<kwd-group> in <table-wrap> is ignored." node="//kwd-group"?>
-<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <table-wrap> is ignored." node="//alt-text"?>
 <?expected-error message="<graphic> in <table-wrap> is ignored." node="//graphic"?>
 

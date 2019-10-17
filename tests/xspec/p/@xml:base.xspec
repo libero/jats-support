@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="p/@xml:base">
+    <x:context href="../../cases/p/@xml:base"/>
+    <x:expect-report id="p-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

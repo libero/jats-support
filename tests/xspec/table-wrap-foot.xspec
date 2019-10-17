@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="table-wrap-foot">
+    <x:context href="../../cases/table-wrap-foot"/>
+    <x:expect-report id="p-assert-1" role="warn"/>
+    <x:expect-report id="title_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

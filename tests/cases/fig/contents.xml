@@ -2,7 +2,6 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<kwd-group> in <fig> is ignored." node="//kwd-group"?>
-<?expected-error message="<kwd-group> is ignored if there is no <title>." node="//kwd-group"?>
 <?expected-error message="<alt-text> in <fig> is ignored." node="//alt-text"?>
 <?expected-error message="<ext-link> in <fig> is ignored." node="//ext-link"?>
 <?expected-error message="<p> in <fig> is ignored." node="//p"?>

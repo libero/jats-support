@@ -1,0 +1,11 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="string-date">
+    <x:context href="../../cases/string-date"/>
+    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
+    <x:expect-report id="content-type-assert-1" role="warn"/>
+    <x:expect-report id="day-assert-3" role="warn"/>
+    <x:expect-report id="iso-8601-date_parent-assert-1" role="warn"/>
+    <x:expect-report id="month-assert-3" role="warn"/>
+    <x:expect-report id="year-assert-3" role="warn"/>
+  </x:scenario>
+</x:description>

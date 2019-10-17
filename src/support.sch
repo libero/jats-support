@@ -9,85 +9,160 @@
     -->
     
     <pattern id="attribute-whitelist">
-        <rule context="@*">
-            <assert id="attribute-whitelist-assert-1" test="
-                name()='accent'
-                or name()='accentunder'
-                or name()='actiontype'
-                or name()='align'
-                or name()='article-type'
-                or name()='bevelled'
-                or name()='class'
-                or name()='close'
-                or name()='columnalign'
-                or name()='columnlines'
-                or name()='columnspacing'
-                or name()='columnspan'
-                or name()='content-type'
-                or name()='contrib-type'
-                or name()='date-type'
-                or name()='definitionURL'
-                or name()='denomalign'
-                or name()='depth'
-                or name()='displaystyle'
-                or name()='display'
-                or name()='encoding'
-                or name()='equalcolumns'
-                or name()='equalrows'
-                or name()='fence'
-                or name()='fontfamily'
-                or name()='fontsize'
-                or name()='fontstyle'
-                or name()='fontweight'
-                or name()='form'
-                or name()='frame'
-                or name()='groupalign'
-                or name()='height'
-                or name()='indentalign'
-                or name()='indenttarget'
-                or name()='iso-8601-date'
-                or name()='kwd-group-type'
-                or name()='largeop'
-                or name()='linebreak'
-                or name()='linebreakstyle'
-                or name()='linethickness'
-                or name()='lspace'
-                or name()='mathbackground'
-                or name()='mathcolor'
-                or name()='mathsize'
-                or name()='mathvariant'
-                or name()='maxsize'
-                or name()='mime-subtype'
-                or name()='mimetype'
-                or name()='minsize'
-                or name()='movablelimits'
-                or name()='name-style'
-                or name()='notation'
-                or name()='numalign'
-                or name()='open'
-                or name()='person-group-type'
-                or name()='pub-id-type'
-                or name()='rowalign'
-                or name()='rowlines'
-                or name()='rowspacing'
-                or name()='rowspan'
-                or name()='rspace'
-                or name()='scriptlevel'
-                or name()='separator'
-                or name()='separators'
-                or name()='stretchy'
-                or name()='style'
-                or name()='subj-group-type'
-                or name()='subscriptshift'
-                or name()='superscriptshift'
-                or name()='symmetric'
-                or name()='width'
-                or name()='xlink:href'
-                or name()='xml:base'
-                or name()='xml:lang'
-            " role="warn">
-                @<name/> is ignored.
-            </assert>
+        <rule context="*[@*]">
+            <report id="attribute-whitelist-assert-1" test="@*[name()!='accent'
+                and name()!='accentunder'
+                and name()!='actiontype'
+                and name()!='align'
+                and name()!='article-type'
+                and name()!='bevelled'
+                and name()!='class'
+                and name()!='close'
+                and name()!='colspan'
+                and name()!='columnalign'
+                and name()!='columnlines'
+                and name()!='columnspacing'
+                and name()!='columnspan'
+                and name()!='content-type'
+                and name()!='contrib-type'
+                and name()!='date-type'
+                and name()!='definitionURL'
+                and name()!='denomalign'
+                and name()!='depth'
+                and name()!='displaystyle'
+                and name()!='display'
+                and name()!='encoding'
+                and name()!='equalcolumns'
+                and name()!='equalrows'
+                and name()!='fence'
+                and name()!='fontfamily'
+                and name()!='fontsize'
+                and name()!='fontstyle'
+                and name()!='fontweight'
+                and name()!='fandm'
+                and name()!='frame'
+                and name()!='groupalign'
+                and name()!='height'
+                and name()!='indentalign'
+                and name()!='indenttarget'
+                and name()!='iso-8601-date'
+                and name()!='kwd-group-type'
+                and name()!='largeop'
+                and name()!='linebreak'
+                and name()!='linebreakstyle'
+                and name()!='linethickness'
+                and name()!='lspace'
+                and name()!='mathbackground'
+                and name()!='mathcoland'
+                and name()!='mathsize'
+                and name()!='mathvariant'
+                and name()!='maxsize'
+                and name()!='mime-subtype'
+                and name()!='mimetype'
+                and name()!='minsize'
+                and name()!='movablelimits'
+                and name()!='name-style'
+                and name()!='notation'
+                and name()!='numalign'
+                and name()!='open'
+                and name()!='person-group-type'
+                and name()!='pub-id-type'
+                and name()!='rowalign'
+                and name()!='rowlines'
+                and name()!='rowspacing'
+                and name()!='rowspan'
+                and name()!='rspace'
+                and name()!='scriptlevel'
+                and name()!='separatand'
+                and name()!='separatands'
+                and name()!='stretchy'
+                and name()!='style'
+                and name()!='subj-group-type'
+                and name()!='subscriptshift'
+                and name()!='superscriptshift'
+                and name()!='symmetric'
+                and name()!='valign'
+                and name()!='width'
+                and name()!='xlink:href'
+                and name()!='xml:base'
+                and name()!='xml:lang']" role="warn">
+                @<value-of select="name(@*[name()!='accent'
+                    and name()!='accentunder'
+                    and name()!='actiontype'
+                    and name()!='align'
+                    and name()!='article-type'
+                    and name()!='bevelled'
+                    and name()!='class'
+                    and name()!='close'
+                    and name()!='colspan'
+                    and name()!='columnalign'
+                    and name()!='columnlines'
+                    and name()!='columnspacing'
+                    and name()!='columnspan'
+                    and name()!='content-type'
+                    and name()!='contrib-type'
+                    and name()!='date-type'
+                    and name()!='definitionURL'
+                    and name()!='denomalign'
+                    and name()!='depth'
+                    and name()!='displaystyle'
+                    and name()!='display'
+                    and name()!='encoding'
+                    and name()!='equalcolumns'
+                    and name()!='equalrows'
+                    and name()!='fence'
+                    and name()!='fontfamily'
+                    and name()!='fontsize'
+                    and name()!='fontstyle'
+                    and name()!='fontweight'
+                    and name()!='fandm'
+                    and name()!='frame'
+                    and name()!='groupalign'
+                    and name()!='height'
+                    and name()!='indentalign'
+                    and name()!='indenttarget'
+                    and name()!='iso-8601-date'
+                    and name()!='kwd-group-type'
+                    and name()!='largeop'
+                    and name()!='linebreak'
+                    and name()!='linebreakstyle'
+                    and name()!='linethickness'
+                    and name()!='lspace'
+                    and name()!='mathbackground'
+                    and name()!='mathcoland'
+                    and name()!='mathsize'
+                    and name()!='mathvariant'
+                    and name()!='maxsize'
+                    and name()!='mime-subtype'
+                    and name()!='mimetype'
+                    and name()!='minsize'
+                    and name()!='movablelimits'
+                    and name()!='name-style'
+                    and name()!='notation'
+                    and name()!='numalign'
+                    and name()!='open'
+                    and name()!='person-group-type'
+                    and name()!='pub-id-type'
+                    and name()!='rowalign'
+                    and name()!='rowlines'
+                    and name()!='rowspacing'
+                    and name()!='rowspan'
+                    and name()!='rspace'
+                    and name()!='scriptlevel'
+                    and name()!='separatand'
+                    and name()!='separatands'
+                    and name()!='stretchy'
+                    and name()!='style'
+                    and name()!='subj-group-type'
+                    and name()!='subscriptshift'
+                    and name()!='superscriptshift'
+                    and name()!='symmetric'
+                    and name()!='valign'
+                    and name()!='width'
+                    and name()!='xlink:href'
+                    and name()!='xml:base'
+                    and name()!='xml:lang'])"/> is ignored.
+            </report>
         </rule>
     </pattern>
 
@@ -104,6 +179,7 @@
                 or name()='back'
                 or name()='body'
                 or name()='bold'
+                or name()='break'
                 or name()='caption'
                 or name()='contrib'
                 or name()='contrib-group'
@@ -158,6 +234,7 @@
                 or name()='mml:abs'
                 or name()='mml:csymbol'
                 or name()='mml:maction'
+                or name()='monospace'
                 or name()='month'
                 or name()='name'
                 or name()='p'
@@ -167,6 +244,7 @@
                 or name()='pub-id'
                 or name()='ref'
                 or name()='ref-list'
+                or name()='sc'
                 or name()='sec'
                 or name()='self-uri'
                 or name()='source'
@@ -176,10 +254,19 @@
                 or name()='suffix'
                 or name()='sup'
                 or name()='surname'
+                or name()='table'
+                or name()='table-wrap'
+                or name()='table-wrap-foot'
+                or name()='tbody'
+                or name()='td'
                 or name()='tex-math'
+                or name()='th'
+                or name()='thead'
                 or name()='title'
                 or name()='title-group'
+                or name()='tr'
                 or name()='year'
+                or name()='underline'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -208,18 +295,17 @@
     </pattern>
 
     <pattern id="article-type">
-        <rule context="@article-type">
-            <let name="parent" value="name(..)"/>
+        <rule context="*[@article-type]">
             <assert id="article-type-assert-1" test="
-                current()='research-article'
+                @article-type='research-article'
             " role="warn">
-                @<name/>="<value-of select="current()"/>" is ignored.
+                @article-type="<value-of select="@article-type"/>" is ignored.
             </assert>
-            <assert id="article-type-assert-2" test="count(parent::article[front/article-meta/article-categories/subj-group[@subj-group-type='display-channel']/subject])=0" role="warn">
-                @<name/> is ignored if there is a &lt;subj-group subj-group-type="display-channel"&gt;.
+            <assert id="article-type-assert-2" test="count(front/article-meta/article-categories/subj-group[@subj-group-type='display-channel']/subject)=0" role="warn">
+                @article-type is ignored if there is a &lt;subj-group subj-group-type="display-channel"&gt;.
             </assert>
-            <assert id="article-type-assert-3" test="$parent='article'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            <assert id="article-type-assert-3" test="name()='article'" role="warn">
+                @article-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -317,25 +403,40 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="break_parent">
+        <rule context="break">
+            <let name="parent" value="name(..)"/>
+            <assert id="break_parent-assert-1" test="
+                $parent='td'
+                or $parent='th'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="caption_parent">
         <rule context="caption">
             <let name="parent" value="name(..)"/>
             <assert id="caption_parent-assert-1" test="
                 $parent='fig'
+                or $parent='table-wrap'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <assert id="caption_parent-assert-2" test="count(preceding-sibling::caption)=0" role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
 
     <pattern id="content-type_parent">
-        <rule context="@content-type">
-            <let name="parent" value="name(..)"/>
+        <rule context="*[@content-type]">
             <assert id="content-type-assert-1" test="
-                $parent='self-uri'
+                name()='self-uri'
             " role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+                @content-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -380,10 +481,9 @@
     </pattern>
 
     <pattern id="date-type_parent">
-        <rule context="@date-type">
-            <let name="parent" value="name(..)"/>
-            <assert id="date-type_parent-assert-1" test="$parent='pub-date'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+        <rule context="*[@date-type]">
+            <assert id="date-type_parent-assert-1" test="name()='pub-date'" role="warn">
+                @date-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -521,10 +621,9 @@
     </pattern>
 
     <pattern id="iso-8601-date_parent">
-        <rule context="@iso-8601-date">
-            <let name="parent" value="name(..)"/>
-            <assert id="iso-8601-date_parent-assert-1" test="$parent='pub-date'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+        <rule context="*[@iso-8601-date]">
+            <assert id="iso-8601-date_parent-assert-1" test="name()='pub-date'" role="warn">
+                @iso-8601-date on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -588,26 +687,28 @@
     <pattern id="label_parent">
         <rule context="label">
             <let name="parent" value="name(..)"/>
-            <assert id="label_parent-assert-1" test="$parent='fig' or $parent='disp-formula'" role="warn">
+            <assert id="label_parent-assert-1" test="$parent='fig' or $parent='disp-formula' or $parent='table-wrap'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <assert id="label_parent-assert-2" test="count(preceding-sibling::label)=0" role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
 
     <pattern id="mimetype_parent">
-        <rule context="@mimetype">
-            <let name="parent" value="name(..)"/>
-            <assert id="mimetype_parent-assert-1" test="$parent='graphic'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+        <rule context="*[@mimetype]">
+            <assert id="mimetype_parent-assert-1" test="name()='graphic'" role="warn">
+                @mimetype on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
 
     <pattern id="mime-subtype_parent">
-        <rule context="@mime-subtype">
+        <rule context="*[@mime-subtype]">
             <let name="parent" value="name(..)"/>
-            <assert id="mime-subtype_parent-assert-1" test="$parent='graphic'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+            <assert id="mime-subtype_parent-assert-1" test="name()='graphic'" role="warn">
+                @mime-subtype on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -667,66 +768,65 @@
     </pattern>
     
     <pattern id="mmlmath_attributes">
-        <rule context="*/@*[
-            name()='accent'
-            or name()='accentunder'
-            or name()='actiontype'
-            or name()='align'
-            or name()='bevelled'
-            or name()='class'
-            or name()='close'
-            or name()='columnalign'
-            or name()='columnlines'
-            or name()='columnspacing'
-            or name()='columnspan'
-            or name()='definitionURL'
-            or name()='denomalign'
-            or name()='depth'
-            or name()='displaystyle'
-            or name()='encoding'
-            or name()='equalcolumns'
-            or name()='equalrows'
-            or name()='fence'
-            or name()='fontfamily'
-            or name()='fontsize'
-            or name()='fontstyle'
-            or name()='fontweight'
-            or name()='form'
-            or name()='frame'
-            or name()='groupalign'
-            or name()='height'
-            or name()='indentalign'
-            or name()='indenttarget'
-            or name()='largeop'
-            or name()='linebreak'
-            or name()='linebreakstyle'
-            or name()='linethickness'
-            or name()='lspace'
-            or name()='mathbackground'
-            or name()='mathcolor'
-            or name()='mathsize'
-            or name()='mathvariant'
-            or name()='maxsize'
-            or name()='minsize'
-            or name()='movablelimits'
-            or name()='notation'
-            or name()='numalign'
-            or name()='open'
-            or name()='rowalign'
-            or name()='rowlines'
-            or name()='rowspacing'
-            or name()='rowspan'
-            or name()='rspace'
-            or name()='scriptlevel'
-            or name()='separator'
-            or name()='separators'
-            or name()='stretchy'
-            or name()='style'
-            or name()='subscriptshift'
-            or name()='superscriptshift'
-            or name()='symmetric'
-            or name()='width']">
-            <assert id="mmlmath_attributes-assert-1" test="parent::*/ancestor::mml:math" role="warn">
+        <rule context="*[@accent
+            or @accentunder
+            or @actiontype
+            or @align
+            or @bevelled
+            or @class
+            or @close
+            or @columnalign
+            or @columnlines
+            or @columnspacing
+            or @columnspan
+            or @definitionURL
+            or @denomalign
+            or @depth
+            or @displaystyle
+            or @encoding
+            or @equalcolumns
+            or @equalrows
+            or @fence
+            or @fontfamily
+            or @fontsize
+            or @fontstyle
+            or @fontweight
+            or @form
+            or @frame
+            or @groupalign
+            or @height
+            or @indentalign
+            or @indenttarget
+            or @largeop
+            or @linebreak
+            or @linebreakstyle
+            or @linethickness
+            or @lspace
+            or @mathbackground
+            or @mathcolor
+            or @mathsize
+            or @mathvariant
+            or @maxsize
+            or @minsize
+            or @movablelimits
+            or @notation
+            or @numalign
+            or @open
+            or @rowalign
+            or @rowlines
+            or @rowspacing
+            or @rowspan
+            or @rspace
+            or @scriptlevel
+            or @separator
+            or @separators
+            or @stretchy
+            or @style
+            or @subscriptshift
+            or @superscriptshift
+            or @symmetric
+            or @width]">
+            <assert id="mmlmath_attributes-assert-1" test="ancestor::mml:math" role="warn">
                 @<name/> outside of &lt;mml:math&gt; is ignored.
             </assert>
         </rule>
@@ -763,10 +863,9 @@
     </pattern>
 
     <pattern id="name-style_parent">
-        <rule context="@name-style">
-            <let name="parent" value="name(..)"/>
-            <assert id="name-style_parent-assert-1" test="$parent='name'" role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+        <rule context="*[@name-style]">
+            <assert id="name-style_parent-assert-1" test="name()='name'" role="warn">
+                @name-style on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -841,13 +940,13 @@
                 &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored if there is no @iso-8601-date, nor numbers in &lt;year&gt;, &lt;month&gt; and &lt;day&gt;.
             </assert>
         </rule>
-        <rule context="@iso-8601-date[parent::pub-date]">
+        <rule context="pub-date[@iso-8601-date]">
             <assert id="pub-date-assert-4" test="
-                (string-length(.)=10 or substring(., 11, 1)='T')
+                (string-length(@iso-8601-date)=10 or substring(@iso-8601-date, 11, 1)='T')
                 and
-                substring(., 5, 1)='-' and substring(., 8, 1)='-'
+                substring(@iso-8601-date, 5, 1)='-' and substring(@iso-8601-date, 8, 1)='-'
             " role="warn">
-                @<name/>="<value-of select="."/>" is ignored.
+                @iso-8601-date="<value-of select="@iso-8601-date"/>" is ignored.
             </assert>
         </rule>
     </pattern>
@@ -894,13 +993,12 @@
     </pattern>
 
     <pattern id="pub-id-type_parent">
-        <rule context="@pub-id-type">
-            <let name="parent" value="name(..)"/>
+        <rule context="*[@pub-id-type]">
             <assert id="pub-id-type_parent-assert-1" test="
-                $parent='pub-id'
-                or $parent='article-id'
+                name()='pub-id'
+                or name()='article-id'
             " role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+                @pub-id-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1003,7 +1101,7 @@
     </pattern>
     
     <pattern id="subj-group_parent">
-        <rule context="subj-group[parent::*]">
+        <rule context="subj-group">
             <let name="parent" value="name(..)"/>
             <assert id="subj-group_parent-assert-1" test="$parent='article-categories'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
@@ -1062,6 +1160,64 @@
         </rule>
     </pattern>
     
+    <pattern id="table_parent">
+        <rule context="table">
+            <let name="parent" value="name(..)"/>
+            <assert id="table_parent-assert-1" test="$parent='table-wrap'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="table">
+        <rule context="table-wrap/table">
+            <assert id="table-assert-1" test="count(preceding-sibling::table)=0" role="warn">
+                Extra &lt;<name/>&gt; in &lt;table-wrap&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="table-wrap">
+        <rule context="table-wrap">
+            <let name="parent" value="name(..)"/>
+            <assert id="table-wrap-assert-1" test="
+                $parent='sec'
+                or $parent='body'
+                or $parent='app'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="tbody_parent">
+        <rule context="tbody">
+            <let name="parent" value="name(..)"/>
+            <assert id="tbody_parent-assert-1" test="$parent='table'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="td_child">
+        <rule context="td/*">
+            <assert id="td_child-assert-1" test="
+                name()='bold'
+                or name()='break'
+                or name()='ext-link'
+                or name()='inline-formula'
+                or name()='italic'
+                or name()='monospace'
+                or name()='sc'
+                or name()='sub'
+                or name()='sup'
+                or name()='underline'
+                or name()='xref'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;td&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="tex-math_parent">
         <rule context="tex-math">
             <let name="parent" value="name(..)"/>
@@ -1069,6 +1225,35 @@
                 $parent='inline-formula'
                 or $parent='disp-formula'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored. &lt;<name/>&gt; must be a child of &lt;disp-formula&gt; or &lt;inline-formula&gt; to be rendered.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="th_child">
+        <rule context="th/*">
+            <assert id="th_child-assert-1" test="
+                name()='bold'
+                or name()='break'
+                or name()='ext-link'
+                or name()='inline-formula'
+                or name()='italic'
+                or name()='monospace'
+                or name()='sc'
+                or name()='sub'
+                or name()='sup'
+                or name()='underline'
+                or name()='xref'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;th&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="thead_parent">
+        <rule context="thead">
+            <let name="parent" value="name(..)"/>
+            <assert id="thead_parent-assert-1" test="$parent='table'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1103,16 +1288,27 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="tr_parent">
+        <rule context="tr">
+            <let name="parent" value="name(..)"/>
+            <assert id="tr_parent-assert-1" test="
+                $parent='thead'
+                or $parent='tbody'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="xlink-href_parent">
-        <rule context="@xlink:href">
+        <rule context="*[@xlink:href]">
             <let name="parent" value="name(..)"/>
             <assert id="xlink-href_parent-assert-1" test="
-                $parent='ext-link'
-                or $parent='graphic'
-                or $parent='self-uri'
+                name()='ext-link'
+                or name()='graphic'
+                or name()='self-uri'
             " role="warn">
-                @<name/> on &lt;<value-of select="$parent"/>&gt; is ignored.
+                @xlink:href on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>

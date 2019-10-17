@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="fig-count">
+    <x:context href="../../cases/fig-count"/>
+    <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

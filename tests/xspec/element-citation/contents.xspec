@@ -1,0 +1,17 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="element-citation/contents">
+    <x:context href="../../cases/element-citation/contents"/>
+    <x:expect-report id="article-title-assert-1" role="warn"/>
+    <x:expect-report id="bold_parent-assert-1" role="warn"/>
+    <x:expect-report id="day-assert-3" role="warn"/>
+    <x:expect-report id="element-citation-assert-2" role="warn"/>
+    <x:expect-report id="ext-link-assert-1" role="warn"/>
+    <x:expect-report id="italic_parent-assert-1" role="warn"/>
+    <x:expect-report id="month-assert-3" role="warn"/>
+    <x:expect-report id="name-assert-2" role="warn"/>
+    <x:expect-report id="pub-id-assert-3" role="warn"/>
+    <x:expect-report id="source-assert-1" role="warn"/>
+    <x:expect-report id="sub_parent-assert-1" role="warn"/>
+    <x:expect-report id="sup_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

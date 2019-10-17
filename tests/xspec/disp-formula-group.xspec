@@ -1,0 +1,10 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="disp-formula-group">
+    <x:context href="../../cases/disp-formula-group"/>
+    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
+    <x:expect-report id="alt-text-assert-2" role="warn"/>
+    <x:expect-report id="caption_parent-assert-1" role="warn"/>
+    <x:expect-report id="content-type-assert-1" role="warn"/>
+    <x:expect-report id="kwd-group-assert-4" role="warn"/>
+  </x:scenario>
+</x:description>

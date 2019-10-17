@@ -1,0 +1,7 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="caption/@style">
+    <x:context href="../../cases/caption/@style"/>
+    <x:expect-report id="caption_parent-assert-1" role="warn"/>
+    <x:expect-report id="mmlmath_attributes-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="kwd/contents">
+    <x:context href="../../cases/kwd/contents"/>
+    <x:expect-report id="kwd_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

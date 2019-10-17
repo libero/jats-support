@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="kwd-group/@kwd-group-type=research-organism">
+    <x:context href="../../cases/kwd-group/@kwd-group-type=research-organism"/>
+    <x:expect-report id="kwd-group-assert-4" role="warn"/>
+  </x:scenario>
+</x:description>

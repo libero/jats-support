@@ -1,0 +1,6 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="italic/@id">
+    <x:context href="../../cases/italic/@id"/>
+    <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>

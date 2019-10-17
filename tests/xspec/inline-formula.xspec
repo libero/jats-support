@@ -1,0 +1,9 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
+  <x:scenario label="inline-formula">
+    <x:context href="../../cases/inline-formula"/>
+    <x:expect-report id="alt-text-assert-2" role="warn"/>
+    <x:expect-report id="content-type-assert-1" role="warn"/>
+    <x:expect-report id="inline-formula_child-assert-1" role="warn"/>
+    <x:expect-report id="inline-formula_parent-assert-1" role="warn"/>
+  </x:scenario>
+</x:description>
