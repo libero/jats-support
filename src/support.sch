@@ -65,7 +65,9 @@
                 and name()!='notation'
                 and name()!='numalign'
                 and name()!='open'
+                and name()!='orientation'
                 and name()!='person-group-type'
+                and name()!='position'
                 and name()!='pub-id-type'
                 and name()!='rowalign'
                 and name()!='rowlines'
@@ -81,11 +83,13 @@
                 and name()!='subscriptshift'
                 and name()!='superscriptshift'
                 and name()!='symmetric'
+                and name()!='toggle'
                 and name()!='valign'
                 and name()!='width'
                 and name()!='xlink:href'
                 and name()!='xml:base'
-                and name()!='xml:lang']" role="warn">
+                and name()!='xml:lang'
+                and name()!='xml:space']" role="warn">
                 @<value-of select="name(@*[name()!='accent'
                     and name()!='accentunder'
                     and name()!='actiontype'
@@ -140,8 +144,10 @@
                     and name()!='name-style'
                     and name()!='notation'
                     and name()!='numalign'
+                    and name()!='orientation'
                     and name()!='open'
                     and name()!='person-group-type'
+                    and name()!='position'
                     and name()!='pub-id-type'
                     and name()!='rowalign'
                     and name()!='rowlines'
@@ -157,11 +163,13 @@
                     and name()!='subscriptshift'
                     and name()!='superscriptshift'
                     and name()!='symmetric'
+                    and name()!='toggle'
                     and name()!='valign'
                     and name()!='width'
                     and name()!='xlink:href'
                     and name()!='xml:base'
-                    and name()!='xml:lang'])"/> is ignored.
+                    and name()!='xml:lang'
+                    and name()!='xml:space'])"/> is ignored.
             </report>
         </rule>
     </pattern>
@@ -181,6 +189,7 @@
                 or name()='bold'
                 or name()='break'
                 or name()='caption'
+                or name()='code'
                 or name()='contrib'
                 or name()='contrib-group'
                 or name()='day'
@@ -427,6 +436,27 @@
             </assert>
             <assert id="caption_parent-assert-2" test="count(preceding-sibling::caption)=0" role="warn">
                 Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="code_child">
+        <rule context="code/*">
+            <report id="code_child-report-1" test="true()" role="warn">
+                &lt;<name/>&gt; in &lt;code&gt; is rendered as text (not parsed).
+            </report>
+        </rule>
+    </pattern>
+    
+    <pattern id="code_parent">
+        <rule context="code">
+            <let name="parent" value="name(..)"/>
+            <assert id="code_parent-assert-1" test="
+                $parent='app'
+                or $parent='sec'
+                or $parent='p'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -812,10 +842,8 @@
             or @notation
             or @numalign
             or @open
-            or @rowalign
             or @rowlines
             or @rowspacing
-            or @rowspan
             or @rspace
             or @scriptlevel
             or @separator
@@ -827,7 +855,81 @@
             or @symmetric
             or @width]">
             <assert id="mmlmath_attributes-assert-1" test="ancestor::mml:math" role="warn">
-                @<name/> outside of &lt;mml:math&gt; is ignored.
+                @<value-of select="name(@*[name()='accent'
+                    or name()='accentunder'
+                    or name()='actiontype'
+                    or name()='align'
+                    or name()='article-type'
+                    or name()='bevelled'
+                    or name()='class'
+                    or name()='close'
+                    or name()='colspan'
+                    or name()='columnalign'
+                    or name()='columnlines'
+                    or name()='columnspacing'
+                    or name()='columnspan'
+                    or name()='content-type'
+                    or name()='contrib-type'
+                    or name()='date-type'
+                    or name()='definitionURL'
+                    or name()='denomalign'
+                    or name()='depth'
+                    or name()='displaystyle'
+                    or name()='display'
+                    or name()='encoding'
+                    or name()='equalcolumns'
+                    or name()='equalrows'
+                    or name()='fence'
+                    or name()='fontfamily'
+                    or name()='fontsize'
+                    or name()='fontstyle'
+                    or name()='fontweight'
+                    or name()='fandm'
+                    or name()='frame'
+                    or name()='groupalign'
+                    or name()='height'
+                    or name()='indentalign'
+                    or name()='indenttarget'
+                    or name()='iso-8601-date'
+                    or name()='kwd-group-type'
+                    or name()='largeop'
+                    or name()='linebreak'
+                    or name()='linebreakstyle'
+                    or name()='linethickness'
+                    or name()='lspace'
+                    or name()='mathbackground'
+                    or name()='mathcoland'
+                    or name()='mathsize'
+                    or name()='mathvariant'
+                    or name()='maxsize'
+                    or name()='mime-subtype'
+                    or name()='mimetype'
+                    or name()='minsize'
+                    or name()='movablelimits'
+                    or name()='name-style'
+                    or name()='notation'
+                    or name()='numalign'
+                    or name()='open'
+                    or name()='person-group-type'
+                    or name()='pub-id-type'
+                    or name()='rowalign'
+                    or name()='rowlines'
+                    or name()='rowspacing'
+                    or name()='rspace'
+                    or name()='scriptlevel'
+                    or name()='separatand'
+                    or name()='separatands'
+                    or name()='stretchy'
+                    or name()='style'
+                    or name()='subj-group-type'
+                    or name()='subscriptshift'
+                    or name()='superscriptshift'
+                    or name()='symmetric'
+                    or name()='valign'
+                    or name()='width'
+                    or name()='xlink:href'
+                    or name()='xml:base'
+                    or name()='xml:lang'])"/> outside of &lt;mml:math&gt; is ignored.
             </assert>
         </rule>
     </pattern>
