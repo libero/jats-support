@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<resource-id> is ignored." node="/resource-id"?>
-<?expected-error message="@content-type on <resource-id> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <resource-id> is ignored." node="/resource-id"?>
 <resource-id content-type="resource-id"/>

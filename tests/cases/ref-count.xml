@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@count is ignored." node="/ref-count"?>
 <?expected-error message="<ref-count> is ignored." node="/ref-count"?>
-<?expected-error message="@count is ignored." node="//@count"?>
-
 <ref-count count="0"/>

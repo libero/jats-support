@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@assigning-authority is ignored." node="//@assigning-authority"?>
-
+<?expected-error message="@assigning-authority is ignored." node="/ext-link"?>
 <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://example.com/" assigning-authority="crossref"/>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<ali:free_to_read> is ignored." node="/ali:free_to_read"?>
-<?expected-error message="@content-type on <ali:free_to_read> is ignored." node="//@content-type"?>
-
+<?expected-error message="<ali:free_to_read> is ignored." node="/*[local-name()='free_to_read']"?>
+<?expected-error message="@content-type on <ali:free_to_read> is ignored." node="/*[local-name()='free_to_read']"?>
 <ali:free_to_read xmlns:ali="http://www.niso.org/schemas/ali/1.0/" content-type="free_to_read"/>

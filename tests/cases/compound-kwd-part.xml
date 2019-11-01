@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<compound-kwd-part> is ignored." node="/compound-kwd-part"?>
-<?expected-error message="@content-type on <compound-kwd-part> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <compound-kwd-part> is ignored." node="/compound-kwd-part"?>
 <compound-kwd-part content-type="compound-kwd-part"/>

@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<term> is ignored." node="/term"?>
-<?expected-error message="<graphic> in <term> is ignored." node="//graphic"?>
-
+<?expected-error message="<graphic> in <term> is ignored." node="/term/graphic"?>
 <term xmlns:xlink="http://www.w3.org/1999/xlink">
     <graphic xlink:href="https://example.com/image.jpg"/>
 </term>

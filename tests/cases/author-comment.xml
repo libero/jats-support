@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<author-comment> is ignored." node="/author-comment"?>
-<?expected-error message="@content-type on <author-comment> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <author-comment> is ignored." node="//title"?>
-<?expected-error message="<p> in <author-comment> is ignored." node="//p"?>
-
+<?expected-error message="@content-type on <author-comment> is ignored." node="/author-comment"?>
+<?expected-error message="<p> in <author-comment> is ignored." node="/author-comment/p"?>
+<?expected-error message="<title> in <author-comment> is ignored." node="/author-comment/title"?>
 <author-comment content-type="author-comment">
     <title/>
     <p/>

@@ -2,10 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<response> is ignored." node="/response"?>
-<?expected-error message="<front> in <response> is ignored." node="//front"?>
-<?expected-error message="<body> in <response> is ignored." node="//body"?>
-<?expected-error message="<back> in <response> is ignored." node="//back"?>
-
+<?expected-error message="no article-id. Article cannot be ingested." node="/response/front/article-meta"?>
+<?expected-error message="<back> in <response> is ignored." node="/response/back"?>
+<?expected-error message="<body> in <response> is ignored." node="/response/body"?>
+<?expected-error message="<front> in <response> is ignored." node="/response/front"?>
 <response>
     <front>
         <article-meta>

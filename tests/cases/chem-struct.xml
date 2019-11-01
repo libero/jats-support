@@ -2,11 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<chem-struct> is ignored." node="/chem-struct"?>
-<?expected-error message="@xlink:href on <chem-struct> is ignored." node="/chem-struct/@xlink:href"?>
-<?expected-error message="@content-type on <chem-struct> is ignored." node="//@content-type"?>
-<?expected-error message="<graphic> in <chem-struct> is ignored." node="//graphic"?>
-<?expected-error message="<alt-text> in <chem-struct> is ignored." node="//alt-text"?>
-
+<?expected-error message="<alt-text> in <chem-struct> is ignored." node="/chem-struct/alt-text"?>
+<?expected-error message="@content-type on <chem-struct> is ignored." node="/chem-struct"?>
+<?expected-error message="<graphic> in <chem-struct> is ignored." node="/chem-struct/graphic"?>
+<?expected-error message="@xlink:href on <chem-struct> is ignored." node="/chem-struct"?>
 <chem-struct xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/image.jpg" content-type="chem-struct">
     <graphic xlink:href="https://example.com/image.jpg"/>
     <alt-text/>

@@ -2,13 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<std> is ignored." node="/std"?>
-<?expected-error message="@content-type on <std> is ignored." node="//@content-type"?>
-<?expected-error message="<source> in <std> is ignored." node="//source"?>
-<?expected-error message="<pub-id> in <std> is ignored." node="//pub-id"?>
-<?expected-error message="<year> in <std> is ignored." node="//year"?>
-<?expected-error message="<month> in <std> is ignored." node="//month"?>
-<?expected-error message="<day> in <std> is ignored." node="//day"?>
-
+<?expected-error message="@content-type on <std> is ignored." node="/std"?>
+<?expected-error message="<day> in <std> is ignored." node="/std/day"?>
+<?expected-error message="<month> in <std> is ignored." node="/std/month"?>
+<?expected-error message="<pub-id> in <std> is ignored." node="/std/pub-id"?>
+<?expected-error message="<source> in <std> is ignored." node="/std/source"?>
+<?expected-error message="<year> in <std> is ignored." node="/std/year"?>
 <std content-type="std">
     <source/>
     <pub-id pub-id-type="doi"/>

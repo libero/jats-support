@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<name-alternatives> is ignored." node="/name-alternatives"?>
-<?expected-error message="<string-name> is ignored." node="//string-name"?>
-<?expected-error message="<name> in <name-alternatives> is ignored." node="//name"?>
-
+<?expected-error message="<string-name> is ignored." node="/name-alternatives/string-name"?>
+<?expected-error message="<name> in <name-alternatives> is ignored." node="/name-alternatives/name"?>
 <name-alternatives>
     <string-name/>
     <name>

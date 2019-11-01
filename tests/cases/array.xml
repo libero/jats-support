@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<array> is ignored." node="/array"?>
-<?expected-error message="@content-type on <array> is ignored." node="//@content-type"?>
-<?expected-error message="<alt-text> in <array> is ignored." node="//alt-text"?>
-<?expected-error message="<graphic> in <array> is ignored." node="//graphic"?>
-
+<?expected-error message="<alt-text> in <array> is ignored." node="/array/alt-text"?>
+<?expected-error message="@content-type on <array> is ignored." node="/array"?>
+<?expected-error message="<graphic> in <array> is ignored." node="/array/graphic"?>
 <array xmlns:xlink="http://www.w3.org/1999/xlink" content-type="array">
     <alt-text/>
     <graphic xlink:href="https://example.com/image.jpg"/>

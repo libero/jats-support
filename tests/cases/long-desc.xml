@@ -2,7 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<long-desc> is ignored." node="/long-desc"?>
-<?expected-error message="@xlink:href on <long-desc> is ignored." node="//@xlink:href"?>
-<?expected-error message="@content-type on <long-desc> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <long-desc> is ignored." node="/long-desc"?>
+<?expected-error message="@xlink:href on <long-desc> is ignored." node="/long-desc"?>
 <long-desc xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/" content-type="long-desc"/>

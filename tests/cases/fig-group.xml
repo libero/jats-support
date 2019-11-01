@@ -2,13 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<fig-group> is ignored." node="/fig-group"?>
-<?expected-error message="@content-type on <fig-group> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <fig-group> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <fig-group> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <fig-group> is ignored." node="//alt-text"?>
-<?expected-error message="<fig> in <fig-group> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <fig-group> is ignored." node="(//graphic)[2]"?>
-
+<?expected-error message="<alt-text> in <fig-group> is ignored." node="/fig-group/alt-text"?>
+<?expected-error message="<caption> in <fig-group> is ignored." node="/fig-group/caption"?>
+<?expected-error message="@content-type on <fig-group> is ignored." node="/fig-group"?>
+<?expected-error message="<fig> in <fig-group> is ignored." node="/fig-group/fig"?>
+<?expected-error message="<graphic> in <fig-group> is ignored." node="/fig-group/graphic"?>
+<?expected-error message="<kwd-group> in <fig-group> is ignored." node="/fig-group/kwd-group"?>
 <fig-group xmlns:xlink="http://www.w3.org/1999/xlink" content-type="fig-group">
     <caption/>
     <kwd-group>

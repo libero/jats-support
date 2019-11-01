@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<styled-content> is ignored." node="/styled-content"?>
-<?expected-error message="<fig> in <styled-content> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <styled-content> is ignored." node="(//graphic)[2]"?>
-
+<?expected-error message="<fig> in <styled-content> is ignored." node="/styled-content/fig"?>
+<?expected-error message="<graphic> in <styled-content> is ignored." node="/styled-content/graphic"?>
 <styled-content xmlns:xlink="http://www.w3.org/1999/xlink">
     <fig>
         <graphic xlink:href="https://example.com/image.jpg"/>

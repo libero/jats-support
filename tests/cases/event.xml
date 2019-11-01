@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<event> is ignored." node="/event"?>
-<?expected-error message="<pub-date> in <event> is ignored." node="//pub-date"?>
-<?expected-error message="<self-uri> in <event> is ignored." node="//self-uri"?>
-
+<?expected-error message="<pub-date> in <event> is ignored." node="/event/pub-date"?>
+<?expected-error message="<self-uri> in <event> is ignored." node="/event/self-uri"?>
 <event xmlns:xlink="http://www.w3.org/1999/xlink">
     <pub-date date-type="pub" iso-8601-date="2000-01-02"/>
     <self-uri xlink:href="https://example.com/file.pdf" content-type="pdf"/>

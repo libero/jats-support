@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<journal-subtitle> is ignored." node="/journal-subtitle"?>
-<?expected-error message="@content-type on <journal-subtitle> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <journal-subtitle> is ignored." node="/journal-subtitle"?>
 <journal-subtitle content-type="journal-subtitle"/>

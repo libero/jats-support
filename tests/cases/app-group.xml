@@ -2,14 +2,13 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<app-group> is ignored." node="/app-group"?>
-<?expected-error message="@content-type on <app-group> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <app-group> is ignored." node="//title"?>
-<?expected-error message="<kwd-group> in <app-group> is ignored." node="//kwd-group"?>
-<?expected-error message="<p> in <app-group> is ignored." node="//p"?>
-<?expected-error message="<fig> in <app-group> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <app-group> is ignored." node="(//graphic)[2]"?>
-<?expected-error message="<ref-list> in <app-group> is ignored." node="//ref-list"?>
-
+<?expected-error message="@content-type on <app-group> is ignored." node="/app-group"?>
+<?expected-error message="<fig> in <app-group> is ignored." node="/app-group/fig"?>
+<?expected-error message="<graphic> in <app-group> is ignored." node="/app-group/graphic"?>
+<?expected-error message="<kwd-group> in <app-group> is ignored." node="/app-group/kwd-group"?>
+<?expected-error message="<p> in <app-group> is ignored." node="/app-group/p"?>
+<?expected-error message="<ref-list> in <app-group> is ignored." node="/app-group/ref-list"?>
+<?expected-error message="<title> in <app-group> is ignored." node="/app-group/title"?>
 <app-group xmlns:xlink="http://www.w3.org/1999/xlink" content-type="app-group">
     <title/>
     <kwd-group>

@@ -2,12 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<inline-graphic> is ignored." node="/inline-graphic"?>
-<?expected-error message="@xlink:href on <inline-graphic> is ignored." node="//@xlink:href"?>
-<?expected-error message="@mimetype on <inline-graphic> is ignored." node="//@mimetype"?>
-<?expected-error message="@mime-subtype on <inline-graphic> is ignored." node="//@mime-subtype"?>
-<?expected-error message="@content-type on <inline-graphic> is ignored." node="//@content-type"?>
-<?expected-error message="<alt-text> in <inline-graphic> is ignored." node="//alt-text"?>
-
+<?expected-error message="<alt-text> in <inline-graphic> is ignored." node="/inline-graphic/alt-text"?>
+<?expected-error message="@content-type on <inline-graphic> is ignored." node="/inline-graphic"?>
+<?expected-error message="@mimetype on <inline-graphic> is ignored." node="/inline-graphic"?>
+<?expected-error message="@mime-subtype on <inline-graphic> is ignored." node="/inline-graphic"?>
+<?expected-error message="@xlink:href on <inline-graphic> is ignored." node="/inline-graphic"?>
 <inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.example.com/image.jpg" mimetype="image" mime-subtype="jpeg" content-type="inline-graphic">
     <alt-text/>
 </inline-graphic>

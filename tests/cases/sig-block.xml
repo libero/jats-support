@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<sig-block> is ignored." node="/sig-block"?>
-<?expected-error message="@content-type on <sig-block> is ignored." node="//@content-type"?>
-<?expected-error message="<graphic> in <sig-block> is ignored." node="//graphic"?>
-<?expected-error message="<aff> in <sig-block> is ignored." node="//aff"?>
-
+<?expected-error message="<aff> in <sig-block> is ignored." node="/sig-block/aff"?>
+<?expected-error message="@content-type on <sig-block> is ignored." node="/sig-block"?>
+<?expected-error message="<graphic> in <sig-block> is ignored." node="/sig-block/graphic"?>
 <sig-block xmlns:xlink="http://www.w3.org/1999/xlink" content-type="sig-block">
     <graphic xlink:href="https://example.com/image.jpg"/>
     <aff/>

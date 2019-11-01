@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<institution> is ignored." node="/institution"?>
-<?expected-error message="@xlink:href on <institution> is ignored." node="//@xlink:href"?>
-<?expected-error message="@content-type on <institution> is ignored." node="//@content-type"?>
-
+<?expected-error message="<institution> in <> is ignored." node="/institution"?>
+<?expected-error message="@xlink:href on <institution> is ignored." node="/institution"?>
 <institution xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/" content-type="institution"/>

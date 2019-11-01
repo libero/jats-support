@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="<bold> in <code> is rendered as text (not parsed)." node="/code/bold"?>
 <?expected-error message="<code> in <> is ignored." node="/code"?>
-<?expected-error message="<bold> in <code> is ignored." node="//bold"?>
-
 <code>
       for this in there 
         do that

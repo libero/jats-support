@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<trans-title-group> is ignored." node="/trans-title-group"?>
-<?expected-error message="<trans-title> is ignored." node="//trans-title"?>
-
+<?expected-error message="<trans-title> is ignored." node="/trans-title-group/trans-title"?>
 <trans-title-group>
     <trans-title/>
 </trans-title-group>

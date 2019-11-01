@@ -2,12 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<glossary> is ignored." node="/glossary"?>
-<?expected-error message="@content-type on <glossary> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <glossary> is ignored." node="//title"?>
-<?expected-error message="<p> in <glossary> is ignored." node="//p"?>
-<?expected-error message="<fig> in <glossary> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <glossary> is ignored." node="(//graphic)[2]"?>
-
+<?expected-error message="@content-type on <glossary> is ignored." node="/glossary"?>
+<?expected-error message="<fig> in <glossary> is ignored." node="/glossary/fig"?>
+<?expected-error message="<graphic> in <glossary> is ignored." node="/glossary/graphic"?>
+<?expected-error message="<p> in <glossary> is ignored." node="/glossary/p"?>
+<?expected-error message="<title> in <glossary> is ignored." node="/glossary/title"?>
 <glossary xmlns:xlink="http://www.w3.org/1999/xlink" content-type="glossary">
     <title/>
     <p/>

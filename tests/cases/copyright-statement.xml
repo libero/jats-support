@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<copyright-statement> is ignored." node="/copyright-statement"?>
-<?expected-error message="@content-type on <copyright-statement> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <copyright-statement> is ignored." node="/copyright-statement"?>
 <copyright-statement content-type="copyright-statement"/>

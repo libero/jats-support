@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<resource-wrap> is ignored." node="/resource-wrap"?>
-<?expected-error message="<resource-name> is ignored." node="//resource-name"?>
-
+<?expected-error message="<resource-name> is ignored." node="/resource-wrap/resource-name"?>
 <resource-wrap>
     <resource-name/>
 </resource-wrap>

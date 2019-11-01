@@ -69,6 +69,8 @@
                 and name()!='person-group-type'
                 and name()!='position'
                 and name()!='pub-id-type'
+                and name()!='ref-type'
+                and name()!='rid'
                 and name()!='rowalign'
                 and name()!='rowlines'
                 and name()!='rowspacing'
@@ -149,6 +151,8 @@
                     and name()!='person-group-type'
                     and name()!='position'
                     and name()!='pub-id-type'
+                    and name()!='ref-type'
+                    and name()!='rid'
                     and name()!='rowalign'
                     and name()!='rowlines'
                     and name()!='rowspacing'
@@ -177,7 +181,8 @@
     <pattern id="element-whitelist">
         <rule context="*">
             <assert id="element-whitelist-assert-1" test="
-                name()='aff'
+                name()='addr-line'
+                or name()='aff'
                 or name()='alt-text'
                 or name()='article'
                 or name()='article-categories'
@@ -192,6 +197,7 @@
                 or name()='code'
                 or name()='contrib'
                 or name()='contrib-group'
+                or name()='country'
                 or name()='day'
                 or name()='disp-formula'
                 or name()='element-citation'
@@ -200,6 +206,7 @@
                 or name()='front'
                 or name()='given-names'
                 or name()='graphic'
+                or name()='institution'
                 or name()='italic'
                 or name()='inline-formula'
                 or name()='kwd'
@@ -246,6 +253,7 @@
                 or name()='monospace'
                 or name()='month'
                 or name()='name'
+                or name()='named-content'
                 or name()='p'
                 or name()='person-group'
                 or name()='prefix'
@@ -276,8 +284,18 @@
                 or name()='tr'
                 or name()='year'
                 or name()='underline'
+                or name()='xref'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="addr-line_parent">
+        <rule context="addr-line">
+            <let name="parent" value="name(..)"/>
+            <assert id="addr-line_parent-assert-1" test="$parent='aff'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -285,7 +303,9 @@
     <pattern id="aff_parent">
         <rule context="aff">
             <let name="parent" value="name(..)"/>
-            <assert id="aff_parent-assert-1" test="$parent='contrib'" role="warn">
+            <assert id="aff_parent-assert-1" test="
+                parent::contrib[@contrib-type='author']
+                or $parent='contrib-group'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -464,7 +484,9 @@
     <pattern id="content-type_parent">
         <rule context="*[@content-type]">
             <assert id="content-type-assert-1" test="
-                name()='self-uri'
+                name()='institution'
+                or name()='named-content'
+                or name()='self-uri'
             " role="warn">
                 @content-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
@@ -506,6 +528,15 @@
             </assert>
             <assert id="contrib-group-assert-2" test="contrib" role="warn">
                 &lt;<name/>&gt; without &lt;contrib&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="country_parent">
+        <rule context="country">
+            <let name="parent" value="name(..)"/>
+            <assert id="country_parent-assert-1" test="$parent='aff'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -674,6 +705,15 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="institution_parent">
+        <rule context="institution">
+            <let name="parent" value="name(..)"/>
+            <assert id="institution_parent-assert-1" test="$parent='aff'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="italic_parent">
         <rule context="italic">
@@ -717,7 +757,7 @@
     <pattern id="label_parent">
         <rule context="label">
             <let name="parent" value="name(..)"/>
-            <assert id="label_parent-assert-1" test="$parent='fig' or $parent='disp-formula' or $parent='table-wrap'" role="warn">
+            <assert id="label_parent-assert-1" test="$parent='fig' or $parent='disp-formula' or $parent='table-wrap' or $parent='aff'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
             <assert id="label_parent-assert-2" test="count(preceding-sibling::label)=0" role="warn">
@@ -968,6 +1008,15 @@
         <rule context="*[@name-style]">
             <assert id="name-style_parent-assert-1" test="name()='name'" role="warn">
                 @name-style on &lt;<value-of select="name()"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="named-content_parent">
+        <rule context="named-content">
+            <let name="parent" value="name(..)"/>
+            <assert id="named-content_parent-assert-1" test="$parent='addr-line'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1411,6 +1460,22 @@
                 or name()='self-uri'
             " role="warn">
                 @xlink:href on &lt;<value-of select="name()"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="xref">
+        <rule context="xref">
+            <let name="parent" value="name(..)"/>
+            <assert id="xref-assert-1" test="
+                @ref-type='aff'
+                " role="warn">
+                &lt;<name/>&gt; without @ref-type="aff" is ignored.
+            </assert>
+            <assert id="xref-assert-2" test="
+                parent::contrib[@contrib-type='author']
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="@count-type is ignored." node="/count"?>
 <?expected-error message="<count> is ignored." node="/count"?>
-<?expected-error message="@count-type is ignored." node="//@count-type"?>
-<?expected-error message="@count is ignored." node="//@count"?>
-
 <count count-type="" count="0"/>

@@ -2,13 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<chem-struct-wrap> is ignored." node="/chem-struct-wrap"?>
-<?expected-error message="@content-type on <chem-struct-wrap> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <chem-struct-wrap> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <chem-struct-wrap> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <chem-struct-wrap> is ignored." node="//alt-text"?>
-<?expected-error message="<textual-form> is ignored." node="//textual-form"?>
-<?expected-error message="<graphic> in <chem-struct-wrap> is ignored." node="//graphic"?>
-
+<?expected-error message="<textual-form> is ignored." node="/chem-struct-wrap/textual-form"?>
+<?expected-error message="<alt-text> in <chem-struct-wrap> is ignored." node="/chem-struct-wrap/alt-text"?>
+<?expected-error message="<caption> in <chem-struct-wrap> is ignored." node="/chem-struct-wrap/caption"?>
+<?expected-error message="@content-type on <chem-struct-wrap> is ignored." node="/chem-struct-wrap"?>
+<?expected-error message="<graphic> in <chem-struct-wrap> is ignored." node="/chem-struct-wrap/graphic"?>
+<?expected-error message="<kwd-group> in <chem-struct-wrap> is ignored." node="/chem-struct-wrap/kwd-group"?>
 <chem-struct-wrap xmlns:xlink="http://www.w3.org/1999/xlink" content-type="chem-struct-wrap">
     <caption/>
     <kwd-group>

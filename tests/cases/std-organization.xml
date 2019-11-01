@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<std-organization> is ignored." node="/std-organization"?>
-<?expected-error message="@content-type on <std-organization> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <std-organization> is ignored." node="/std-organization"?>
 <std-organization content-type="std-organization"/>

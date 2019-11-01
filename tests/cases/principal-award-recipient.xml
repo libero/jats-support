@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<principal-award-recipient> is ignored." node="/principal-award-recipient"?>
-<?expected-error message="<name> in <principal-award-recipient> is ignored." node="//name"?>
-
+<?expected-error message="<name> in <principal-award-recipient> is ignored." node="/principal-award-recipient/name"?>
 <principal-award-recipient>
     <name>
         <given-names/>

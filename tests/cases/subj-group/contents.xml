@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?expected-error message="<compound-subject> is ignored." node="/subj-group/subj-group/subj-group/compound-subject"?>
+<?expected-error message="<compound-subject-part> is ignored." node="/subj-group/subj-group/subj-group/compound-subject/compound-subject-part"?>
+<?expected-error message="<subj-group> in <> is ignored." node="/subj-group"?>
 <?expected-error message="<subj-group> in <subj-group> is ignored." node="/subj-group/subj-group"?>
 <?expected-error message="<subj-group> in <subj-group> is ignored." node="/subj-group/subj-group/subj-group"?>
 <?expected-error message="<subj-group> without any <subject> is ignored." node="/subj-group/subj-group/subj-group"?>
-<?expected-error message="<compound-subject> is ignored." node="//compound-subject"?>
-<?expected-error message="<compound-subject-part> is ignored." node="//compound-subject-part"?>
-
 <subj-group subj-group-type="heading">
     <subject/>
     <subj-group subj-group-type="heading">

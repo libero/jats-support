@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<compound-subject> is ignored." node="//compound-subject"?>
-<?expected-error message="<compound-subject-part> is ignored." node="//compound-subject-part"?>
-<?expected-error message="Extra <subject> in <subj-group subj-group-type=\"display-channel\"> is ignored." node="//subject[2]"?>
-<?expected-error message="Extra <subject> in <subj-group subj-group-type=\"display-channel\"> is ignored." node="//subject[3]"?>
-
+<?expected-error message="<compound-subject> is ignored." node="/subj-group/compound-subject"?>
+<?expected-error message="<compound-subject-part> is ignored." node="/subj-group/compound-subject/compound-subject-part"?>
+<?expected-error message="<subj-group> in <> is ignored." node="/subj-group"?>
+<?expected-error message="Extra <subject> in <subj-group subj-group-type="display-channel"> is ignored." node="/subj-group/subject[2]"?>
+<?expected-error message="Extra <subject> in <subj-group subj-group-type="display-channel"> is ignored." node="/subj-group/subject[3]"?>
 <subj-group subj-group-type="display-channel">
     <compound-subject>
         <compound-subject-part/>

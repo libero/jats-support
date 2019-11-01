@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<verse-group> is ignored." node="/verse-group"?>
-<?expected-error message="@content-type on <verse-group> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <verse-group> is ignored." node="//title"?>
-<?expected-error message="<verse-line> is ignored." node="//verse-line"?>
-
+<?expected-error message="<verse-line> is ignored." node="/verse-group/verse-line"?>
+<?expected-error message="@content-type on <verse-group> is ignored." node="/verse-group"?>
+<?expected-error message="<title> in <verse-group> is ignored." node="/verse-group/title"?>
 <verse-group content-type="verse-group">
     <title/>
     <verse-line/>

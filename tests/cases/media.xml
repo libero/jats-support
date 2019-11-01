@@ -2,14 +2,13 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<media> is ignored." node="/media"?>
-<?expected-error message="@xlink:href on <media> is ignored." node="//@xlink:href"?>
-<?expected-error message="@mimetype on <media> is ignored." node="//@mimetype"?>
-<?expected-error message="@mime-subtype on <media> is ignored." node="//@mime-subtype"?>
-<?expected-error message="@content-type on <media> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <media> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <media> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <media> is ignored." node="//alt-text"?>
-
+<?expected-error message="<alt-text> in <media> is ignored." node="/media/alt-text"?>
+<?expected-error message="<caption> in <media> is ignored." node="/media/caption"?>
+<?expected-error message="@content-type on <media> is ignored." node="/media"?>
+<?expected-error message="<kwd-group> in <media> is ignored." node="/media/kwd-group"?>
+<?expected-error message="@mimetype on <media> is ignored." node="/media"?>
+<?expected-error message="@mime-subtype on <media> is ignored." node="/media"?>
+<?expected-error message="@xlink:href on <media> is ignored." node="/media"?>
 <media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.example.com/audio.mp3" mimetype="audio" mime-subtype="mp3" content-type="media">
     <caption/>
     <kwd-group>
