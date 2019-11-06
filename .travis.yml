@@ -1,3 +1,5 @@
+language: bash
+
 before_script:
 # install XSpec
 - git clone -b master https://github.com/xspec/xspec.git ~/tmp/xspec
@@ -5,7 +7,8 @@ before_script:
 - mkdir -p ~/tmp/saxon 
 - wget -O ~/tmp/saxon/saxon9he.jar http://central.maven.org/maven2/net/sf/saxon/Saxon-HE/9.9.1-5/Saxon-HE-9.9.1-5.jar
 - chmod +x ~/tmp/saxon/saxon9he.jar
+- chmod +x ./test.sh
 
 script:
 - echo "execute XSpec unit tests"
-- ./test.sh
+- bash ./test.sh
