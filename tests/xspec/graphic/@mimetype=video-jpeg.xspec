@@ -1,7 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="graphic/@mimetype=video-jpeg">
-    <x:context href="../../cases/graphic/@mimetype=video-jpeg"/>
-    <x:expect-report id="graphic-assert-2" role=""/>
-    <x:expect-report id="graphic_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

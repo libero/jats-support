@@ -1,7 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="prefix/@content-type">
-    <x:context href="../../cases/prefix/@content-type"/>
-    <x:expect-report id="content-type-assert-1" role="warn"/>
-    <x:expect-report id="prefix_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

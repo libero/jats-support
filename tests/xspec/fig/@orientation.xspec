@@ -1,6 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="fig/@orientation">
-    <x:context href="../../cases/fig/@orientation"/>
-    <x:expect-report id="fig_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

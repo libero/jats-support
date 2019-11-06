@@ -1,8 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="article/display-channel@article-type">
-    <x:context href="../../cases/article/display-channel@article-type"/>
-    <x:expect-report id="article-type-assert-2" role="warn"/>
-    <x:expect-report id="article-id-logic-report-5" role="error"/>
-    <x:expect-report id="subj-group-report-2" role="info"/>
-  </x:scenario>
-</x:description>

@@ -1,8 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="sec-meta">
-    <x:context href="../../cases/sec-meta"/>
-    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
-    <x:expect-report id="contrib-group-assert-1" role="warn"/>
-    <x:expect-report id="kwd-group-assert-4" role="warn"/>
-  </x:scenario>
-</x:description>

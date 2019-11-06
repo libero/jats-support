@@ -1,7 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="isbn">
-    <x:context href="../../cases/isbn"/>
-    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
-    <x:expect-report id="content-type-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

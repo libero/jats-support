@@ -1,9 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="named-content">
-    <x:context href="../../cases/named-content"/>
-    <x:expect-report id="fig_parent-assert-1" role="warn"/>
-    <x:expect-report id="graphic_parent-assert-1" role="warn"/>
-    <x:expect-report id="named-content_parent-assert-1" role="warn"/>
-    <x:expect-report id="xlink-href_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

@@ -1,6 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="kwd-group/contents">
-    <x:context href="../../cases/kwd-group/contents"/>
-    <x:expect-report id="kwd-group-assert-4" role="warn"/>
-  </x:scenario>
-</x:description>

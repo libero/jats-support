@@ -1,6 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="self-uri/@content-type=pdf">
-    <x:context href="../../cases/self-uri/@content-type=pdf"/>
-    <x:expect-report id="self-uri_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

@@ -1,0 +1,3039 @@
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src/support.sch">
+  <x:scenario>
+    <x:scenario label="abbrev-journal-title">
+      <x:context href="../cases/abbrev-journal-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="abbrev">
+      <x:context href="../cases/abbrev.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="abstract">
+      <x:context href="../cases/abstract.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="access-date">
+      <x:context href="../cases/access-date.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ack">
+      <x:context href="../cases/ack.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="addr-line">
+      <x:context href="../cases/addr-line.xml"/>
+      <x:expect-assert id="addr-line_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="address">
+      <x:context href="../cases/address.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@content-type">
+      <x:context href="../cases/aff/@content-type.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@id">
+      <x:context href="../cases/aff/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@rid">
+      <x:context href="../cases/aff/@rid.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@specific-use">
+      <x:context href="../cases/aff/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@xml:base">
+      <x:context href="../cases/aff/@xml:base.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/@xml:lang">
+      <x:context href="../cases/aff/@xml:lang.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff/contents">
+      <x:context href="../cases/aff/contents.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="aff-alternatives">
+      <x:context href="../cases/aff-alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ali:free_to_read">
+      <x:context href="../cases/ali:free_to_read.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ali:license_ref">
+      <x:context href="../cases/ali:license_ref.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-text/@content-type">
+      <x:context href="../cases/alt-text/@content-type.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-text/@id">
+      <x:context href="../cases/alt-text/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-text/@specific-use">
+      <x:context href="../cases/alt-text/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-text/@xml:base">
+      <x:context href="../cases/alt-text/@xml:base.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-text/@xml:lang">
+      <x:context href="../cases/alt-text/@xml:lang.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alt-title">
+      <x:context href="../cases/alt-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="alternatives">
+      <x:context href="../cases/alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="annotation">
+      <x:context href="../cases/annotation.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="anonymous">
+      <x:context href="../cases/anonymous.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="app-group">
+      <x:context href="../cases/app-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="app">
+      <x:context href="../cases/app.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="array">
+      <x:context href="../cases/array.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article/@article-type=research-article">
+      <x:context href="../cases/article/@article-type=research-article.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@article-type=something">
+      <x:context href="../cases/article/@article-type=something.xml"/>
+      <x:expect-assert id="article-type-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@dtd-version">
+      <x:context href="../cases/article/@dtd-version.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@id">
+      <x:context href="../cases/article/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@specific-use">
+      <x:context href="../cases/article/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@xml:base">
+      <x:context href="../cases/article/@xml:base.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/@xml:lang">
+      <x:context href="../cases/article/@xml:lang.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/contents">
+      <x:context href="../cases/article/contents.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article/display-channel@article-type">
+      <x:context href="../cases/article/display-channel@article-type.xml"/>
+      <x:expect-assert id="article-type-assert-2" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-report id="subj-group-report-2" role="info"/>
+    </x:scenario>
+    <x:scenario label="article-categories/@id">
+      <x:context href="../cases/article-categories/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-categories_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-categories/@xml:base">
+      <x:context href="../cases/article-categories/@xml:base.xml"/>
+      <x:expect-assert id="article-categories_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-categories/content">
+      <x:context href="../cases/article-categories/content.xml"/>
+      <x:expect-assert id="article-categories_parent-assert-1" role="warn"/>
+      <x:expect-report id="subj-group-report-1" role="info"/>
+    </x:scenario>
+    <x:scenario label="article-id">
+      <x:context href="../cases/article-id.xml"/>
+      <x:expect-assert id="article-id-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-meta/@id">
+      <x:context href="../cases/article-meta/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article-meta/@xml:base">
+      <x:context href="../cases/article-meta/@xml:base.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+    </x:scenario>
+    <x:scenario label="article-meta/content">
+      <x:context href="../cases/article-meta/content.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-meta/title-group">
+      <x:context href="../cases/article-meta/title-group.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="article-meta_title-group-assert-1" role="error"/>
+    </x:scenario>
+    <x:scenario label="article-title/@id">
+      <x:context href="../cases/article-title/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-title/@xml:base">
+      <x:context href="../cases/article-title/@xml:base.xml"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-title/@xml:lang">
+      <x:context href="../cases/article-title/@xml:lang.xml"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-title/contents">
+      <x:context href="../cases/article-title/contents.xml"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-version-alternatives">
+      <x:context href="../cases/article-version-alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="article-version">
+      <x:context href="../cases/article-version.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="attrib">
+      <x:context href="../cases/attrib.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="author-comment">
+      <x:context href="../cases/author-comment.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="author-notes">
+      <x:context href="../cases/author-notes.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="award-group">
+      <x:context href="../cases/award-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="award-id">
+      <x:context href="../cases/award-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="back/@id">
+      <x:context href="../cases/back/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="back_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="back/@xml:base">
+      <x:context href="../cases/back/@xml:base.xml"/>
+      <x:expect-assert id="back_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="back/contents">
+      <x:context href="../cases/back/contents.xml"/>
+      <x:expect-assert id="back_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="bio">
+      <x:context href="../cases/bio.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="body/@id">
+      <x:context href="../cases/body/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="body/@specific-use">
+      <x:context href="../cases/body/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="body/@xml:base">
+      <x:context href="../cases/body/@xml:base.xml"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="body/contents">
+      <x:context href="../cases/body/contents.xml"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="body/empty">
+      <x:context href="../cases/body/empty.xml"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="bold/@id">
+      <x:context href="../cases/bold/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="bold/@specific-use">
+      <x:context href="../cases/bold/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="bold/@xml:base">
+      <x:context href="../cases/bold/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="bold/contents">
+      <x:context href="../cases/bold/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="bold/toggle">
+      <x:context href="../cases/bold/toggle.xml"/>
+    </x:scenario>
+    <x:scenario label="boxed-text">
+      <x:context href="../cases/boxed-text.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="break">
+      <x:context href="../cases/break.xml"/>
+      <x:expect-assert id="break_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@content-type">
+      <x:context href="../cases/caption/@content-type.xml"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@id">
+      <x:context href="../cases/caption/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@specific-use">
+      <x:context href="../cases/caption/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@style">
+      <x:context href="../cases/caption/@style.xml"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mmlmath_attributes-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@xml:base">
+      <x:context href="../cases/caption/@xml:base.xml"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/@xml:lang">
+      <x:context href="../cases/caption/@xml:lang.xml"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="caption/contents">
+      <x:context href="../cases/caption/contents.xml"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="chapter-title">
+      <x:context href="../cases/chapter-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="chem-struct-wrap">
+      <x:context href="../cases/chem-struct-wrap.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="chem-struct">
+      <x:context href="../cases/chem-struct.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="citation-alternatives">
+      <x:context href="../cases/citation-alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="city">
+      <x:context href="../cases/city.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="code">
+      <x:context href="../cases/code.xml"/>
+      <x:expect-report id="code_child-report-1" role="warn"/>
+      <x:expect-assert id="code_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="col">
+      <x:context href="../cases/col.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="colgroup">
+      <x:context href="../cases/colgroup.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="collab-alternatives">
+      <x:context href="../cases/collab-alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="collab">
+      <x:context href="../cases/collab.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="comment">
+      <x:context href="../cases/comment.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="compound-kwd-part">
+      <x:context href="../cases/compound-kwd-part.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="compound-kwd">
+      <x:context href="../cases/compound-kwd.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="compound-subject-part">
+      <x:context href="../cases/compound-subject-part.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="compound-subject">
+      <x:context href="../cases/compound-subject.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-acronym">
+      <x:context href="../cases/conf-acronym.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-date">
+      <x:context href="../cases/conf-date.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-loc">
+      <x:context href="../cases/conf-loc.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-name">
+      <x:context href="../cases/conf-name.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-num">
+      <x:context href="../cases/conf-num.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-sponsor">
+      <x:context href="../cases/conf-sponsor.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conf-theme">
+      <x:context href="../cases/conf-theme.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="conference">
+      <x:context href="../cases/conference.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@contrib-type">
+      <x:context href="../cases/contrib/@contrib-type.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@contrib-type=author">
+      <x:context href="../cases/contrib/@contrib-type=author.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@contrib-type=foo">
+      <x:context href="../cases/contrib/@contrib-type=foo.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@corresp">
+      <x:context href="../cases/contrib/@corresp.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@deceased">
+      <x:context href="../cases/contrib/@deceased.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@equal-contrib">
+      <x:context href="../cases/contrib/@equal-contrib.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@id">
+      <x:context href="../cases/contrib/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@rid">
+      <x:context href="../cases/contrib/@rid.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@specific-use">
+      <x:context href="../cases/contrib/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:actuate">
+      <x:context href="../cases/contrib/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:href">
+      <x:context href="../cases/contrib/@xlink:href.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:role">
+      <x:context href="../cases/contrib/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:show">
+      <x:context href="../cases/contrib/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:title">
+      <x:context href="../cases/contrib/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xlink:type">
+      <x:context href="../cases/contrib/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/@xml:base">
+      <x:context href="../cases/contrib/@xml:base.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/content">
+      <x:context href="../cases/contrib/content.xml"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-report id="name-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib/name">
+      <x:context href="../cases/contrib/name.xml"/>
+      <x:expect-assert id="contrib-assert-3" role="warn"/>
+      <x:expect-assert id="contrib_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-group/@content-type">
+      <x:context href="../cases/contrib-group/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-group/@id">
+      <x:context href="../cases/contrib-group/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-group/@specific-use">
+      <x:context href="../cases/contrib-group/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-group/@xml:base">
+      <x:context href="../cases/contrib-group/@xml:base.xml"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-group/content">
+      <x:context href="../cases/contrib-group/content.xml"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contrib-id">
+      <x:context href="../cases/contrib-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="contributed-resource-group">
+      <x:context href="../cases/contributed-resource-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="copyright-holder">
+      <x:context href="../cases/copyright-holder.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="copyright-statement">
+      <x:context href="../cases/copyright-statement.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="copyright-year">
+      <x:context href="../cases/copyright-year.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="corresp">
+      <x:context href="../cases/corresp.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="count">
+      <x:context href="../cases/count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="country">
+      <x:context href="../cases/country.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="country_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="counts">
+      <x:context href="../cases/counts.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="custom-meta-group">
+      <x:context href="../cases/custom-meta-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="custom-meta">
+      <x:context href="../cases/custom-meta.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="data-title">
+      <x:context href="../cases/data-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="date-in-citation">
+      <x:context href="../cases/date-in-citation.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="date">
+      <x:context href="../cases/date.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="date-type_parent-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/@content-type">
+      <x:context href="../cases/day/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/@id">
+      <x:context href="../cases/day/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/@specific-use">
+      <x:context href="../cases/day/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/@xml:base">
+      <x:context href="../cases/day/@xml:base.xml"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/@xml:lang">
+      <x:context href="../cases/day/@xml:lang.xml"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="day/contents">
+      <x:context href="../cases/day/contents.xml"/>
+      <x:expect-assert id="day-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="def-head">
+      <x:context href="../cases/def-head.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="def-item">
+      <x:context href="../cases/def-item.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="def-list">
+      <x:context href="../cases/def-list.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="def">
+      <x:context href="../cases/def.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="degrees">
+      <x:context href="../cases/degrees.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="disp-formula-group">
+      <x:context href="../cases/disp-formula-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="disp-formula">
+      <x:context href="../cases/disp-formula.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="disp-formula_child-assert-1" role="warn"/>
+      <x:expect-assert id="disp-formula_child-assert-1" role="warn"/>
+      <x:expect-assert id="disp-formula_child-assert-1" role="warn"/>
+      <x:expect-assert id="disp-formula_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="disp-quote">
+      <x:context href="../cases/disp-quote.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="edition">
+      <x:context href="../cases/edition.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@id">
+      <x:context href="../cases/element-citation/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@publication-format">
+      <x:context href="../cases/element-citation/@publication-format.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@publication-type">
+      <x:context href="../cases/element-citation/@publication-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@publisher-type">
+      <x:context href="../cases/element-citation/@publisher-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@specific-use">
+      <x:context href="../cases/element-citation/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@use-type">
+      <x:context href="../cases/element-citation/@use-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:actuate">
+      <x:context href="../cases/element-citation/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:href">
+      <x:context href="../cases/element-citation/@xlink:href.xml"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:role">
+      <x:context href="../cases/element-citation/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:show">
+      <x:context href="../cases/element-citation/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:title">
+      <x:context href="../cases/element-citation/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xlink:type">
+      <x:context href="../cases/element-citation/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xml:base">
+      <x:context href="../cases/element-citation/@xml:base.xml"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/@xml:lang">
+      <x:context href="../cases/element-citation/@xml:lang.xml"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/article-title">
+      <x:context href="../cases/element-citation/article-title.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="element-citation/contents">
+      <x:context href="../cases/element-citation/contents.xml"/>
+      <x:expect-assert id="article-title-assert-1" role="warn"/>
+      <x:expect-assert id="bold_parent-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-assert id="italic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+      <x:expect-assert id="pub-id-assert-3" role="warn"/>
+      <x:expect-assert id="source-assert-1" role="warn"/>
+      <x:expect-assert id="sub_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sup_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="elocation-id">
+      <x:context href="../cases/elocation-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="email">
+      <x:context href="../cases/email.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="equation-count">
+      <x:context href="../cases/equation-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="era">
+      <x:context href="../cases/era.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="etal">
+      <x:context href="../cases/etal.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="event-desc">
+      <x:context href="../cases/event-desc.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="event">
+      <x:context href="../cases/event.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@assigning-authority">
+      <x:context href="../cases/ext-link/@assigning-authority.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@ext-link-type">
+      <x:context href="../cases/ext-link/@ext-link-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@id">
+      <x:context href="../cases/ext-link/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@specific-use">
+      <x:context href="../cases/ext-link/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:actuate">
+      <x:context href="../cases/ext-link/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href">
+      <x:context href="../cases/ext-link/@xlink:href.xml"/>
+      <x:expect-report id="ext-link-report-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href=ftp">
+      <x:context href="../cases/ext-link/@xlink:href=ftp.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href=http">
+      <x:context href="../cases/ext-link/@xlink:href=http.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href=https">
+      <x:context href="../cases/ext-link/@xlink:href=https.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href=mailto">
+      <x:context href="../cases/ext-link/@xlink:href=mailto.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:href=relative">
+      <x:context href="../cases/ext-link/@xlink:href=relative.xml"/>
+      <x:expect-report id="ext-link-report-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:role">
+      <x:context href="../cases/ext-link/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:show">
+      <x:context href="../cases/ext-link/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:title">
+      <x:context href="../cases/ext-link/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xlink:type">
+      <x:context href="../cases/ext-link/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xml:base">
+      <x:context href="../cases/ext-link/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/@xml:lang">
+      <x:context href="../cases/ext-link/@xml:lang.xml"/>
+    </x:scenario>
+    <x:scenario label="ext-link/contents">
+      <x:context href="../cases/ext-link/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="fax">
+      <x:context href="../cases/fax.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@fig-type">
+      <x:context href="../cases/fig/@fig-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@id">
+      <x:context href="../cases/fig/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@orientation">
+      <x:context href="../cases/fig/@orientation.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@position">
+      <x:context href="../cases/fig/@position.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@specific-use">
+      <x:context href="../cases/fig/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@xml:base">
+      <x:context href="../cases/fig/@xml:base.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/@xml:lang">
+      <x:context href="../cases/fig/@xml:lang.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/contents">
+      <x:context href="../cases/fig/contents.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+      <x:expect-assert id="graphic-assert-3" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig/no-graphic">
+      <x:context href="../cases/fig/no-graphic.xml"/>
+      <x:expect-assert id="fig-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig-count">
+      <x:context href="../cases/fig-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fig-group">
+      <x:context href="../cases/fig-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fixed-case">
+      <x:context href="../cases/fixed-case.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="floats-group">
+      <x:context href="../cases/floats-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fn-group">
+      <x:context href="../cases/fn-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fn">
+      <x:context href="../cases/fn.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="fpage">
+      <x:context href="../cases/fpage.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="front/@id">
+      <x:context href="../cases/front/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="front_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="front/@xml:base">
+      <x:context href="../cases/front/@xml:base.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="front_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="front/article-meta">
+      <x:context href="../cases/front/article-meta.xml"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="front_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="front-stub">
+      <x:context href="../cases/front-stub.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="article-categories_parent-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="funding-group">
+      <x:context href="../cases/funding-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="funding-source">
+      <x:context href="../cases/funding-source.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="funding-statement">
+      <x:context href="../cases/funding-statement.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="given-names/@id">
+      <x:context href="../cases/given-names/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="given-names-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="given-names/@initials">
+      <x:context href="../cases/given-names/@initials.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="given-names-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="given-names/@xml:base">
+      <x:context href="../cases/given-names/@xml:base.xml"/>
+      <x:expect-assert id="given-names-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="given-names/contents">
+      <x:context href="../cases/given-names/contents.xml"/>
+      <x:expect-assert id="given-names-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="glossary">
+      <x:context href="../cases/glossary.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="glyph-data">
+      <x:context href="../cases/glyph-data.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="glyph-ref">
+      <x:context href="../cases/glyph-ref.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="gov">
+      <x:context href="../cases/gov.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@content-type">
+      <x:context href="../cases/graphic/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@id">
+      <x:context href="../cases/graphic/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@mimetype=-jpeg">
+      <x:context href="../cases/graphic/@mimetype=-jpeg.xml"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@mimetype=image-">
+      <x:context href="../cases/graphic/@mimetype=image-.xml"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@mimetype=image-jpeg">
+      <x:context href="../cases/graphic/@mimetype=image-jpeg.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@mimetype=video-jpeg">
+      <x:context href="../cases/graphic/@mimetype=video-jpeg.xml"/>
+      <x:expect-assert id="graphic-assert-2" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@orientation">
+      <x:context href="../cases/graphic/@orientation.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@position">
+      <x:context href="../cases/graphic/@position.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@specific-use">
+      <x:context href="../cases/graphic/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:actuate">
+      <x:context href="../cases/graphic/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=.jpeg">
+      <x:context href="../cases/graphic/@xlink:href=.jpeg.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=.jpg">
+      <x:context href="../cases/graphic/@xlink:href=.jpg.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=ftp">
+      <x:context href="../cases/graphic/@xlink:href=ftp.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=http">
+      <x:context href="../cases/graphic/@xlink:href=http.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=https">
+      <x:context href="../cases/graphic/@xlink:href=https.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:href=relative">
+      <x:context href="../cases/graphic/@xlink:href=relative.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:role">
+      <x:context href="../cases/graphic/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:show">
+      <x:context href="../cases/graphic/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:title">
+      <x:context href="../cases/graphic/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xlink:type">
+      <x:context href="../cases/graphic/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xml:base=ftp">
+      <x:context href="../cases/graphic/@xml:base=ftp.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xml:base=http">
+      <x:context href="../cases/graphic/@xml:base=http.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xml:base=https">
+      <x:context href="../cases/graphic/@xml:base=https.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/@xml:lang">
+      <x:context href="../cases/graphic/@xml:lang.xml"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="graphic/contents">
+      <x:context href="../cases/graphic/contents.xml"/>
+      <x:expect-assert id="alt-text-assert-1" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="history">
+      <x:context href="../cases/history.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="hr">
+      <x:context href="../cases/hr.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="index-term-range-end">
+      <x:context href="../cases/index-term-range-end.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="index-term">
+      <x:context href="../cases/index-term.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="inline-formula">
+      <x:context href="../cases/inline-formula.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="inline-formula_child-assert-1" role="warn"/>
+      <x:expect-assert id="inline-formula_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="inline-graphic">
+      <x:context href="../cases/inline-graphic.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="inline-media">
+      <x:context href="../cases/inline-media.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="inline-supplementary-material">
+      <x:context href="../cases/inline-supplementary-material.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="institution-id">
+      <x:context href="../cases/institution-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="institution-wrap">
+      <x:context href="../cases/institution-wrap.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="institution">
+      <x:context href="../cases/institution.xml"/>
+      <x:expect-assert id="institution_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="isbn">
+      <x:context href="../cases/isbn.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issn-l">
+      <x:context href="../cases/issn-l.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issn">
+      <x:context href="../cases/issn.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issue-id">
+      <x:context href="../cases/issue-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id-type_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issue-part">
+      <x:context href="../cases/issue-part.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issue-sponsor">
+      <x:context href="../cases/issue-sponsor.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issue-title">
+      <x:context href="../cases/issue-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="issue">
+      <x:context href="../cases/issue.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="italic/@id">
+      <x:context href="../cases/italic/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="italic/@specific-use">
+      <x:context href="../cases/italic/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="italic/@xml:base">
+      <x:context href="../cases/italic/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="italic/contents">
+      <x:context href="../cases/italic/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="italic/toggle">
+      <x:context href="../cases/italic/toggle.xml"/>
+    </x:scenario>
+    <x:scenario label="journal-id">
+      <x:context href="../cases/journal-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="journal-meta">
+      <x:context href="../cases/journal-meta.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="journal-subtitle">
+      <x:context href="../cases/journal-subtitle.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="journal-title-group">
+      <x:context href="../cases/journal-title-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="journal-title">
+      <x:context href="../cases/journal-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@content-type">
+      <x:context href="../cases/kwd/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@id">
+      <x:context href="../cases/kwd/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@vocab-identifier">
+      <x:context href="../cases/kwd/@vocab-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@vocab-term-identifier">
+      <x:context href="../cases/kwd/@vocab-term-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@vocab-term">
+      <x:context href="../cases/kwd/@vocab-term.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@vocab">
+      <x:context href="../cases/kwd/@vocab.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/@xml:base">
+      <x:context href="../cases/kwd/@xml:base.xml"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd/contents">
+      <x:context href="../cases/kwd/contents.xml"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@id">
+      <x:context href="../cases/kwd-group/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@kwd-group-type">
+      <x:context href="../cases/kwd-group/@kwd-group-type.xml"/>
+      <x:expect-assert id="kwd-group-assert-2" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@kwd-group-type=author-keywords">
+      <x:context href="../cases/kwd-group/@kwd-group-type=author-keywords.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@kwd-group-type=research-organism">
+      <x:context href="../cases/kwd-group/@kwd-group-type=research-organism.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@kwd-group-type=something">
+      <x:context href="../cases/kwd-group/@kwd-group-type=something.xml"/>
+      <x:expect-assert id="kwd-group-assert-2" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@specific-use">
+      <x:context href="../cases/kwd-group/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@vocab-identifier">
+      <x:context href="../cases/kwd-group/@vocab-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@vocab">
+      <x:context href="../cases/kwd-group/@vocab.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@xml:base">
+      <x:context href="../cases/kwd-group/@xml:base.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/@xml:lang">
+      <x:context href="../cases/kwd-group/@xml:lang.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/contents">
+      <x:context href="../cases/kwd-group/contents.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="kwd-group/empty">
+      <x:context href="../cases/kwd-group/empty.xml"/>
+      <x:expect-assert id="kwd-group_kwd-assert-3" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="label">
+      <x:context href="../cases/label.xml"/>
+      <x:expect-assert id="label_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="license-p">
+      <x:context href="../cases/license-p.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="license">
+      <x:context href="../cases/license.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="list-item">
+      <x:context href="../cases/list-item.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="list">
+      <x:context href="../cases/list.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="long-desc">
+      <x:context href="../cases/long-desc.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="lpage">
+      <x:context href="../cases/lpage.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="media">
+      <x:context href="../cases/media.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="meta-name">
+      <x:context href="../cases/meta-name.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="meta-value">
+      <x:context href="../cases/meta-value.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="milestone-end">
+      <x:context href="../cases/milestone-end.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="milestone-start">
+      <x:context href="../cases/milestone-start.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="mixed-citation">
+      <x:context href="../cases/mixed-citation.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="mml:math">
+      <x:context href="../cases/mml:math.xml"/>
+      <x:expect-assert id="mmlmath_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="monospace">
+      <x:context href="../cases/monospace.xml"/>
+    </x:scenario>
+    <x:scenario label="month/@content-type">
+      <x:context href="../cases/month/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="month/@id">
+      <x:context href="../cases/month/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="month/@specific-use">
+      <x:context href="../cases/month/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="month/@xml:base">
+      <x:context href="../cases/month/@xml:base.xml"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="month/@xml:lang">
+      <x:context href="../cases/month/@xml:lang.xml"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="month/contents">
+      <x:context href="../cases/month/contents.xml"/>
+      <x:expect-assert id="month-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@content-type">
+      <x:context href="../cases/name/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@id">
+      <x:context href="../cases/name/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@name-style">
+      <x:context href="../cases/name/@name-style.xml"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@name-style=given-only">
+      <x:context href="../cases/name/@name-style=given-only.xml"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@specific-use">
+      <x:context href="../cases/name/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@xml:base">
+      <x:context href="../cases/name/@xml:base.xml"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/@xml:lang">
+      <x:context href="../cases/name/@xml:lang.xml"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name/content">
+      <x:context href="../cases/name/content.xml"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="name-alternatives">
+      <x:context href="../cases/name-alternatives.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="named-content">
+      <x:context href="../cases/named-content.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="named-content_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="nested-kwd">
+      <x:context href="../cases/nested-kwd.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="nlm-citation">
+      <x:context href="../cases/nlm-citation.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="note">
+      <x:context href="../cases/note.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="notes">
+      <x:context href="../cases/notes.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="object-id">
+      <x:context href="../cases/object-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id-type_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="on-behalf-of">
+      <x:context href="../cases/on-behalf-of.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="open-access">
+      <x:context href="../cases/open-access.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="overline-end">
+      <x:context href="../cases/overline-end.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="overline-start">
+      <x:context href="../cases/overline-start.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="overline">
+      <x:context href="../cases/overline.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/@content-type">
+      <x:context href="../cases/p/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/@id">
+      <x:context href="../cases/p/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/@specific-use">
+      <x:context href="../cases/p/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/@xml:base">
+      <x:context href="../cases/p/@xml:base.xml"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/@xml:lang">
+      <x:context href="../cases/p/@xml:lang.xml"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="p/contents">
+      <x:context href="../cases/p/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="page-count">
+      <x:context href="../cases/page-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="page-range">
+      <x:context href="../cases/page-range.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="part-title">
+      <x:context href="../cases/part-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="patent">
+      <x:context href="../cases/patent.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="permissions">
+      <x:context href="../cases/permissions.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@id">
+      <x:context href="../cases/person-group/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@person-group-type">
+      <x:context href="../cases/person-group/@person-group-type.xml"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@person-group-type=author">
+      <x:context href="../cases/person-group/@person-group-type=author.xml"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@person-group-type=foo">
+      <x:context href="../cases/person-group/@person-group-type=foo.xml"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@specific-use">
+      <x:context href="../cases/person-group/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@xml:base">
+      <x:context href="../cases/person-group/@xml:base.xml"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/@xml:lang">
+      <x:context href="../cases/person-group/@xml:lang.xml"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="person-group/contents">
+      <x:context href="../cases/person-group/contents.xml"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="phone">
+      <x:context href="../cases/phone.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="postal-code">
+      <x:context href="../cases/postal-code.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/@content-type">
+      <x:context href="../cases/prefix/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/@id">
+      <x:context href="../cases/prefix/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/@specific-use">
+      <x:context href="../cases/prefix/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/@xml:base">
+      <x:context href="../cases/prefix/@xml:base.xml"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/@xml:lang">
+      <x:context href="../cases/prefix/@xml:lang.xml"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="prefix/contents">
+      <x:context href="../cases/prefix/contents.xml"/>
+      <x:expect-assert id="prefix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="preformat">
+      <x:context href="../cases/preformat.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="price">
+      <x:context href="../cases/price.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="principal-award-recipient">
+      <x:context href="../cases/principal-award-recipient.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="principal-investigator">
+      <x:context href="../cases/principal-investigator.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="private-char">
+      <x:context href="../cases/private-char.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="product">
+      <x:context href="../cases/product.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@calendar">
+      <x:context href="../cases/pub-date/@calendar.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@date-type">
+      <x:context href="../cases/pub-date/@date-type.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@date-type=foo">
+      <x:context href="../cases/pub-date/@date-type=foo.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@date-type=pub">
+      <x:context href="../cases/pub-date/@date-type=pub.xml"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@id">
+      <x:context href="../cases/pub-date/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@iso-8601-date=--01-02">
+      <x:context href="../cases/pub-date/@iso-8601-date=--01-02.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@iso-8601-date=2000-01-02">
+      <x:context href="../cases/pub-date/@iso-8601-date=2000-01-02.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@iso-8601-date=2000-01-02T03:04:05">
+      <x:context href="../cases/pub-date/@iso-8601-date=2000-01-02T03:04:05.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@iso-8601-date=2000-01">
+      <x:context href="../cases/pub-date/@iso-8601-date=2000-01.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@pub-type">
+      <x:context href="../cases/pub-date/@pub-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@publication-format">
+      <x:context href="../cases/pub-date/@publication-format.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@xml:base">
+      <x:context href="../cases/pub-date/@xml:base.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/@xml:lang">
+      <x:context href="../cases/pub-date/@xml:lang.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/contents">
+      <x:context href="../cases/pub-date/contents.xml"/>
+      <x:expect-assert id="day-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-2" role="warn"/>
+      <x:expect-assert id="month-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-2" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/contents=--01-02">
+      <x:context href="../cases/pub-date/contents=--01-02.xml"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/contents=2000-01-02">
+      <x:context href="../cases/pub-date/contents=2000-01-02.xml"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/contents=2000-01">
+      <x:context href="../cases/pub-date/contents=2000-01.xml"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date/contents=2000-january-02">
+      <x:context href="../cases/pub-date/contents=2000-january-02.xml"/>
+      <x:expect-assert id="month-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
+      <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-date-not-available">
+      <x:context href="../cases/pub-date-not-available.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-history">
+      <x:context href="../cases/pub-history.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@assigning-authority">
+      <x:context href="../cases/pub-id/@assigning-authority.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@id">
+      <x:context href="../cases/pub-id/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@pub-id-type">
+      <x:context href="../cases/pub-id/@pub-id-type.xml"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@pub-id-type=doi">
+      <x:context href="../cases/pub-id/@pub-id-type=doi.xml"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@pub-id-type=foo">
+      <x:context href="../cases/pub-id/@pub-id-type=foo.xml"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@specific-use">
+      <x:context href="../cases/pub-id/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:actuate">
+      <x:context href="../cases/pub-id/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:href">
+      <x:context href="../cases/pub-id/@xlink:href.xml"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:role">
+      <x:context href="../cases/pub-id/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:show">
+      <x:context href="../cases/pub-id/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:title">
+      <x:context href="../cases/pub-id/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xlink:type">
+      <x:context href="../cases/pub-id/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="pub-id/@xml:base">
+      <x:context href="../cases/pub-id/@xml:base.xml"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="publisher-loc">
+      <x:context href="../cases/publisher-loc.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="publisher-name">
+      <x:context href="../cases/publisher-name.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="publisher">
+      <x:context href="../cases/publisher.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="rb">
+      <x:context href="../cases/rb.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref/@content-type">
+      <x:context href="../cases/ref/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref/@id">
+      <x:context href="../cases/ref/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref/@specific-use">
+      <x:context href="../cases/ref/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref/@xml:base">
+      <x:context href="../cases/ref/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="ref/@xml:lang">
+      <x:context href="../cases/ref/@xml:lang.xml"/>
+    </x:scenario>
+    <x:scenario label="ref/contents">
+      <x:context href="../cases/ref/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="ref-count">
+      <x:context href="../cases/ref-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/@content-type">
+      <x:context href="../cases/ref-list/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/@id">
+      <x:context href="../cases/ref-list/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/@specific-use">
+      <x:context href="../cases/ref-list/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/@xml:base">
+      <x:context href="../cases/ref-list/@xml:base.xml"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/@xml:lang">
+      <x:context href="../cases/ref-list/@xml:lang.xml"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ref-list/contents">
+      <x:context href="../cases/ref-list/contents.xml"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="related-article">
+      <x:context href="../cases/related-article.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="related-object">
+      <x:context href="../cases/related-object.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-title-assert-2" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="name-assert-2" role="warn"/>
+      <x:expect-assert id="person-group-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="resource-group">
+      <x:context href="../cases/resource-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="resource-id">
+      <x:context href="../cases/resource-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="resource-name">
+      <x:context href="../cases/resource-name.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="resource-wrap">
+      <x:context href="../cases/resource-wrap.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="response">
+      <x:context href="../cases/response.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="back_parent-assert-1" role="warn"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+      <x:expect-assert id="front_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="role">
+      <x:context href="../cases/role.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="roman">
+      <x:context href="../cases/roman.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="rp">
+      <x:context href="../cases/rp.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="rt">
+      <x:context href="../cases/rt.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="ruby">
+      <x:context href="../cases/ruby.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sans-serif">
+      <x:context href="../cases/sans-serif.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sc">
+      <x:context href="../cases/sc.xml"/>
+    </x:scenario>
+    <x:scenario label="season">
+      <x:context href="../cases/season.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@disp-level">
+      <x:context href="../cases/sec/@disp-level.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@id">
+      <x:context href="../cases/sec/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@sec-type">
+      <x:context href="../cases/sec/@sec-type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@specific-use">
+      <x:context href="../cases/sec/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@xml:base">
+      <x:context href="../cases/sec/@xml:base.xml"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/@xml:lang">
+      <x:context href="../cases/sec/@xml:lang.xml"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/contents">
+      <x:context href="../cases/sec/contents.xml"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec/empty">
+      <x:context href="../cases/sec/empty.xml"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sec-meta">
+      <x:context href="../cases/sec-meta.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
+    <x:scenario label="see-also">
+      <x:context href="../cases/see-also.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="see">
+      <x:context href="../cases/see.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@content-type">
+      <x:context href="../cases/self-uri/@content-type.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@content-type=foo">
+      <x:context href="../cases/self-uri/@content-type=foo.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@content-type=pdf">
+      <x:context href="../cases/self-uri/@content-type=pdf.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@id">
+      <x:context href="../cases/self-uri/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@specific-use">
+      <x:context href="../cases/self-uri/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:actuate">
+      <x:context href="../cases/self-uri/@xlink:actuate.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:href=ftp">
+      <x:context href="../cases/self-uri/@xlink:href=ftp.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:href=http">
+      <x:context href="../cases/self-uri/@xlink:href=http.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:href=https">
+      <x:context href="../cases/self-uri/@xlink:href=https.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:href=relative">
+      <x:context href="../cases/self-uri/@xlink:href=relative.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:role">
+      <x:context href="../cases/self-uri/@xlink:role.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:show">
+      <x:context href="../cases/self-uri/@xlink:show.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:title">
+      <x:context href="../cases/self-uri/@xlink:title.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xlink:type">
+      <x:context href="../cases/self-uri/@xlink:type.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xml:base=ftp">
+      <x:context href="../cases/self-uri/@xml:base=ftp.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xml:base=http">
+      <x:context href="../cases/self-uri/@xml:base=http.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xml:base=https">
+      <x:context href="../cases/self-uri/@xml:base=https.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/@xml:lang">
+      <x:context href="../cases/self-uri/@xml:lang.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="self-uri/contents">
+      <x:context href="../cases/self-uri/contents.xml"/>
+      <x:expect-assert id="self-uri_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="series-text">
+      <x:context href="../cases/series-text.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="series-title">
+      <x:context href="../cases/series-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="series">
+      <x:context href="../cases/series.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sig-block">
+      <x:context href="../cases/sig-block.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="aff_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sig">
+      <x:context href="../cases/sig.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="size">
+      <x:context href="../cases/size.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/@content-type">
+      <x:context href="../cases/source/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/@id">
+      <x:context href="../cases/source/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/@specific-use">
+      <x:context href="../cases/source/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/@xml:base">
+      <x:context href="../cases/source/@xml:base.xml"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/@xml:lang">
+      <x:context href="../cases/source/@xml:lang.xml"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="source/contents">
+      <x:context href="../cases/source/contents.xml"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="speaker">
+      <x:context href="../cases/speaker.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="speech">
+      <x:context href="../cases/speech.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="state">
+      <x:context href="../cases/state.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="statement">
+      <x:context href="../cases/statement.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="std-organization">
+      <x:context href="../cases/std-organization.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="std">
+      <x:context href="../cases/std.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
+      <x:expect-assert id="source-assert-2" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="strike">
+      <x:context href="../cases/strike.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="string-conf">
+      <x:context href="../cases/string-conf.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="string-date">
+      <x:context href="../cases/string-date.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="string-name">
+      <x:context href="../cases/string-name.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="name-style_parent-assert-1" role="warn"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="styled-content">
+      <x:context href="../cases/styled-content.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sub/@arrange">
+      <x:context href="../cases/sub/@arrange.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sub/@id">
+      <x:context href="../cases/sub/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sub/@specific-use">
+      <x:context href="../cases/sub/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sub/@xml:base">
+      <x:context href="../cases/sub/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="sub/contents">
+      <x:context href="../cases/sub/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="sub-article">
+      <x:context href="../cases/sub-article.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="article-type-assert-3" role="warn"/>
+      <x:expect-report id="article-id-logic-report-5" role="error"/>
+      <x:expect-assert id="back_parent-assert-1" role="warn"/>
+      <x:expect-assert id="body_parent-assert-1" role="warn"/>
+      <x:expect-assert id="front_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@id">
+      <x:context href="../cases/subj-group/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@specific-use">
+      <x:context href="../cases/subj-group/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@subj-group-type">
+      <x:context href="../cases/subj-group/@subj-group-type.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@subj-group-type=display-channel">
+      <x:context href="../cases/subj-group/@subj-group-type=display-channel.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@subj-group-type=heading">
+      <x:context href="../cases/subj-group/@subj-group-type=heading.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@subj-group-type=something">
+      <x:context href="../cases/subj-group/@subj-group-type=something.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@vocab-identifier">
+      <x:context href="../cases/subj-group/@vocab-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@vocab">
+      <x:context href="../cases/subj-group/@vocab.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@xml:base">
+      <x:context href="../cases/subj-group/@xml:base.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/@xml:lang">
+      <x:context href="../cases/subj-group/@xml:lang.xml"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/contents">
+      <x:context href="../cases/subj-group/contents.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_subject-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subj-group/contents@subj-group-type=display-channel">
+      <x:context href="../cases/subj-group/contents@subj-group-type=display-channel.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_parent-assert-1" role="warn"/>
+      <x:expect-assert id="subj-group_subject-assert-2" role="warn"/>
+      <x:expect-assert id="subj-group_subject-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@content-type">
+      <x:context href="../cases/subject/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@id">
+      <x:context href="../cases/subject/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@vocab-identifier">
+      <x:context href="../cases/subject/@vocab-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@vocab-term-identifier">
+      <x:context href="../cases/subject/@vocab-term-identifier.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@vocab-term">
+      <x:context href="../cases/subject/@vocab-term.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@vocab">
+      <x:context href="../cases/subject/@vocab.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="subject/@xml:base">
+      <x:context href="../cases/subject/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="subject/contents">
+      <x:context href="../cases/subject/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="subtitle">
+      <x:context href="../cases/subtitle.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/@content-type">
+      <x:context href="../cases/suffix/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/@id">
+      <x:context href="../cases/suffix/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/@specific-use">
+      <x:context href="../cases/suffix/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/@xml:base">
+      <x:context href="../cases/suffix/@xml:base.xml"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/@xml:lang">
+      <x:context href="../cases/suffix/@xml:lang.xml"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="suffix/contents">
+      <x:context href="../cases/suffix/contents.xml"/>
+      <x:expect-assert id="suffix_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sup/@arrange">
+      <x:context href="../cases/sup/@arrange.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sup/@id">
+      <x:context href="../cases/sup/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sup/@specific-use">
+      <x:context href="../cases/sup/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="sup/@xml:base">
+      <x:context href="../cases/sup/@xml:base.xml"/>
+    </x:scenario>
+    <x:scenario label="sup/contents">
+      <x:context href="../cases/sup/contents.xml"/>
+    </x:scenario>
+    <x:scenario label="supplement">
+      <x:context href="../cases/supplement.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="contrib-group-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="supplementary-material">
+      <x:context href="../cases/supplementary-material.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="support-description">
+      <x:context href="../cases/support-description.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="support-group">
+      <x:context href="../cases/support-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="support-source">
+      <x:context href="../cases/support-source.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="surname/@id">
+      <x:context href="../cases/surname/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="surname/@initials">
+      <x:context href="../cases/surname/@initials.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="surname/@xml:base">
+      <x:context href="../cases/surname/@xml:base.xml"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="surname/contents">
+      <x:context href="../cases/surname/contents.xml"/>
+      <x:expect-assert id="surname_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="table-count">
+      <x:context href="../cases/table-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="table-wrap-foot">
+      <x:context href="../cases/table-wrap-foot.xml"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="table-wrap-group">
+      <x:context href="../cases/table-wrap-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="table-wrap-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="table-wrap">
+      <x:context href="../cases/table-wrap.xml"/>
+      <x:expect-assert id="alt-text-assert-2" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="table-wrap-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="table">
+      <x:context href="../cases/table.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="table_parent-assert-1" role="warn"/>
+      <x:expect-assert id="tr_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="target">
+      <x:context href="../cases/target.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="tbody">
+      <x:context href="../cases/tbody.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="tbody_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="td">
+      <x:context href="../cases/td.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="td_child-assert-1" role="warn"/>
+      <x:expect-assert id="td_child-assert-1" role="warn"/>
+      <x:expect-assert id="td_child-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="term-head">
+      <x:context href="../cases/term-head.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="term">
+      <x:context href="../cases/term.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="tex-math">
+      <x:context href="../cases/tex-math.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="tex-math_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="textual-form">
+      <x:context href="../cases/textual-form.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="tfoot">
+      <x:context href="../cases/tfoot.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="tr_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="th">
+      <x:context href="../cases/th.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="th_child-assert-1" role="warn"/>
+      <x:expect-assert id="th_child-assert-1" role="warn"/>
+      <x:expect-assert id="th_child-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="thead">
+      <x:context href="../cases/thead.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="thead_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="time-stamp">
+      <x:context href="../cases/time-stamp.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="month-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title/@content-type">
+      <x:context href="../cases/title/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title/@id">
+      <x:context href="../cases/title/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title/@specific-use">
+      <x:context href="../cases/title/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title/@xml:base">
+      <x:context href="../cases/title/@xml:base.xml"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title/contents">
+      <x:context href="../cases/title/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title-group/@id">
+      <x:context href="../cases/title-group/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="title-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title-group/@xml:base">
+      <x:context href="../cases/title-group/@xml:base.xml"/>
+      <x:expect-assert id="title-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="title-group/article-title">
+      <x:context href="../cases/title-group/article-title.xml"/>
+      <x:expect-assert id="title-group_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="tr">
+      <x:context href="../cases/tr.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="tr_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="trans-abstract">
+      <x:context href="../cases/trans-abstract.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
+      <x:expect-assert id="sec_parent-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="trans-source">
+      <x:context href="../cases/trans-source.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="trans-subtitle">
+      <x:context href="../cases/trans-subtitle.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="trans-title-group">
+      <x:context href="../cases/trans-title-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="trans-title">
+      <x:context href="../cases/trans-title.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="underline-end">
+      <x:context href="../cases/underline-end.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="underline-start">
+      <x:context href="../cases/underline-start.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="underline">
+      <x:context href="../cases/underline.xml"/>
+    </x:scenario>
+    <x:scenario label="unstructured-kwd-group">
+      <x:context href="../cases/unstructured-kwd-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="uri">
+      <x:context href="../cases/uri.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="verse-group">
+      <x:context href="../cases/verse-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="verse-line">
+      <x:context href="../cases/verse-line.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="version">
+      <x:context href="../cases/version.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="volume-id">
+      <x:context href="../cases/volume-id.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="pub-id-type_parent-assert-1" role="warn"/>
+      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="volume-issue-group">
+      <x:context href="../cases/volume-issue-group.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="volume-series">
+      <x:context href="../cases/volume-series.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="volume">
+      <x:context href="../cases/volume.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="word-count">
+      <x:context href="../cases/word-count.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="x">
+      <x:context href="../cases/x.xml"/>
+      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+    </x:scenario>
+    <x:scenario label="xref">
+      <x:context href="../cases/xref.xml"/>
+      <x:expect-assert id="xref-assert-1" role="warn"/>
+      <x:expect-assert id="xref-assert-2" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@calendar">
+      <x:context href="../cases/year/@calendar.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@content-type">
+      <x:context href="../cases/year/@content-type.xml"/>
+      <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@id">
+      <x:context href="../cases/year/@id.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@iso-8601-date">
+      <x:context href="../cases/year/@iso-8601-date.xml"/>
+      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@specific-use">
+      <x:context href="../cases/year/@specific-use.xml"/>
+      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@xml:base">
+      <x:context href="../cases/year/@xml:base.xml"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/@xml:lang">
+      <x:context href="../cases/year/@xml:lang.xml"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+    <x:scenario label="year/contents">
+      <x:context href="../cases/year/contents.xml"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
+      <x:expect-assert id="year-assert-3" role="warn"/>
+    </x:scenario>
+  </x:scenario>
+</x:description>

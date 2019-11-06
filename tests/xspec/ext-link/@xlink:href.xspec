@@ -1,6 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="ext-link/@xlink:href">
-    <x:context href="../../cases/ext-link/@xlink:href"/>
-    <x:expect-report id="ext-link-report-1" role=""/>
-  </x:scenario>
-</x:description>

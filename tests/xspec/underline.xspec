@@ -1,5 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="underline">
-    <x:context href="../../cases/underline"/>
-  </x:scenario>
-</x:description>

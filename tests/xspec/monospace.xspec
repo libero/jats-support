@@ -1,5 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="monospace">
-    <x:context href="../../cases/monospace"/>
-  </x:scenario>
-</x:description>

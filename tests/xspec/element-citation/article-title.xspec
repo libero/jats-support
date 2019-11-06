@@ -1,7 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="element-citation/article-title">
-    <x:context href="../../cases/element-citation/article-title"/>
-    <x:expect-report id="element-citation-assert-1" role="warn"/>
-    <x:expect-report id="element-citation-assert-2" role="warn"/>
-  </x:scenario>
-</x:description>

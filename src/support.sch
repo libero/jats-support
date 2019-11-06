@@ -378,8 +378,8 @@
     </pattern>
 
     <pattern id="article-meta_title-group">
-        <rule context="article-meta" role="error">
-            <assert id="article-meta_title-group-assert-1" test="title-group">
+        <rule context="article-meta">
+            <assert id="article-meta_title-group-assert-1" test="title-group" role="error">
                 &lt;<name/>&gt; requires a &lt;title-group&gt;.
             </assert>
         </rule>
@@ -495,12 +495,12 @@
 
     <pattern id="contrib">
         <rule context="contrib[not(@contrib-type)]">
-            <assert id="contrib-assert-1" test="true" role="warn">
+            <assert id="contrib-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; without a @contrib-type is ignored.
             </assert>
         </rule>
         <rule context="contrib[not(@contrib-type='author')]">
-            <assert id="contrib-assert-2" test="true" role="warn">
+            <assert id="contrib-assert-2" test="true()" role="warn">
                 &lt;<name/> contrib-type="<value-of select="@contrib-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -596,9 +596,9 @@
     </pattern>
 
     <pattern id="ext-link">
-        <rule context="ext-link" role="warn">
+        <rule context="ext-link">
             <let name="parent" value="name(..)"/>
-            <report id="ext-link-report-1" test="not(contains(@xlink:href, ':') or ancestor-or-self::*[contains(@xml:base, ':')])">
+            <report id="ext-link-report-1" test="not(contains(@xlink:href, ':') or ancestor-or-self::*[contains(@xml:base, ':')])" role="warn">
                 &lt;<name/>&gt; without an absolute @xlink:href is ignored.
             </report>
             <assert id="ext-link-assert-1" test="
@@ -656,9 +656,9 @@
     </pattern>
 
     <pattern id="graphic">
-        <rule context="graphic" role="warn">
+        <rule context="graphic">
             <let name="parent" value="name(..)"/>
-            <assert id="graphic-assert-2" test="(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=translate(substring(@xlink:href, string-length(@xlink:href)-3), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')) or ('.jpeg'=translate(substring(@xlink:href, string-length(@xlink:href)-4), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))">
+            <assert id="graphic-assert-2" test="(@mimetype='image' and @mime-subtype='jpeg') or ('.jpg'=translate(substring(@xlink:href, string-length(@xlink:href)-3), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')) or ('.jpeg'=translate(substring(@xlink:href, string-length(@xlink:href)-4), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))"  role="warn">
                 &lt;<name/>&gt; is ignored if it is not a JPEG.
             </assert>
             <assert id="graphic-assert-3" test="
@@ -1036,12 +1036,12 @@
 
     <pattern id="person-group-1">
         <rule context="person-group[not(@person-group-type)]">
-            <assert id="person-group-assert-1" test="true" role="warn">
+            <assert id="person-group-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; without a @person-group-type is ignored.
             </assert>
         </rule>
         <rule context="person-group[not(@person-group-type='author')]">
-            <assert id="person-group-assert-2" test="true" role="warn">
+            <assert id="person-group-assert-2" test="true()" role="warn">
                 &lt;<name/> person-group-type="<value-of select="@person-group-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -1069,12 +1069,12 @@
 
     <pattern id="pub-date">
         <rule context="pub-date[not(@date-type)]">
-            <assert id="pub-date-assert-1" test="true" role="warn">
+            <assert id="pub-date-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; without a @date-type is ignored.
             </assert>
         </rule>
         <rule context="pub-date[not(@date-type='pub')]">
-            <assert id="pub-date-assert-2" test="true" role="warn">
+            <assert id="pub-date-assert-2" test="true()" role="warn">
                 &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -1115,12 +1115,12 @@
 
     <pattern id="pub-id">
         <rule context="pub-id[not(@pub-id-type)]">
-            <assert id="pub-id-assert-1" test="true" role="warn">
+            <assert id="pub-id-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; without a @pub-id-type is ignored.
             </assert>
         </rule>
         <rule context="pub-id[not(@pub-id-type='doi')]">
-            <assert id="pub-id-assert-2" test="true" role="warn">
+            <assert id="pub-id-assert-2" test="true()" role="warn">
                 &lt;<name/> pub-id-type="<value-of select="@pub-id-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -1178,13 +1178,13 @@
     </pattern>
 
     <pattern id="self-uri">
-        <rule context="self-uri[not(@content-type)]" role="warn">
-            <assert id="self-uri-assert-1" test="true">
+        <rule context="self-uri[not(@content-type)]">
+            <assert id="self-uri-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; without a @content-type is ignored.
             </assert>
         </rule>
-        <rule context="self-uri[not(@content-type='pdf')]" role="warn">
-            <assert id="self-uri-assert-2" test="true">
+        <rule context="self-uri[not(@content-type='pdf')]">
+            <assert id="self-uri-assert-2" test="true()" role="warn">
                 &lt;<name/> content-type="<value-of select="@content-type"/>"&gt; is ignored.
             </assert>
         </rule>
@@ -1197,8 +1197,8 @@
     </pattern>
 
     <pattern id="self-uri_content">
-        <rule context="self-uri[child::node()]" role="warn">
-            <assert id="self-uri_content-assert-1" test="true">
+        <rule context="self-uri[child::node()]">
+            <assert id="self-uri_content-assert-1" test="true()" role="warn">
                 Content inside &lt;<name/>&gt; is ignored.
             </assert>
         </rule>
@@ -1296,7 +1296,7 @@
     <pattern id="surname_given-only">
         <rule context="surname[parent::name[@name-style='given-only']]">
             <let name="parent" value="name(..)"/>
-            <assert id="surname_given-only-assert-1" test="true" role="warn">
+            <assert id="surname_given-only-assert-1" test="true()" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/> name-style="given-only"&gt; is ignored.
             </assert>
         </rule>

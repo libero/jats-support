@@ -1,8 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="styled-content">
-    <x:context href="../../cases/styled-content"/>
-    <x:expect-report id="element-whitelist-assert-1" role="warn"/>
-    <x:expect-report id="fig_parent-assert-1" role="warn"/>
-    <x:expect-report id="graphic_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>

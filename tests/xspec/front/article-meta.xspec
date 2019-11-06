@@ -1,7 +1,0 @@
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../src.support.sch">
-  <x:scenario label="front/article-meta">
-    <x:context href="../../cases/front/article-meta"/>
-    <x:expect-report id="article-id-logic-report-5" role="error"/>
-    <x:expect-report id="front_parent-assert-1" role="warn"/>
-  </x:scenario>
-</x:description>
