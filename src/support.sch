@@ -15,6 +15,7 @@
                 and name()!='actiontype'
                 and name()!='align'
                 and name()!='article-type'
+                and name()!='authenticated'
                 and name()!='bevelled'
                 and name()!='class'
                 and name()!='close'
@@ -24,7 +25,9 @@
                 and name()!='columnspacing'
                 and name()!='columnspan'
                 and name()!='content-type'
+                and name()!='contrib-id-type'
                 and name()!='contrib-type'
+                and name()!='corresp'
                 and name()!='date-type'
                 and name()!='definitionURL'
                 and name()!='denomalign'
@@ -40,9 +43,11 @@
                 and name()!='fontstyle'
                 and name()!='fontweight'
                 and name()!='fandm'
+                and name()!='fn-type'
                 and name()!='frame'
                 and name()!='groupalign'
                 and name()!='height'
+                and name()!='id'
                 and name()!='indentalign'
                 and name()!='indenttarget'
                 and name()!='iso-8601-date'
@@ -97,6 +102,7 @@
                     and name()!='actiontype'
                     and name()!='align'
                     and name()!='article-type'
+                    and name()!='authenticated'
                     and name()!='bevelled'
                     and name()!='class'
                     and name()!='close'
@@ -106,7 +112,9 @@
                     and name()!='columnspacing'
                     and name()!='columnspan'
                     and name()!='content-type'
+                    and name()!='contrib-id-type'
                     and name()!='contrib-type'
+                    and name()!='corresp'
                     and name()!='date-type'
                     and name()!='definitionURL'
                     and name()!='denomalign'
@@ -122,9 +130,11 @@
                     and name()!='fontstyle'
                     and name()!='fontweight'
                     and name()!='fandm'
+                    and name()!='fn-type'
                     and name()!='frame'
                     and name()!='groupalign'
                     and name()!='height'
+                    and name()!='id'
                     and name()!='indentalign'
                     and name()!='indenttarget'
                     and name()!='iso-8601-date'
@@ -146,8 +156,8 @@
                     and name()!='name-style'
                     and name()!='notation'
                     and name()!='numalign'
-                    and name()!='orientation'
                     and name()!='open'
+                    and name()!='orientation'
                     and name()!='person-group-type'
                     and name()!='position'
                     and name()!='pub-id-type'
@@ -189,6 +199,7 @@
                 or name()='article-id'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='author-notes'
                 or name()='back'
                 or name()='body'
                 or name()='bold'
@@ -196,13 +207,17 @@
                 or name()='caption'
                 or name()='code'
                 or name()='contrib'
+                or name()='contrib-id'
                 or name()='contrib-group'
                 or name()='country'
                 or name()='day'
                 or name()='disp-formula'
                 or name()='element-citation'
+                or name()='email'
                 or name()='ext-link'
                 or name()='fig'
+                or name()='fn'
+                or name()='fn-group'
                 or name()='front'
                 or name()='given-names'
                 or name()='graphic'
@@ -399,6 +414,17 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="author-notes_parent">
+        <rule context="author-notes">
+            <let name="parent" value="name(..)"/>
+            <assert id="author-notes-assert-1" test="
+                $parent='article-meta'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="back_parent">
         <rule context="back">
@@ -519,6 +545,18 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="contrib-id">
+        <rule context="contrib-id">
+            <let name="parent" value="name(..)"/>
+            <assert id="contrib-id-assert-1" test="$parent='contrib'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <assert id="contrib-id-assert-2" test="@contrib-id-type='orcid'" role="warn">
+                &lt;<name/>&gt; without @contrib-id-type='orcid' is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="contrib-group">
         <rule context="contrib-group">
@@ -529,6 +567,19 @@
             <assert id="contrib-group-assert-2" test="contrib" role="warn">
                 &lt;<name/>&gt; without &lt;contrib&gt; is ignored.
             </assert>
+            <assert id="contrib-group-assert-3" test="count(preceding-sibling::contrib-group)=0" role="warn">
+                Extra &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="corresp-att_parent">
+        <rule context="*[@corresp]">
+            <report id="corresp-att-assert-1" 
+                test="(@corresp='yes') and (name()='contrib') and not(@contrib-type='author')" 
+                role="warn">
+                @corresp on &lt;<value-of select="name()"/>&gt; without contrib-type="author" is ignored.
+            </report>
         </rule>
     </pattern>
     
@@ -594,6 +645,16 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="email_parent">
+        <rule context="email">
+            <let name="parent" value="name(..)"/>
+            <assert id="email_parent-assert-1" test="parent::contrib[@contrib-type='author']" 
+                role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="ext-link">
         <rule context="ext-link">
@@ -632,6 +693,25 @@
                 $parent='body'
                 or $parent='sec'
                 " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="fn_parent">
+        <rule context="fn">
+            <let name="parent" value="name(..)"/>
+            <assert id="fn_parent-assert-1" test="$parent='fn-group' 
+                or $parent='author-notes'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="fn-group_parent">
+        <rule context="fn-group">
+            <let name="parent" value="name(..)"/>
+            <assert id="fn-group_parent-assert-1" test="$parent='table-wrap-foot'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -677,6 +757,14 @@
                 or $parent='sec'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="id_parent">
+        <rule context="*[@id]">
+            <assert id="id_parent-assert-1" test="name()='fn'" role="warn">
+                @id on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -757,7 +845,11 @@
     <pattern id="label_parent">
         <rule context="label">
             <let name="parent" value="name(..)"/>
-            <assert id="label_parent-assert-1" test="$parent='fig' or $parent='disp-formula' or $parent='table-wrap' or $parent='aff'" role="warn">
+            <assert id="label_parent-assert-1" test="$parent='fig' 
+                or $parent='disp-formula' 
+                or $parent='table-wrap' 
+                or $parent='aff'
+                or $parent='fn'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
             <assert id="label_parent-assert-2" test="count(preceding-sibling::label)=0" role="warn">
@@ -1028,6 +1120,7 @@
                 $parent='body'
                 or $parent='caption'
                 or $parent='sec'
+                or $parent='fn'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1422,6 +1515,7 @@
             <let name="parent" value="name(..)"/>
             <assert id="title_parent-assert-1" test="
                 $parent='caption'
+                or $parent='fn-group'
                 or $parent='kwd-group'
                 or $parent='ref-list'
                 or $parent='sec'
@@ -1469,8 +1563,9 @@
             <let name="parent" value="name(..)"/>
             <assert id="xref-assert-1" test="
                 @ref-type='aff'
+                or @ref-type='fn'
                 " role="warn">
-                &lt;<name/>&gt; without @ref-type="aff" is ignored.
+                &lt;<name/>&gt; without @ref-type="aff" or @ref-type='fn' is ignored.
             </assert>
             <assert id="xref-assert-2" test="
                 parent::contrib[@contrib-type='author']
