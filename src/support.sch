@@ -4,8 +4,7 @@
 
     <ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
     <ns uri="http://www.w3.org/1998/Math/MathML" prefix="mml"/>
-    <!-- ali namespace not included as http://www.niso.org/schemas/ali/1.0/ and http://www.niso.org/schemas/ali/1.0 are used
-         local-name() will have to be used (in place of name()) in tests for those elements
+    <!-- ali namespace not included as both http://www.niso.org/schemas/ali/1.0/ and http://www.niso.org/schemas/ali/1.0 are used (due to error in JATS 1.1d3). local-name() function will have to be used (in place of name()) in tests for those elements
     -->
     
     <pattern id="attribute-whitelist">
@@ -813,6 +812,17 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="kwd_child">
+        <rule context="kwd/*">
+            <let name="parent" value="name(..)"/>
+            <assert id="kwd_child-assert-1" 
+                test="name()='italic' or name()='sup' or name()='sub' or name()='bold' or name()='sc'" 
+                role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="kwd_parent">
         <rule context="kwd">
@@ -827,7 +837,7 @@
         <rule context="kwd-group">
             <let name="parent" value="name(..)"/>
             <assert id="kwd-group-assert-2" test="
-                @kwd-group-type='author-keywords'
+                @kwd-group-type='author-generated'
                 or @kwd-group-type='research-organism'
                 or child::title
             " role="warn">

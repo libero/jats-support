@@ -1485,6 +1485,7 @@
     </x:scenario>
     <x:scenario label="kwd/contents">
       <x:context href="../cases/kwd/contents.xml"/>
+      <x:expect-assert id="kwd_child-assert-1" role="warn"/>
       <x:expect-assert id="kwd_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="kwd-group/@id">
@@ -1497,8 +1498,13 @@
       <x:expect-assert id="kwd-group-assert-2" role="warn"/>
       <x:expect-assert id="kwd-group-assert-4" role="warn"/>
     </x:scenario>
+    <x:scenario label="kwd-group/@kwd-group-type=author-generated">
+      <x:context href="../cases/kwd-group/@kwd-group-type=author-generated.xml"/>
+      <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+    </x:scenario>
     <x:scenario label="kwd-group/@kwd-group-type=author-keywords">
       <x:context href="../cases/kwd-group/@kwd-group-type=author-keywords.xml"/>
+      <x:expect-assert id="kwd-group-assert-2" role="warn"/>
       <x:expect-assert id="kwd-group-assert-4" role="warn"/>
     </x:scenario>
     <x:scenario label="kwd-group/@kwd-group-type=research-organism">
