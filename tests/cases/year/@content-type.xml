@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@content-type on <year> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <year> is ignored." node="/year"?>
+<?expected-error message="<year> in <> is ignored." node="/year"?>
 <year content-type="year">2000</year>

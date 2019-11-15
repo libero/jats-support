@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<speaker> is ignored." node="/speaker"?>
-<?expected-error message="@content-type on <speaker> is ignored." node="//@content-type"?>
-<?expected-error message="<surname> in <speaker> is ignored." node="//surname"?>
-<?expected-error message="<suffix> in <speaker> is ignored." node="//suffix"?>
-
+<?expected-error message="@content-type on <speaker> is ignored." node="/speaker"?>
+<?expected-error message="<suffix> in <speaker> is ignored." node="/speaker/suffix"?>
+<?expected-error message="<surname> in <speaker> is ignored." node="/speaker/surname"?>
 <speaker content-type="speaker">
     <surname/>
     <suffix/>

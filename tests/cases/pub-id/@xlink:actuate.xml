@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@xlink:actuate is ignored." node="//@xlink:actuate"?>
-
+<?expected-error message="@xlink:actuate is ignored." node="/pub-id"?>
+<?expected-error message="<pub-id> in <> is ignored." node="/pub-id"?>
 <pub-id xmlns:xlink="http://www.w3.org/1999/xlink" pub-id-type="doi" xlink:actuate="other"/>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<tex-math> is ignored." node="/tex-math"?>
-<?expected-error message="@content-type on <tex-math> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <tex-math> is ignored." node="/tex-math"?>
+<?expected-error message="<tex-math> in <> is ignored. <tex-math> must be a child of <disp-formula> or <inline-formula> to be rendered." node="/tex-math"?>
 <tex-math content-type="tex-math"/>

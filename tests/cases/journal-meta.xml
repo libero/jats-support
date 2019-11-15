@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<journal-meta> is ignored." node="/journal-meta"?>
-<?expected-error message="<contrib-group> in <journal-meta> is ignored." node="//contrib-group"?>
-<?expected-error message="<aff> in <journal-meta> is ignored." node="//aff"?>
-<?expected-error message="<self-uri> in <journal-meta> is ignored." node="//self-uri"?>
-
+<?expected-error message="<aff> in <journal-meta> is ignored." node="/journal-meta/aff"?>
+<?expected-error message="<contrib-group> in <journal-meta> is ignored." node="/journal-meta/contrib-group"?>
+<?expected-error message="<self-uri> in <journal-meta> is ignored." node="/journal-meta/self-uri"?>
 <journal-meta xmlns:xlink="http://www.w3.org/1999/xlink">
     <contrib-group>
         <contrib contrib-type="author">

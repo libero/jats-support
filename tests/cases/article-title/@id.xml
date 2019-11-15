@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@id is ignored." node="//@id"?>
-
+<?expected-error message="@id is ignored." node="/article-title"?>
+<?expected-error message="<article-title> in <> is ignored." node="/article-title"?>
 <article-title id="id"/>

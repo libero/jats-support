@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<kwd-group kwd-group-type=\"something\"> is ignored if there is no <title>." node="/kwd-group"?>
-
+<?expected-error message="<kwd-group> is ignored if there is no <title>." node="/kwd-group"?>
+<?expected-error message="<kwd-group> in <> is ignored." node="/kwd-group"?>
 <kwd-group kwd-group-type="something">
     <kwd/>
 </kwd-group>

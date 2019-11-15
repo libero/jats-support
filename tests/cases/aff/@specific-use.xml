@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@specific-use is ignored." node="//@specific-use"?>
-
+<?expected-error message="@specific-use is ignored." node="/aff"?>
+<?expected-error message="<aff> in <> is ignored." node="/aff"?>
 <aff specific-use="web-only"/>

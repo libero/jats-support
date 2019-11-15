@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<issue-id> is ignored." node="/issue-id"?>
-<?expected-error message="@xlink:href on <issue-id> is ignored." node="//@xlink:href"?>
-<?expected-error message="@content-type on <issue-id> is ignored." node="//@content-type"?>
-<?expected-error message="@pub-id-type on <issue-id> is ignored." node="//@pub-id-type"?>
-
+<?expected-error message="@content-type on <issue-id> is ignored." node="/issue-id"?>
+<?expected-error message="@pub-id-type on <issue-id> is ignored." node="/issue-id"?>
+<?expected-error message="@xlink:href on <issue-id> is ignored." node="/issue-id"?>
 <issue-id xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/" content-type="issue-id" pub-id-type="doi"/>

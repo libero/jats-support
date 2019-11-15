@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<table-wrap-foot> is ignored." node="/table-wrap-foot"?>
-<?expected-error message="<title> in <table-wrap-foot> is ignored." node="//title"?>
-<?expected-error message="<p> in <table-wrap-foot> is ignored." node="//p"?>
-
+<?expected-error message="<p> in <table-wrap-foot> is ignored." node="/table-wrap-foot/p"?>
+<?expected-error message="<title> in <table-wrap-foot> is ignored." node="/table-wrap-foot/title"?>
 <table-wrap-foot>
     <title/>
     <p/>

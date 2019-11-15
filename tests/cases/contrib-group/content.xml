@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<ext-link> in <contrib-group> is ignored." node="//ext-link"?>
-
+<?expected-error message="<contrib-group> in <> is ignored." node="/contrib-group"?>
+<?expected-error message="<ext-link> in <contrib-group> is ignored." node="/contrib-group/ext-link"?>
 <contrib-group xmlns:xlink="http://www.w3.org/1999/xlink">
     <contrib contrib-type="author">
         <name>

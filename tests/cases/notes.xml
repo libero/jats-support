@@ -2,13 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<notes> is ignored." node="/notes"?>
-<?expected-error message="<title> in <notes> is ignored." node="//title"?>
-<?expected-error message="<p> in <notes> is ignored." node="//p"?>
-<?expected-error message="<fig> in <notes> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <notes> is ignored." node="(//graphic)[2]"?>
-<?expected-error message="<sec> in <notes> is ignored." node="//sec"?>
-<?expected-error message="<ref-list> in <notes> is ignored." node="//ref-list"?>
-
+<?expected-error message="<fig> in <notes> is ignored." node="/notes/fig"?>
+<?expected-error message="<graphic> in <notes> is ignored." node="/notes/graphic"?>
+<?expected-error message="<p> in <notes> is ignored." node="/notes/p"?>
+<?expected-error message="<ref-list> in <notes> is ignored." node="/notes/ref-list"?>
+<?expected-error message="<sec> in <notes> is ignored." node="/notes/sec"?>
+<?expected-error message="<title> in <notes> is ignored." node="/notes/title"?>
 <notes xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>

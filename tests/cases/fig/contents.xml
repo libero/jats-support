@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<kwd-group> in <fig> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <fig> is ignored." node="//alt-text"?>
-<?expected-error message="<ext-link> in <fig> is ignored." node="//ext-link"?>
-<?expected-error message="<p> in <fig> is ignored." node="//p"?>
-<?expected-error message="<graphic> is ignored if it is not a JPEG." node="//graphic[1]"?>
-<?expected-error message="<graphic> is ignored if it is not a JPEG." node="(//graphic)[2]"?>
-<?expected-error message="Extra <graphic> is ignored." node="//graphic[4]"?>
-
+<?expected-error message="<alt-text> in <fig> is ignored." node="/fig/alt-text"?>
+<?expected-error message="<ext-link> in <fig> is ignored." node="/fig/ext-link"?>
+<?expected-error message="<fig> in <> is ignored." node="/fig"?>
+<?expected-error message="<graphic> is ignored if it is not a JPEG." node="/fig/graphic[1]"?>
+<?expected-error message="<graphic> is ignored if it is not a JPEG." node="/fig/graphic[2]"?>
+<?expected-error message="Extra <graphic> is ignored." node="/fig/graphic[4]"?>
+<?expected-error message="<kwd-group> in <fig> is ignored." node="/fig/kwd-group"?>
+<?expected-error message="<p> in <fig> is ignored." node="/fig/p"?>
 <fig xmlns:xlink="http://www.w3.org/1999/xlink">
     <caption/>
     <kwd-group>

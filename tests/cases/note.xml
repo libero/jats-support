@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<note> is ignored." node="/note"?>
-<?expected-error message="@content-type on <note> is ignored." node="//@content-type"?>
-<?expected-error message="<p> in <note> is ignored." node="//p"?>
-
+<?expected-error message="@content-type on <note> is ignored." node="/note"?>
+<?expected-error message="<p> in <note> is ignored." node="/note/p"?>
 <note content-type="note">
     <p/>
 </note>

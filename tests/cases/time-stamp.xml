@@ -2,11 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<time-stamp> is ignored." node="/time-stamp"?>
-<?expected-error message="@content-type on <time-stamp> is ignored." node="//@content-type"?>
-<?expected-error message="<year> in <time-stamp> is ignored." node="//year"?>
-<?expected-error message="<month> in <time-stamp> is ignored." node="//month"?>
-<?expected-error message="<day> in <time-stamp> is ignored." node="//day"?>
-
+<?expected-error message="@content-type on <time-stamp> is ignored." node="/time-stamp"?>
+<?expected-error message="<day> in <time-stamp> is ignored." node="/time-stamp/day"?>
+<?expected-error message="<month> in <time-stamp> is ignored." node="/time-stamp/month"?>
+<?expected-error message="<year> in <time-stamp> is ignored." node="/time-stamp/year"?>
 <time-stamp content-type="time-stamp">
     <year>2000</year>
     <month>1</month>

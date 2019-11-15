@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<mml:math> is ignored." node="/mml:math"?>
-
+<?expected-error message="<mml:math> in <> is ignored. <mml:math> must be a child of <disp-formula> or <inline-formula> to be rendered." node="/*[local-name()='math']"?>
 <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"/>

@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<article-version-alternatives> is ignored." node="/article-version-alternatives"?>
-<?expected-error message="<article-version> is ignored." node="//article-version"?>
-
+<?expected-error message="<article-version> is ignored." node="/article-version-alternatives/article-version"?>
 <article-version-alternatives>
     <article-version/>
 </article-version-alternatives>

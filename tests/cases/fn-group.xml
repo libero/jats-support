@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<fn-group> is ignored." node="/fn-group"?>
-<?expected-error message="@content-type on <fn-group> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <fn-group> is ignored." node="//title"?>
-<?expected-error message="<x> is ignored." node="//x"?>
-
+<?expected-error message="<x> is ignored." node="/fn-group/x"?>
+<?expected-error message="@content-type on <fn-group> is ignored." node="/fn-group"?>
+<?expected-error message="<title> in <fn-group> is ignored." node="/fn-group/title"?>
 <fn-group content-type="fn-group">
     <title/>
     <x/>

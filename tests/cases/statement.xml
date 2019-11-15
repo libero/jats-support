@@ -2,11 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<statement> is ignored." node="/statement"?>
-<?expected-error message="@content-type on <statement> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <statement> is ignored." node="//title"?>
-<?expected-error message="<kwd-group> in <statement> is ignored." node="//kwd-group"?>
-<?expected-error message="<p> in <statement> is ignored." node="//p"?>
-
+<?expected-error message="@content-type on <statement> is ignored." node="/statement"?>
+<?expected-error message="<kwd-group> in <statement> is ignored." node="/statement/kwd-group"?>
+<?expected-error message="<p> in <statement> is ignored." node="/statement/p"?>
+<?expected-error message="<title> in <statement> is ignored." node="/statement/title"?>
 <statement content-type="statement">
     <title/>
     <kwd-group>

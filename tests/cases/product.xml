@@ -2,16 +2,15 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<product> is ignored." node="/product"?>
-<?expected-error message="@xlink:href on <product> is ignored." node="//@xlink:href"?>
-<?expected-error message="<article-title> in <product> is ignored." node="//article-title"?>
-<?expected-error message="<source> in <product> is ignored." node="//source"?>
-<?expected-error message="<person-group> in <product> is ignored." node="//person-group"?>
-<?expected-error message="<pub-id> in <product> is ignored." node="//pub-id"?>
-<?expected-error message="<year> in <product> is ignored." node="//year"?>
-<?expected-error message="<month> in <product> is ignored." node="//month"?>
-<?expected-error message="<day> in <product> is ignored." node="//day"?>
-<?expected-error message="<name> in <product> is ignored." node="//name"?>
-
+<?expected-error message="<article-title> in <product> is ignored." node="/product/article-title"?>
+<?expected-error message="<day> in <product> is ignored." node="/product/day"?>
+<?expected-error message="<month> in <product> is ignored." node="/product/month"?>
+<?expected-error message="<name> in <product> is ignored." node="/product/name"?>
+<?expected-error message="<person-group> in <product> is ignored." node="/product/person-group"?>
+<?expected-error message="<pub-id> in <product> is ignored." node="/product/pub-id"?>
+<?expected-error message="<source> in <product> is ignored." node="/product/source"?>
+<?expected-error message="@xlink:href on <product> is ignored." node="/product"?>
+<?expected-error message="<year> in <product> is ignored." node="/product/year"?>
 <product xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <article-title/>
     <source/>

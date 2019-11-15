@@ -2,5 +2,5 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<person-group> without a @person-group-type is ignored." node="/person-group"?>
-
+<?expected-error message="<person-group> in <> is ignored." node="/person-group"?>
 <person-group/>

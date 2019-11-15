@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@pub-type is ignored." node="//@pub-type"?>
-
+<?expected-error message="@pub-type is ignored." node="/pub-date"?>
+<?expected-error message="<pub-date> in <> is ignored." node="/pub-date"?>
 <pub-date date-type="pub" iso-8601-date="2000-01-02" pub-type="epub"/>

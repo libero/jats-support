@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<bold> in <element-citation> is ignored." node="//bold"?>
-<?expected-error message="<italic> in <element-citation> is ignored." node="//italic"?>
-<?expected-error message="Extra <article-title> is ignored." node="//article-title[2]"?>
-<?expected-error message="<day> in <element-citation> is ignored." node="//day"?>
-<?expected-error message="<ext-link> in <element-citation> is ignored." node="//ext-link"?>
-<?expected-error message="<month> in <element-citation> is ignored." node="//month"?>
-<?expected-error message="<name> in <element-citation> is ignored." node="//name"?>
-<?expected-error message="Extra <pub-id pub-id-type=\"doi\"> is ignored." node="//pub-id[@pub-id-type='doi'][2]"?>
-<?expected-error message="Extra <source> is ignored." node="//source[2]"?>
-<?expected-error message="<year> in <element-citation> is ignored." node="//year"?>
-<?expected-error message="<sub> in <element-citation> is ignored." node="//sub"?>
-<?expected-error message="<sup> in <element-citation> is ignored." node="//sup"?>
-
+<?expected-error message="Extra <article-title> is ignored." node="/element-citation/article-title[2]"?>
+<?expected-error message="<bold> in <element-citation> is ignored." node="/element-citation/bold"?>
+<?expected-error message="<day> in <element-citation> is ignored." node="/element-citation/day"?>
+<?expected-error message="<element-citation> in <> is ignored." node="/element-citation"?>
+<?expected-error message="<ext-link> in <element-citation> is ignored." node="/element-citation/ext-link"?>
+<?expected-error message="<italic> in <element-citation> is ignored." node="/element-citation/italic"?>
+<?expected-error message="<month> in <element-citation> is ignored." node="/element-citation/month"?>
+<?expected-error message="<name> in <element-citation> is ignored." node="/element-citation/name"?>
+<?expected-error message="Extra <pub-id pub-id-type="doi"> is ignored." node="/element-citation/pub-id[2]"?>
+<?expected-error message="Extra <source> is ignored." node="/element-citation/source[2]"?>
+<?expected-error message="<sub> in <element-citation> is ignored." node="/element-citation/sub"?>
+<?expected-error message="<sup> in <element-citation> is ignored." node="/element-citation/sup"?>
 <element-citation xmlns:xlink="http://www.w3.org/1999/xlink">
     <bold/>
     <italic/>

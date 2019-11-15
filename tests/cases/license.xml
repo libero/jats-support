@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<license> is ignored." node="/license"?>
-<?expected-error message="@xlink:href on <license> is ignored." node="//@xlink:href"?>
-<?expected-error message="<license-p> is ignored." node="//license-p"?>
-
+<?expected-error message="<license-p> is ignored." node="/license/license-p"?>
+<?expected-error message="@xlink:href on <license> is ignored." node="/license"?>
 <license xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <license-p/>
 </license>

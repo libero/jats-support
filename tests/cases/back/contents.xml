@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<title> in <back> is ignored." node="//title"?>
-<?expected-error message="<sec> in <back> is ignored." node="//sec"?>
-
+<?expected-error message="<back> in <> is ignored." node="/back"?>
+<?expected-error message="<sec> in <back> is ignored." node="/back/sec"?>
+<?expected-error message="<title> in <back> is ignored." node="/back/title"?>
 <back>
     <title/>
     <ref-list/>

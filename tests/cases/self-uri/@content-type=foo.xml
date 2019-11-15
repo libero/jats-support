@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<self-uri content-type=\"foo\"> is ignored." node="/self-uri"?>
-
+<?expected-error message="<self-uri content-type="foo"> is ignored." node="/self-uri"?>
+<?expected-error message="<self-uri> in <> is ignored." node="/self-uri"?>
 <self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/file.pdf" content-type="foo"/>

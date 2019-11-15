@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<table> is ignored." node="/table"?>
-<?expected-error message="@content-type on <table> is ignored." node="//@content-type"?>
-<?expected-error message="<tr> is ignored." node="//tr"?>
-<?expected-error message="<td> is ignored." node="//td"?>
-
+<?expected-error message="@content-type on <table> is ignored." node="/table"?>
+<?expected-error message="<table> in <> is ignored." node="/table"?>
+<?expected-error message="<tr> in <table> is ignored." node="/table/tr"?>
 <table content-type="table">
     <tr>
         <td/>

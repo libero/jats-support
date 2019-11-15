@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<index-term> is ignored." node="/index-term"?>
-<?expected-error message="@content-type on <index-term> is ignored." node="//@content-type"?>
-<?expected-error message="<term> is ignored." node="//term"?>
-
+<?expected-error message="<term> is ignored." node="/index-term/term"?>
+<?expected-error message="@content-type on <index-term> is ignored." node="/index-term"?>
 <index-term content-type="index-term">
     <term/>
 </index-term>

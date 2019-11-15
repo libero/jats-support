@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<ruby> is ignored." node="/ruby"?>
-<?expected-error message="@content-type on <ruby> is ignored." node="//@content-type"?>
-<?expected-error message="<rb> is ignored." node="//rb"?>
-<?expected-error message="<rt> is ignored." node="//rt"?>
-
+<?expected-error message="<rb> is ignored." node="/ruby/rb"?>
+<?expected-error message="<rt> is ignored." node="/ruby/rt"?>
+<?expected-error message="@content-type on <ruby> is ignored." node="/ruby"?>
 <ruby content-type="ruby">
     <rb/>
     <rt/>

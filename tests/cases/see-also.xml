@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<see-also> is ignored." node="/see-also"?>
-<?expected-error message="@content-type on <see-also> is ignored." node="//@content-type"?>
-<?expected-error message="<graphic> in <see-also> is ignored." node="//graphic"?>
-
+<?expected-error message="@content-type on <see-also> is ignored." node="/see-also"?>
+<?expected-error message="<graphic> in <see-also> is ignored." node="/see-also/graphic"?>
 <see-also xmlns:xlink="http://www.w3.org/1999/xlink" content-type="see-also">
     <graphic xlink:href="https://example.com/image.jpg"/>
 </see-also>

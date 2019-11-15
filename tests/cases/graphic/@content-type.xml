@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@content-type on <graphic> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <graphic> is ignored." node="/graphic"?>
+<?expected-error message="<graphic> in <> is ignored." node="/graphic"?>
 <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/image.jpg" content-type="content-type"/>

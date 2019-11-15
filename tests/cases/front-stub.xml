@@ -2,14 +2,13 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<front-stub> is ignored." node="/front-stub"?>
-<?expected-error message="<article-categories> in <front-stub> is ignored." node="//article-categories"?>
-<?expected-error message="<title-group> in <front-stub> is ignored." node="//title-group"?>
-<?expected-error message="<contrib-group> in <front-stub> is ignored." node="//contrib-group"?>
-<?expected-error message="<aff> in <front-stub> is ignored." node="//aff"?>
-<?expected-error message="<pub-date> in <front-stub> is ignored." node="//pub-date"?>
-<?expected-error message="<kwd-group> in <front-stub> is ignored." node="//kwd-group"?>
-<?expected-error message="<self-uri> in <front-stub> is ignored." node="//self-uri"?>
-
+<?expected-error message="<aff> in <front-stub> is ignored." node="/front-stub/aff"?>
+<?expected-error message="<article-categories> in <front-stub> is ignored." node="/front-stub/article-categories"?>
+<?expected-error message="<contrib-group> in <front-stub> is ignored." node="/front-stub/contrib-group"?>
+<?expected-error message="<kwd-group> in <front-stub> is ignored." node="/front-stub/kwd-group"?>
+<?expected-error message="<pub-date> in <front-stub> is ignored." node="/front-stub/pub-date"?>
+<?expected-error message="<self-uri> in <front-stub> is ignored." node="/front-stub/self-uri"?>
+<?expected-error message="<title-group> in <front-stub> is ignored." node="/front-stub/title-group"?>
 <front-stub xmlns:xlink="http://www.w3.org/1999/xlink">
     <article-categories/>
     <title-group>

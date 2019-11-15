@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<td> is ignored." node="/td"?>
-<?expected-error message="@content-type on <td> is ignored." node="//@content-type"?>
-<?expected-error message="<element-citation> in <td> is ignored." node="//element-citation"?>
-<?expected-error message="<p> in <td> is ignored." node="//p"?>
-<?expected-error message="<graphic> in <td> is ignored." node="//graphic"?>
-
+<?expected-error message="@content-type on <td> is ignored." node="/td"?>
+<?expected-error message="<element-citation> in <td> is ignored." node="/td/element-citation"?>
+<?expected-error message="<graphic> in <td> is ignored." node="/td/graphic"?>
+<?expected-error message="<p> in <td> is ignored." node="/td/p"?>
+<?expected-error message="<element-citation> in <td> is ignored." node="/td/element-citation"?>
+<?expected-error message="<p> in <td> is ignored." node="/td/p"?>
+<?expected-error message="<graphic> in <td> is ignored." node="/td/graphic"?>
 <td xmlns:xlink="http://www.w3.org/1999/xlink" content-type="td">
     <element-citation>
         <article-title/>

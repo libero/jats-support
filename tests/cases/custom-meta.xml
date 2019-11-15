@@ -2,10 +2,9 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<custom-meta> is ignored." node="/custom-meta"?>
-<?expected-error message="@xlink:href on <custom-meta> is ignored." node="//@xlink:href"?>
-<?expected-error message="<meta-name> is ignored." node="//meta-name"?>
-<?expected-error message="<meta-value> is ignored." node="//meta-value"?>
-
+<?expected-error message="<meta-name> is ignored." node="/custom-meta/meta-name"?>
+<?expected-error message="<meta-value> is ignored." node="/custom-meta/meta-value"?>
+<?expected-error message="@xlink:href on <custom-meta> is ignored." node="/custom-meta"?>
 <custom-meta xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <meta-name/>
     <meta-value/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
+<?expected-error message="<graphic> in <> is ignored." node="/graphic"?>
 <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="image.jpg" xml:base="https://example.com/"/>

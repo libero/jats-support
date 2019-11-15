@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<pub-date date-type=\"pub\"> is ignored if there is no @iso-8601-date, nor numbers in <year>, <month> and <day>." node="/pub-date"?>
-<?expected-error message="<month>January</month> is ignored." node="//month"?>
-
+<?expected-error message="<month>January</month> is ignored." node="/pub-date/month"?>
+<?expected-error message="<pub-date date-type="pub"> is ignored if there is no @iso-8601-date, nor numbers in <year>, <month> and <day>." node="/pub-date"?>
+<?expected-error message="<pub-date> in <> is ignored." node="/pub-date"?>
 <pub-date date-type="pub">
     <month>January</month>
     <day>02</day>

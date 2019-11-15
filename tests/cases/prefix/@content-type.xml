@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@content-type on <prefix> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <prefix> is ignored." node="/prefix"?>
+<?expected-error message="<prefix> in <> is ignored." node="/prefix"?>
 <prefix content-type="prefix"/>

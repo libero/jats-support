@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<ext-link> in <graphic> is ignored." node="//ext-link"?>
-<?expected-error message="<caption> in <graphic> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <graphic> is ignored." node="//kwd-group"?>
-<?expected-error message="Extra <alt-text> is ignored." node="//alt-text[2]"?>
-
+<?expected-error message="Extra <alt-text> is ignored." node="/graphic/alt-text[2]"?>
+<?expected-error message="<caption> in <graphic> is ignored." node="/graphic/caption"?>
+<?expected-error message="<ext-link> in <graphic> is ignored." node="/graphic/ext-link"?>
+<?expected-error message="<graphic> in <> is ignored." node="/graphic"?>
+<?expected-error message="<kwd-group> in <graphic> is ignored." node="/graphic/kwd-group"?>
 <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/image.jpg">
     <ext-link xlink:href="http://example.com/">Link</ext-link>
     <caption/>

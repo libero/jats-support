@@ -2,16 +2,15 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<supplementary-material> is ignored." node="/supplementary-material"?>
-<?expected-error message="@xlink:href on <supplementary-material> is ignored." node="//@xlink:href"?>
-<?expected-error message="@mimetype on <supplementary-material> is ignored." node="//@mimetype"?>
-<?expected-error message="@mime-subtype on <supplementary-material> is ignored." node="//@mime-subtype"?>
-<?expected-error message="@content-type on <supplementary-material> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <supplementary-material> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <supplementary-material> is ignored." node="//alt-text"?>
-<?expected-error message="<p> in <supplementary-material> is ignored." node="//p"?>
-<?expected-error message="<graphic> in <supplementary-material> is ignored." node="//graphic"?>
-
+<?expected-error message="<alt-text> in <supplementary-material> is ignored." node="/supplementary-material/alt-text"?>
+<?expected-error message="<caption> in <supplementary-material> is ignored." node="/supplementary-material/caption"?>
+<?expected-error message="@content-type on <supplementary-material> is ignored." node="/supplementary-material"?>
+<?expected-error message="<graphic> in <supplementary-material> is ignored." node="/supplementary-material/graphic"?>
+<?expected-error message="<kwd-group> in <supplementary-material> is ignored." node="/supplementary-material/kwd-group"?>
+<?expected-error message="@mimetype on <supplementary-material> is ignored." node="/supplementary-material"?>
+<?expected-error message="@mime-subtype on <supplementary-material> is ignored." node="/supplementary-material"?>
+<?expected-error message="<p> in <supplementary-material> is ignored." node="/supplementary-material/p"?>
+<?expected-error message="@xlink:href on <supplementary-material> is ignored." node="/supplementary-material"?>
 <supplementary-material xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/text.txt" mimetype="text" mime-subtype="plain" content-type="supplementary-material">
     <caption/>
     <kwd-group>

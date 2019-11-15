@@ -2,7 +2,6 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<object-id> is ignored." node="/object-id"?>
-<?expected-error message="@content-type on <object-id> is ignored." node="//@content-type"?>
-<?expected-error message="@pub-id-type on <object-id> is ignored." node="//@pub-id-type"?>
-
+<?expected-error message="@content-type on <object-id> is ignored." node="/object-id"?>
+<?expected-error message="@pub-id-type on <object-id> is ignored." node="/object-id"?>
 <object-id content-type="object-id" pub-id-type="doi"/>

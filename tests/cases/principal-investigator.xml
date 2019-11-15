@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<principal-investigator> is ignored." node="/principal-investigator"?>
-<?expected-error message="<name> in <principal-investigator> is ignored." node="//name"?>
-
+<?expected-error message="<name> in <principal-investigator> is ignored." node="/principal-investigator/name"?>
 <principal-investigator>
     <name>
         <given-names/>

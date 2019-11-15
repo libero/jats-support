@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<th> is ignored." node="/th"?>
-<?expected-error message="@content-type on <th> is ignored." node="//@content-type"?>
-<?expected-error message="<element-citation> in <th> is ignored." node="//element-citation"?>
-<?expected-error message="<p> in <th> is ignored." node="//p"?>
-<?expected-error message="<graphic> in <th> is ignored." node="//graphic"?>
-
+<?expected-error message="@content-type on <th> is ignored." node="/th"?>
+<?expected-error message="<element-citation> in <th> is ignored." node="/th/element-citation"?>
+<?expected-error message="<graphic> in <th> is ignored." node="/th/graphic"?>
+<?expected-error message="<p> in <th> is ignored." node="/th/p"?>
+<?expected-error message="<element-citation> in <th> is ignored." node="/th/element-citation"?>
+<?expected-error message="<p> in <th> is ignored." node="/th/p"?>
+<?expected-error message="<graphic> in <th> is ignored." node="/th/graphic"?>
 <th xmlns:xlink="http://www.w3.org/1999/xlink" content-type="th">
     <element-citation>
         <article-title/>
     </element-citation>
     <p/>
     <graphic xlink:href="https://example.com/image.jpg"/>
+    <bold/>
 </th>

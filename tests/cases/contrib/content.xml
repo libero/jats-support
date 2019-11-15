@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="Extra <name> is ignored." node="//name[2]"?>
-<?expected-error message="<ext-link> in <contrib> is ignored." node="//ext-link"?>
-
+<?expected-error message="<contrib> in <> is ignored." node="/contrib"?>
+<?expected-error message="<ext-link> in <contrib> is ignored." node="/contrib/ext-link"?>
+<?expected-error message="Extra <name> is ignored." node="/contrib/name[2]"?>
 <contrib xmlns:xlink="http://www.w3.org/1999/xlink" contrib-type="author">
     <name>
         <given-names/>

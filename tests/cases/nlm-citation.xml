@@ -2,15 +2,14 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<nlm-citation> is ignored." node="/nlm-citation"?>
-<?expected-error message="@xlink:href on <nlm-citation> is ignored." node="//@xlink:href"?>
-<?expected-error message="<person-group> in <nlm-citation> is ignored." node="//person-group"?>
-<?expected-error message="<article-title> in <nlm-citation> is ignored." node="//article-title"?>
-<?expected-error message="<source> in <nlm-citation> is ignored." node="//source"?>
-<?expected-error message="<year> in <nlm-citation> is ignored." node="//year"?>
-<?expected-error message="<month> in <nlm-citation> is ignored." node="//month"?>
-<?expected-error message="<day> in <nlm-citation> is ignored." node="//day"?>
-<?expected-error message="<pub-id> in <nlm-citation> is ignored." node="//pub-id"?>
-
+<?expected-error message="<article-title> in <nlm-citation> is ignored." node="/nlm-citation/article-title"?>
+<?expected-error message="<day> in <nlm-citation> is ignored." node="/nlm-citation/day"?>
+<?expected-error message="<month> in <nlm-citation> is ignored." node="/nlm-citation/month"?>
+<?expected-error message="<person-group> in <nlm-citation> is ignored." node="/nlm-citation/person-group"?>
+<?expected-error message="<pub-id> in <nlm-citation> is ignored." node="/nlm-citation/pub-id"?>
+<?expected-error message="<source> in <nlm-citation> is ignored." node="/nlm-citation/source"?>
+<?expected-error message="@xlink:href on <nlm-citation> is ignored." node="/nlm-citation"?>
+<?expected-error message="<year> in <nlm-citation> is ignored." node="/nlm-citation/year"?>
 <nlm-citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <person-group person-group-type="author"/>
     <article-title/>

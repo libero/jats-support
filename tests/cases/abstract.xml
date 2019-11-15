@@ -2,13 +2,12 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<abstract> is ignored." node="/abstract"?>
-<?expected-error message="<title> in <abstract> is ignored." node="//title"?>
-<?expected-error message="<p> in <abstract> is ignored." node="//p"?>
-<?expected-error message="<fig> in <abstract> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <abstract> is ignored." node="(//graphic)[2]"?>
-<?expected-error message="<sec> in <abstract> is ignored." node="//sec"?>
-<?expected-error message="<ref-list> in <abstract> is ignored." node="//ref-list"?>
-
+<?expected-error message="<fig> in <abstract> is ignored." node="/abstract/fig"?>
+<?expected-error message="<graphic> in <abstract> is ignored." node="/abstract/graphic"?>
+<?expected-error message="<p> in <abstract> is ignored." node="/abstract/p"?>
+<?expected-error message="<ref-list> in <abstract> is ignored." node="/abstract/ref-list"?>
+<?expected-error message="<sec> in <abstract> is ignored." node="/abstract/sec"?>
+<?expected-error message="<title> in <abstract> is ignored." node="/abstract/title"?>
 <abstract xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <p/>

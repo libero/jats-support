@@ -2,5 +2,5 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<contrib> is ignored if there is no <name>." node="/contrib"?>
-
+<?expected-error message="<contrib> in <> is ignored." node="/contrib"?>
 <contrib contrib-type="author"/>

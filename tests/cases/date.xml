@@ -2,12 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<date> is ignored." node="/date"?>
-<?expected-error message="@date-type on <date> is ignored." node="//@date-type"?>
-<?expected-error message="@iso-8601-date on <date> is ignored." node="//@iso-8601-date"?>
-<?expected-error message="<day> in <date> is ignored." node="//day"?>
-<?expected-error message="<month> in <date> is ignored." node="//month"?>
-<?expected-error message="<year> in <date> is ignored." node="//year"?>
-
+<?expected-error message="@date-type on <date> is ignored." node="/date"?>
+<?expected-error message="<day> in <date> is ignored." node="/date/day"?>
+<?expected-error message="@iso-8601-date on <date> is ignored." node="/date"?>
+<?expected-error message="<month> in <date> is ignored." node="/date/month"?>
+<?expected-error message="<year> in <date> is ignored." node="/date/year"?>
 <date date-type="pub" iso-8601-date="2000-01-02">
     <day>1</day>
     <month>1</month>

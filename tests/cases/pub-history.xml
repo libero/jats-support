@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<pub-history> is ignored." node="/pub-history"?>
-<?expected-error message="<event> is ignored." node="//event"?>
-
+<?expected-error message="<event> is ignored." node="/pub-history/event"?>
 <pub-history>
     <event/>
 </pub-history>

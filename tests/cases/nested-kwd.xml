@@ -2,9 +2,8 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<nested-kwd> is ignored." node="/nested-kwd"?>
-<?expected-error message="@content-type on <nested-kwd> is ignored." node="//@content-type"?>
-<?expected-error message="<kwd> in <nested-kwd> is ignored." node="//kwd"?>
-
+<?expected-error message="@content-type on <nested-kwd> is ignored." node="/nested-kwd"?>
+<?expected-error message="<kwd> in <nested-kwd> is ignored." node="/nested-kwd/kwd"?>
 <nested-kwd content-type="nested-kwd">
     <kwd/>
 </nested-kwd>

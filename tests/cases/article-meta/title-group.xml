@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error line="6" message="<article-meta> requires a <title-group>." node="/article-meta"?>
-
+<?expected-error message="no article-id. Article cannot be ingested." node="/article-meta"?>
+<?expected-error message="<article-meta> requires a <title-group>." node="/article-meta"?>
 <article-meta/>

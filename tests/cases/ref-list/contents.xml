@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<fig> in <ref-list> is ignored." node="//fig"?>
+<?expected-error message="<fig> in <ref-list> is ignored." node="/ref-list/fig"?>
 <?expected-error message="<graphic> in <ref-list> is ignored." node="/ref-list/graphic"?>
-<?expected-error message="<p> in <ref-list> is ignored." node="//p"?>
+<?expected-error message="<p> in <ref-list> is ignored." node="/ref-list/p"?>
+<?expected-error message="<ref-list> in <> is ignored." node="/ref-list"?>
 <?expected-error message="<ref-list> in <ref-list> is ignored." node="/ref-list/ref-list"?>
-
 <ref-list xmlns:xlink="http://www.w3.org/1999/xlink">
     <title/>
     <fig>

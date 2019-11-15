@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@rid is ignored." node="//@rid"?>
-<?expected-error message="IDREFS attribute rid references an unknown ID \"rid\"" line="8"?>
-<?expected-error message="IDREFS attribute rid references an unknown ID \"rid\"" line="8"?>
-
+<?expected-error message="<contrib> in <> is ignored." node="/contrib"?>
 <contrib contrib-type="author" rid="rid">
     <name>
         <given-names/>

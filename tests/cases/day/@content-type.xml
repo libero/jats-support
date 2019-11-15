@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="@content-type on <day> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <day> is ignored." node="/day"?>
+<?expected-error message="<day> in <> is ignored." node="/day"?>
 <day content-type="day">1</day>

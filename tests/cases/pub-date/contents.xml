@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<month>January</month> is ignored." node="//month[1]"?>
-<?expected-error message="Extra <month> is ignored." node="//month[3]"?>
-<?expected-error message="<day>Second</day> is ignored." node="//day[1]"?>
-<?expected-error message="Extra <day> is ignored." node="//day[3]"?>
-<?expected-error message="<year>Two Thousand</year> is ignored." node="//year[1]"?>
-<?expected-error message="Extra <year> is ignored." node="//year[3]"?>
-
+<?expected-error message="<day>Second</day> is ignored." node="/pub-date/day[1]"?>
+<?expected-error message="Extra <day> is ignored." node="/pub-date/day[3]"?>
+<?expected-error message="<month>January</month> is ignored." node="/pub-date/month[1]"?>
+<?expected-error message="Extra <month> is ignored." node="/pub-date/month[3]"?>
+<?expected-error message="<pub-date> in <> is ignored." node="/pub-date"?>
+<?expected-error message="<year>Two Thousand</year> is ignored." node="/pub-date/year[1]"?>
+<?expected-error message="Extra <year> is ignored." node="/pub-date/year[3]"?>
 <pub-date date-type="pub">
     <month>January</month>
     <month>01</month>

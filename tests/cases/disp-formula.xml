@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<disp-formula> is ignored." node="/disp-formula"?>
-<?expected-error message="@content-type on <disp-formula> is ignored." node="//@content-type"?>
-<?expected-error message="<kwd-group> in <disp-formula> is ignored." node="//kwd-group"?>
-<?expected-error message="<graphic> in <disp-formula> is ignored." node="//graphic"?>
-<?expected-error message="<alt-text> in <disp-formula> is ignored." node="//alt-text"?>
-
+<?expected-error message="<alt-text> in <disp-formula> is ignored." node="/disp-formula/alt-text"?>
+<?expected-error message="@content-type on <disp-formula> is ignored." node="/disp-formula"?>
+<?expected-error message="<kwd-group> in <disp-formula> is ignored." node="/disp-formula/kwd-group"?>
+<?expected-error message="<graphic> in <disp-formula> is ignored." node="/disp-formula/graphic"?>
+<?expected-error message="<alt-text> in <disp-formula> is ignored." node="/disp-formula/alt-text"?>
+<?expected-error message="<disp-formula> in <> is ignored." node="/disp-formula"?>
+<?expected-error message="<graphic> in <disp-formula> is ignored." node="/disp-formula/graphic"?>
+<?expected-error message="<kwd-group> in <disp-formula> is ignored." node="/disp-formula/kwd-group"?>
 <disp-formula xmlns:xlink="http://www.w3.org/1999/xlink" content-type="disp-formula">
     <kwd-group>
         <title/>

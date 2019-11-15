@@ -2,8 +2,8 @@
 <?xml-model href="../../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<fig> without a JPEG <graphic> is ignored." node="/fig"?>
-<?expected-error message="<graphic> is ignored if it is not a JPEG." node="//graphic"?>
-
+<?expected-error message="<fig> in <> is ignored." node="/fig"?>
+<?expected-error message="<graphic> is ignored if it is not a JPEG." node="/fig/graphic"?>
 <fig xmlns:xlink="http://www.w3.org/1999/xlink">
     <graphic xlink:href="https://example.com/"/>
 </fig>

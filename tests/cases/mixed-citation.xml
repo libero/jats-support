@@ -2,16 +2,15 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<mixed-citation> is ignored." node="/mixed-citation"?>
-<?expected-error message="@xlink:href on <mixed-citation> is ignored." node="//@xlink:href"?>
-<?expected-error message="<article-title> in <mixed-citation> is ignored." node="//article-title"?>
-<?expected-error message="<day> in <mixed-citation> is ignored." node="//day"?>
-<?expected-error message="<month> in <mixed-citation> is ignored." node="//month"?>
-<?expected-error message="<name> in <mixed-citation> is ignored." node="//name"?>
-<?expected-error message="<person-group> in <mixed-citation> is ignored." node="//person-group"?>
-<?expected-error message="<pub-id> in <mixed-citation> is ignored." node="//pub-id"?>
-<?expected-error message="<source> in <mixed-citation> is ignored." node="//source"?>
-<?expected-error message="<year> in <mixed-citation> is ignored." node="//year"?>
-
+<?expected-error message="<article-title> in <mixed-citation> is ignored." node="/mixed-citation/article-title"?>
+<?expected-error message="<day> in <mixed-citation> is ignored." node="/mixed-citation/day"?>
+<?expected-error message="<month> in <mixed-citation> is ignored." node="/mixed-citation/month"?>
+<?expected-error message="<name> in <mixed-citation> is ignored." node="/mixed-citation/name"?>
+<?expected-error message="<person-group> in <mixed-citation> is ignored." node="/mixed-citation/person-group"?>
+<?expected-error message="<pub-id> in <mixed-citation> is ignored." node="/mixed-citation/pub-id"?>
+<?expected-error message="<source> in <mixed-citation> is ignored." node="/mixed-citation/source"?>
+<?expected-error message="@xlink:href on <mixed-citation> is ignored." node="/mixed-citation"?>
+<?expected-error message="<year> in <mixed-citation> is ignored." node="/mixed-citation/year"?>
 <mixed-citation xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
     <article-title/>
     <day>01</day>

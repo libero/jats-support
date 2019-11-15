@@ -2,11 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<disp-formula-group> is ignored." node="/disp-formula-group"?>
-<?expected-error message="@content-type on <disp-formula-group> is ignored." node="//@content-type"?>
-<?expected-error message="<caption> in <disp-formula-group> is ignored." node="//caption"?>
-<?expected-error message="<kwd-group> in <disp-formula-group> is ignored." node="//kwd-group"?>
-<?expected-error message="<alt-text> in <disp-formula-group> is ignored." node="//alt-text"?>
-
+<?expected-error message="<alt-text> in <disp-formula-group> is ignored." node="/disp-formula-group/alt-text"?>
+<?expected-error message="<caption> in <disp-formula-group> is ignored." node="/disp-formula-group/caption"?>
+<?expected-error message="@content-type on <disp-formula-group> is ignored." node="/disp-formula-group"?>
+<?expected-error message="<kwd-group> in <disp-formula-group> is ignored." node="/disp-formula-group/kwd-group"?>
 <disp-formula-group content-type="disp-formula-group">
     <caption/>
     <kwd-group>

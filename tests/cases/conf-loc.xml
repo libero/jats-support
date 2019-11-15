@@ -2,6 +2,5 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<conf-loc> is ignored." node="/conf-loc"?>
-<?expected-error message="@content-type on <conf-loc> is ignored." node="//@content-type"?>
-
+<?expected-error message="@content-type on <conf-loc> is ignored." node="/conf-loc"?>
 <conf-loc content-type="conf-loc"/>

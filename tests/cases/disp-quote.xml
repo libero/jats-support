@@ -2,12 +2,11 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<disp-quote> is ignored." node="/disp-quote"?>
-<?expected-error message="@content-type on <disp-quote> is ignored." node="//@content-type"?>
-<?expected-error message="<title> in <disp-quote> is ignored." node="//title"?>
-<?expected-error message="<p> in <disp-quote> is ignored." node="//p"?>
-<?expected-error message="<fig> in <disp-quote> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <disp-quote> is ignored." node="(//graphic)[2]"?>
-
+<?expected-error message="@content-type on <disp-quote> is ignored." node="/disp-quote"?>
+<?expected-error message="<fig> in <disp-quote> is ignored." node="/disp-quote/fig"?>
+<?expected-error message="<graphic> in <disp-quote> is ignored." node="/disp-quote/graphic"?>
+<?expected-error message="<p> in <disp-quote> is ignored." node="/disp-quote/p"?>
+<?expected-error message="<title> in <disp-quote> is ignored." node="/disp-quote/title"?>
 <disp-quote xmlns:xlink="http://www.w3.org/1999/xlink" content-type="disp-quote">
     <title/>
     <p/>

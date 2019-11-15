@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?expected-error message="<named-content> is ignored." node="/named-content"?>
-<?expected-error message="@content-type on <named-content> is ignored." node="//@content-type"?>
-<?expected-error message="@xlink:href on <named-content> is ignored." node="//@xlink:href"?>
-<?expected-error message="<fig> in <named-content> is ignored." node="//fig"?>
-<?expected-error message="<graphic> in <named-content> is ignored." node="(//graphic)[2]"?>
-
+<?expected-error message="<fig> in <named-content> is ignored." node="/named-content/fig"?>
+<?expected-error message="<graphic> in <named-content> is ignored." node="/named-content/graphic"?>
+<?expected-error message="<named-content> in <> is ignored." node="/named-content"?>
+<?expected-error message="@xlink:href on <named-content> is ignored." node="/named-content"?>
 <named-content xmlns:xlink="http://www.w3.org/1999/xlink" content-type="named-content" xlink:href="https://example.com/">
     <fig>
         <graphic xlink:href="https://example.com/image.jpg"/>

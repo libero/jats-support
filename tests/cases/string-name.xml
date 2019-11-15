@@ -2,11 +2,10 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<string-name> is ignored." node="/string-name"?>
-<?expected-error message="@name-style on <string-name> is ignored." node="//@name-style"?>
-<?expected-error message="@content-type on <string-name> is ignored." node="//@content-type"?>
-<?expected-error message="<surname> in <string-name> is ignored." node="//surname"?>
-<?expected-error message="<suffix> in <string-name> is ignored." node="//suffix"?>
-
+<?expected-error message="@content-type on <string-name> is ignored." node="/string-name"?>
+<?expected-error message="@name-style on <string-name> is ignored." node="/string-name"?>
+<?expected-error message="<suffix> in <string-name> is ignored." node="/string-name/suffix"?>
+<?expected-error message="<surname> in <string-name> is ignored." node="/string-name/surname"?>
 <string-name name-style="islensk" content-type="string-name">
     <surname/>
     <suffix/>

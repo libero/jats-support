@@ -2,8 +2,7 @@
 <?xml-model href="../jats.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<collab-alternatives> is ignored." node="/collab-alternatives"?>
-<?expected-error message="<collab> is ignored." node="//collab"?>
-
+<?expected-error message="<collab> is ignored." node="/collab-alternatives/collab"?>
 <collab-alternatives>
     <collab/>
 </collab-alternatives>
