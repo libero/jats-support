@@ -12,13 +12,11 @@
     </x:scenario>
     <x:scenario label="abstract">
       <x:context href="../cases/abstract.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="abstract_parent-assert-1" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
       <x:expect-assert id="sec_parent-assert-1" role="warn"/>
-      <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="access-date">
       <x:context href="../cases/access-date.xml"/>

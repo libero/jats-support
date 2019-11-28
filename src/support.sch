@@ -190,7 +190,8 @@
     <pattern id="element-whitelist">
         <rule context="*">
             <assert id="element-whitelist-assert-1" test="
-                name()='addr-line'
+                name()='abstract'
+                or name()='addr-line'
                 or name()='aff'
                 or name()='alt-text'
                 or name()='article'
@@ -301,6 +302,15 @@
                 or name()='xref'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="abstract_parent">
+        <rule context="abstract">
+            <let name="parent" value="name(..)"/>
+            <assert id="abstract_parent-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1127,7 +1137,8 @@
         <rule context="p">
             <let name="parent" value="name(..)"/>
             <assert id="p-assert-1" test="
-                $parent='body'
+                $parent='abstract'
+                or $parent='body'
                 or $parent='caption'
                 or $parent='sec'
                 or $parent='fn'
@@ -1524,7 +1535,8 @@
         <rule context="title">
             <let name="parent" value="name(..)"/>
             <assert id="title_parent-assert-1" test="
-                $parent='caption'
+                $parent='abstract'
+                or $parent='caption'
                 or $parent='fn-group'
                 or $parent='kwd-group'
                 or $parent='ref-list'
