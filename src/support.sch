@@ -314,7 +314,7 @@
             </assert>
         </rule>
     </pattern>
-    
+   
     <pattern id="addr-line_parent">
         <rule context="addr-line">
             <let name="parent" value="name(..)"/>
