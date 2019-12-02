@@ -49,6 +49,7 @@
                 and name()!='id'
                 and name()!='indentalign'
                 and name()!='indenttarget'
+                and name()!='institution-id-type'
                 and name()!='iso-8601-date'
                 and name()!='kwd-group-type'
                 and name()!='largeop'
@@ -136,6 +137,7 @@
                     and name()!='id'
                     and name()!='indentalign'
                     and name()!='indenttarget'
+                    and name()!='institution-id-type'
                     and name()!='iso-8601-date'
                     and name()!='kwd-group-type'
                     and name()!='largeop'
@@ -200,6 +202,8 @@
                 or name()='article-meta'
                 or name()='article-title'
                 or name()='author-notes'
+                or name()='award-group'
+                or name()='award-id'
                 or name()='back'
                 or name()='body'
                 or name()='bold'
@@ -219,9 +223,13 @@
                 or name()='fn'
                 or name()='fn-group'
                 or name()='front'
+                or name()='funding-group'
+                or name()='funding-source'
                 or name()='given-names'
                 or name()='graphic'
                 or name()='institution'
+                or name()='institution-id'
+                or name()='institution-wrap'
                 or name()='italic'
                 or name()='inline-formula'
                 or name()='kwd'
@@ -314,7 +322,7 @@
             </assert>
         </rule>
     </pattern>
-   
+    
     <pattern id="addr-line_parent">
         <rule context="addr-line">
             <let name="parent" value="name(..)"/>
@@ -432,6 +440,18 @@
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="award-id_parent">
+        <rule context="award-id">
+            <let name="parent" value="name(..)"/>
+            <assert id="award-id-assert-1" test="$parent='award-group'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="award-id-report-1" test="($parent='award-group') and preceding-sibling::award-id" role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
 
@@ -734,6 +754,29 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="funding-group_parent">
+        <rule context="funding-group">
+            <let name="parent" value="name(..)"/>
+            <assert id="funding-group_parent-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="funding-source_parent">
+        <rule context="funding-source">
+            <let name="parent" value="name(..)"/>
+            <assert id="funding-source_parent-assert-1" test="$parent='award-group'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="funding-source_parent-report-1" 
+                test="($parent='award-group') and preceding-sibling::funding-source" 
+                role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
+        </rule>
+    </pattern>
 
     <pattern id="given-names_parent">
         <rule context="given-names">
@@ -806,9 +849,25 @@
     <pattern id="institution_parent">
         <rule context="institution">
             <let name="parent" value="name(..)"/>
-            <assert id="institution_parent-assert-1" test="$parent='aff'" role="warn">
+            <assert id="institution_parent-assert-1" 
+                test="$parent='aff' or $parent='institution-wrap'" 
+                role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="institution-wrap_parent">
+        <rule context="institution-wrap">
+            <let name="parent" value="name(..)"/>
+            <assert id="institution-wrap_parent-assert-1" test="$parent='funding-source'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="institution-wrap_parent-report-1" 
+                test="($parent='funding-source') and preceding-sibling::institution-wrap" 
+                role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
 

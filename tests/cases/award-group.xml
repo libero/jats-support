@@ -3,4 +3,12 @@
 <?xml-model href="../../src/support.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?expected-error message="<award-group> is ignored." node="/award-group"?>
 <?expected-error message="@xlink:href on <award-group> is ignored." node="/award-group"?>
-<award-group xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/"/>
+<award-group xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://example.com/">
+    <funding-source>
+        <institution-wrap><institution-id institution-id-type="FundRef">http://dx.doi.org/10.13039/501100003132</institution-id>
+            <institution>Agentschap voor Innovatie door Wetenschap en Technologie</institution>
+        </institution-wrap>
+    </funding-source>
+    <award-id>GRANT 1</award-id>
+    <award-id>GRANT 2</award-id>
+</award-group>
