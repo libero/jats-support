@@ -293,12 +293,12 @@
     </x:scenario>
     <x:scenario label="award-group">
       <x:context href="../cases/award-group.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-report id="award-id-report-1" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="award-id">
       <x:context href="../cases/award-id.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="award-id-assert-1" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="back/@id">
@@ -1130,11 +1130,11 @@
     </x:scenario>
     <x:scenario label="funding-group">
       <x:context href="../cases/funding-group.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="funding-group_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="funding-source">
       <x:context href="../cases/funding-source.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="funding-source_parent-assert-1" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="funding-statement">
@@ -1351,12 +1351,11 @@
     </x:scenario>
     <x:scenario label="institution-id">
       <x:context href="../cases/institution-id.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="institution-wrap">
       <x:context href="../cases/institution-wrap.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="institution-wrap_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="institution">
       <x:context href="../cases/institution.xml"/>
