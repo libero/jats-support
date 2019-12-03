@@ -908,8 +908,8 @@
     </x:scenario>
     <x:scenario label="elocation-id">
       <x:context href="../cases/elocation-id.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="elocation-id_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="email">
       <x:context href="../cases/email.xml"/>
@@ -1098,8 +1098,8 @@
     </x:scenario>
     <x:scenario label="fpage">
       <x:context href="../cases/fpage.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="fpage_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="front/@id">
       <x:context href="../cases/front/@id.xml"/>
@@ -1583,8 +1583,8 @@
     </x:scenario>
     <x:scenario label="lpage">
       <x:context href="../cases/lpage.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="lpage_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="media">
       <x:context href="../cases/media.xml"/>
@@ -1942,10 +1942,14 @@
     </x:scenario>
     <x:scenario label="pub-date/@date-type">
       <x:context href="../cases/pub-date/@date-type.xml"/>
+      <x:expect-assert id="pub-date-assert-1" role="warn"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
       <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="pub-date/@date-type=foo">
       <x:context href="../cases/pub-date/@date-type=foo.xml"/>
+      <x:expect-report id="pub-date-report-1" role="warn"/>
+      <x:expect-assert id="pub-date-assert-3" role="warn"/>
       <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="pub-date/@date-type=pub">
@@ -2980,8 +2984,8 @@
     </x:scenario>
     <x:scenario label="volume">
       <x:context href="../cases/volume.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="volume_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="word-count">
       <x:context href="../cases/word-count.xml"/>

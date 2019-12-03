@@ -217,11 +217,13 @@
                 or name()='day'
                 or name()='disp-formula'
                 or name()='element-citation'
+                or name()='elocation-id'
                 or name()='email'
                 or name()='ext-link'
                 or name()='fig'
                 or name()='fn'
                 or name()='fn-group'
+                or name()='fpage'
                 or name()='front'
                 or name()='funding-group'
                 or name()='funding-source'
@@ -235,6 +237,7 @@
                 or name()='kwd'
                 or name()='kwd-group'
                 or name()='label'
+                or name()='lpage'
                 or name()='mml:math'
                 or name()='mml:mrow'
                 or name()='mml:msub'
@@ -305,9 +308,10 @@
                 or name()='title'
                 or name()='title-group'
                 or name()='tr'
-                or name()='year'
                 or name()='underline'
+                or name()='volume'
                 or name()='xref'
+                or name()='year'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -389,6 +393,14 @@
         </rule>
     </pattern>
     
+    <pattern id="article-id-doi">
+        <rule context="article-meta/article-id[@pub-id-type='doi']">
+            <assert id="article-id-doi-assert-1" test="starts-with(.,'10.')" role="warn">
+                &lt;<name/> pub-id-type='doi'&gt; which doesn't begin with '10.' is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="article-id-logic">
         <rule context="article-meta">
             <report id="article-id-logic-report-1" test="article-id[@pub-id-type='publisher-id']" role="info">
@@ -400,10 +412,10 @@
             <report id="article-id-logic-report-3" test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and elocation-id" role="info">
                 &lt;elocation-id&gt; <value-of select="elocation-id"/> is used as article-id.
             </report>
-            <report id="article-id-logic-report-4" test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and not(elocation-id) and article-id[@pub-id-type='doi']" role="info">
+            <report id="article-id-logic-report-4" test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and not(elocation-id) and article-id[(@pub-id-type='doi') and starts-with(.,'10.')]" role="info">
                 &lt;article-id&gt; <value-of select="article-id[@pub-id-type='doi']"/> is used as article-id.
             </report>
-            <report id="article-id-logic-report-5" test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and not(elocation-id) and not(article-id[@pub-id-type='doi'])" role="error">
+            <report id="article-id-logic-report-5" test="not(article-id[@pub-id-type='publisher-id']) and not(article-id[not(@pub-id-type='pmid') and not(@pub-id-type='pmc') and not(@pub-id-type='doi')]) and not(elocation-id) and not(article-id[(@pub-id-type='doi') and starts-with(.,'10.')])" role="error">
                 no article-id. Article cannot be ingested.
             </report>
         </rule>
@@ -675,6 +687,15 @@
         </rule>
     </pattern>
     
+    <pattern id="elocation-id_parent">
+        <rule context="elocation-id">
+            <let name="parent" value="name(..)"/>
+            <assert id="elocation-id_parent-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="email_parent">
         <rule context="email">
             <let name="parent" value="name(..)"/>
@@ -741,6 +762,15 @@
         <rule context="fn-group">
             <let name="parent" value="name(..)"/>
             <assert id="fn-group_parent-assert-1" test="$parent='table-wrap-foot'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="fpage_parent">
+        <rule context="fpage">
+            <let name="parent" value="name(..)"/>
+            <assert id="fpage_parent-assert-1" test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -933,6 +963,15 @@
             </assert>
             <assert id="label_parent-assert-2" test="count(preceding-sibling::label)=0" role="warn">
                 Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="lpage_parent">
+        <rule context="lpage">
+            <let name="parent" value="name(..)"/>
+            <assert id="lpage_parent-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1241,16 +1280,17 @@
     </pattern>
 
     <pattern id="pub-date">
-        <rule context="pub-date[not(@date-type)]">
-            <assert id="pub-date-assert-1" test="true()" role="warn">
+        <rule context="pub-date">
+            <assert id="pub-date-assert-1" test="@date-type" role="warn">
                 &lt;<name/>&gt; without a @date-type is ignored.
             </assert>
-        </rule>
-        <rule context="pub-date[not(@date-type='pub')]">
-            <assert id="pub-date-assert-2" test="true()" role="warn">
-                &lt;<name/> date-type="<value-of select="@date-type"/>"&gt; is ignored.
-            </assert>
-        </rule>
+            <report id="pub-date-report-1" test="(@date-type) and (@date-type!='pub')" role="warn">
+                &lt;<name/>&gt; with a @date-type="<value-of select="@date-type"/>".
+            </report>
+       </rule>
+    </pattern>
+    
+    <pattern id="pub-date-iso">
         <rule context="pub-date[
             not(@iso-8601-date)
             or
@@ -1635,6 +1675,15 @@
                 or name()='self-uri'
             " role="warn">
                 @xlink:href on &lt;<value-of select="name()"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="volume_parent">
+        <rule context="volume">
+            <let name="parent" value="name(..)"/>
+            <assert id="volume_parent-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
