@@ -312,6 +312,8 @@
                 or name()='volume'
                 or name()='xref'
                 or name()='year'
+                or name()='underline'
+                or name()='xref'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -876,7 +878,7 @@
         </rule>
     </pattern>
     
-    <pattern id="institution_parent">
+   <pattern id="institution_parent">
         <rule context="institution">
             <let name="parent" value="name(..)"/>
             <assert id="institution_parent-assert-1" 
@@ -1289,7 +1291,7 @@
             </report>
        </rule>
     </pattern>
-    
+  
     <pattern id="pub-date-iso">
         <rule context="pub-date[
             not(@iso-8601-date)
