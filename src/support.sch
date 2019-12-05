@@ -316,6 +316,8 @@
                 or name()='volume'
                 or name()='xref'
                 or name()='year'
+                or name()='underline'
+                or name()='xref'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -888,6 +890,20 @@
                 role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="institution-wrap_parent">
+        <rule context="institution-wrap">
+            <let name="parent" value="name(..)"/>
+            <assert id="institution-wrap_parent-assert-1" test="$parent='funding-source'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="institution-wrap_parent-report-1" 
+                test="($parent='funding-source') and preceding-sibling::institution-wrap" 
+                role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
     
