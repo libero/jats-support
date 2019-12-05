@@ -670,7 +670,6 @@
     </x:scenario>
     <x:scenario label="copyright-statement">
       <x:context href="../cases/copyright-statement.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="copyright-year">
@@ -1551,7 +1550,6 @@
     </x:scenario>
     <x:scenario label="license-p">
       <x:context href="../cases/license-p.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
@@ -1559,8 +1557,6 @@
     </x:scenario>
     <x:scenario label="license">
       <x:context href="../cases/license.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="list-item">
@@ -1824,7 +1820,7 @@
     </x:scenario>
     <x:scenario label="permissions">
       <x:context href="../cases/permissions.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="permissions-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="person-group/@id">
       <x:context href="../cases/person-group/@id.xml"/>

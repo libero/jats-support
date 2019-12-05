@@ -213,6 +213,7 @@
                 or name()='contrib'
                 or name()='contrib-id'
                 or name()='contrib-group'
+                or name()='copyright-statement'
                 or name()='country'
                 or name()='day'
                 or name()='disp-formula'
@@ -237,6 +238,8 @@
                 or name()='kwd'
                 or name()='kwd-group'
                 or name()='label'
+                or name()='license'
+                or name()='license-p'
                 or name()='lpage'
                 or name()='mml:math'
                 or name()='mml:mrow'
@@ -281,6 +284,7 @@
                 or name()='name'
                 or name()='named-content'
                 or name()='p'
+                or name()='permissions'
                 or name()='person-group'
                 or name()='prefix'
                 or name()='pub-date'
@@ -878,7 +882,7 @@
         </rule>
     </pattern>
     
-   <pattern id="institution_parent">
+    <pattern id="institution_parent">
         <rule context="institution">
             <let name="parent" value="name(..)"/>
             <assert id="institution_parent-assert-1" 
@@ -886,6 +890,20 @@
                 role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="institution-wrap_parent">
+        <rule context="institution-wrap">
+            <let name="parent" value="name(..)"/>
+            <assert id="institution-wrap_parent-assert-1" test="$parent='funding-source'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="institution-wrap_parent-report-1" 
+                test="($parent='funding-source') and preceding-sibling::institution-wrap" 
+                role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
     
@@ -1247,6 +1265,15 @@
             </assert>
         </rule>
     </pattern>
+    
+    <pattern id="permissions">
+        <rule context="permissions">
+            <let name="parent" value="name(..)"/>
+            <assert id="permissions-assert-1" test="$parent='article-meta'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
 
     <pattern id="person-group-1">
         <rule context="person-group[not(@person-group-type)]">
@@ -1289,9 +1316,12 @@
             <report id="pub-date-report-1" test="(@date-type) and (@date-type!='pub')" role="warn">
                 &lt;<name/>&gt; with a @date-type="<value-of select="@date-type"/>".
             </report>
+            <report id="pub-date-report-2" test="(@date-type!='pub') and preceding-sibling::pub-date[@date-type='pub']" role="warn">
+                Extra &lt;<name/> date-type="pub"&gt; is ignored.
+            </report>
        </rule>
     </pattern>
-  
+    
     <pattern id="pub-date-iso">
         <rule context="pub-date[
             not(@iso-8601-date)
