@@ -4,12 +4,12 @@
 
     <ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
     <ns uri="http://www.w3.org/1998/Math/MathML" prefix="mml"/>
-    <!-- ali namespace not included as both http://www.niso.org/schemas/ali/1.0/ and http://www.niso.org/schemas/ali/1.0 are used (due to error in JATS 1.1d3). local-name() function will have to be used (in place of name()) in tests for those elements
-    -->
+    <!-- ali namespace not included as both http://www.niso.org/schemas/ali/1.0/ and http://www.niso.org/schemas/ali/1.0 are used (due to error in JATS 1.1d3). -->
     
     <pattern id="attribute-whitelist">
         <rule context="*[@*]">
-            <report id="attribute-whitelist-assert-1" test="@*[name()!='accent'
+            <report id="attribute-whitelist-assert-1" test="@*[name()!='abstract-type'
+                and name()!='accent'
                 and name()!='accentunder'
                 and name()!='actiontype'
                 and name()!='align'
@@ -97,7 +97,8 @@
                 and name()!='xml:base'
                 and name()!='xml:lang'
                 and name()!='xml:space']" role="warn">
-                @<value-of select="name(@*[name()!='accent'
+                @<value-of select="name(@*[name()!='abstract-type'
+                    and name()!='accent'
                     and name()!='accentunder'
                     and name()!='actiontype'
                     and name()!='align'
@@ -316,8 +317,6 @@
                 or name()='volume'
                 or name()='xref'
                 or name()='year'
-                or name()='underline'
-                or name()='xref'
             " role="warn">
                 &lt;<name/>&gt; is ignored.
             </assert>
@@ -330,6 +329,27 @@
             <assert id="abstract_parent-assert-1" test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report id="abstract_parent-report-1" test="($parent='article-meta') and (@abstract-type!='summary'
+                and @abstract-type!='ASCII'
+                and @abstract-type!='author'
+                and @abstract-type!='editor'
+                and @abstract-type!='key-points'
+                and @abstract-type!='objectives'
+                and @abstract-type!='section'
+                and @abstract-type!='toc'
+                and @abstract-type!='impact-statement'
+                and @abstract-type!='short'
+                and @abstract-type!='teaser'
+                and @abstract-type!='web-summary')" role="warn">
+                &lt;<name/> abstract-type="<value-of select="@abstract-type"/>"&gt; is ignored.
+            </report>
+            <report id="abstract_parent-report-2" test="($parent='article-meta') and (@abstract-type='toc'
+                or @abstract-type='impact-statement'
+                or @abstract-type='short'
+                or @abstract-type='teaser'
+                or @abstract-type='web-summary')" role="info">
+                &lt;<name/> abstract-type="<value-of select="@abstract-type"/>"&gt; is treated as an impact statement.
+            </report>
         </rule>
     </pattern>
     
@@ -890,20 +910,6 @@
                 role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
-        </rule>
-    </pattern>
-    
-    <pattern id="institution-wrap_parent">
-        <rule context="institution-wrap">
-            <let name="parent" value="name(..)"/>
-            <assert id="institution-wrap_parent-assert-1" test="$parent='funding-source'" role="warn">
-                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </assert>
-            <report id="institution-wrap_parent-report-1" 
-                test="($parent='funding-source') and preceding-sibling::institution-wrap" 
-                role="warn">
-                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
-            </report>
         </rule>
     </pattern>
     
