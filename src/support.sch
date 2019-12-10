@@ -387,15 +387,10 @@
 
     <pattern id="article-type">
         <rule context="*[@article-type]">
-            <assert id="article-type-assert-1" test="
-                @article-type='research-article'
-            " role="warn">
-                @article-type="<value-of select="@article-type"/>" is ignored.
+            <assert id="article-type-assert-1" test="count(front/article-meta/article-categories/subj-group[@subj-group-type='heading']/subject)=0" role="warn">
+                @article-type is ignored if there is a &lt;subj-group subj-group-type="heading"&gt;.
             </assert>
-            <assert id="article-type-assert-2" test="count(front/article-meta/article-categories/subj-group[@subj-group-type='display-channel']/subject)=0" role="warn">
-                @article-type is ignored if there is a &lt;subj-group subj-group-type="display-channel"&gt;.
-            </assert>
-            <assert id="article-type-assert-3" test="name()='article'" role="warn">
+            <assert id="article-type-assert-2" test="name()='article'" role="warn">
                 @article-type on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
