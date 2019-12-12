@@ -274,7 +274,7 @@
     </x:scenario>
     <x:scenario label="attrib">
       <x:context href="../cases/attrib.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="attrib_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="author-comment">
       <x:context href="../cases/author-comment.xml"/>
@@ -803,11 +803,10 @@
     </x:scenario>
     <x:scenario label="disp-quote">
       <x:context href="../cases/disp-quote.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="disp-quote_parent-assert-1" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="edition">
@@ -1566,7 +1565,7 @@
     <x:scenario label="list">
       <x:context href="../cases/list.xml"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="list_parent-assert-1" role="warn"/>
       <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="long-desc">

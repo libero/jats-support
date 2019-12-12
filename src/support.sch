@@ -202,6 +202,7 @@
                 or name()='article-id'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='attrib'
                 or name()='author-notes'
                 or name()='award-group'
                 or name()='award-id'
@@ -218,6 +219,7 @@
                 or name()='country'
                 or name()='day'
                 or name()='disp-formula'
+                or name()='disp-quote'
                 or name()='element-citation'
                 or name()='elocation-id'
                 or name()='email'
@@ -241,6 +243,7 @@
                 or name()='label'
                 or name()='license'
                 or name()='license-p'
+                or name()='list'
                 or name()='lpage'
                 or name()='mml:math'
                 or name()='mml:mrow'
@@ -460,6 +463,15 @@
                 $parent='element-citation'
                 or $parent='title-group'
             " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="attrib_parent">
+        <rule context="attrib">
+            <let name="parent" value="name(..)"/>
+            <assert id="attrib_parent-assert-1" test="$parent='disp-quote'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -689,6 +701,15 @@
         <rule context="disp-formula">
             <let name="parent" value="name(..)"/>
             <assert id="disp-formula_parent-assert-1" test="$parent='p' or $parent='body' or $parent='sec' or $parent='app' or $parent='disp-quote' or $parent='boxed-text'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="disp-quote_parent">
+        <rule context="disp-quote">
+            <let name="parent" value="name(..)"/>
+            <assert id="disp-quote_parent-assert-1" test="$parent='body' or $parent='sec' or $parent='app'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -988,6 +1009,15 @@
         </rule>
     </pattern>
     
+    <pattern id="list_parent">
+        <rule context="list">
+            <let name="parent" value="name(..)"/>
+            <assert id="list_parent-assert-1" test="$parent='disp-quote'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="lpage_parent">
         <rule context="lpage">
             <let name="parent" value="name(..)"/>
@@ -1259,6 +1289,7 @@
                 $parent='abstract'
                 or $parent='body'
                 or $parent='caption'
+                or $parent='disp-quote'
                 or $parent='sec'
                 or $parent='fn'
             " role="warn">
