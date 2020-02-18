@@ -82,6 +82,7 @@
                 and name()!='rowspan'
                 and name()!='rspace'
                 and name()!='scriptlevel'
+                and name()!='sec-type'
                 and name()!='separatand'
                 and name()!='separatands'
                 and name()!='stretchy'
@@ -171,6 +172,7 @@
                     and name()!='rowspan'
                     and name()!='rspace'
                     and name()!='scriptlevel'
+                    and name()!='sec-type'
                     and name()!='separatand'
                     and name()!='separatands'
                     and name()!='stretchy'
@@ -304,6 +306,7 @@
                 or name()='subject'
                 or name()='suffix'
                 or name()='sup'
+                or name()='supplementary-material'
                 or name()='surname'
                 or name()='table'
                 or name()='table-wrap'
@@ -803,7 +806,7 @@
     <pattern id="fn-group_parent">
         <rule context="fn-group">
             <let name="parent" value="name(..)"/>
-            <assert id="fn-group_parent-assert-1" test="$parent='table-wrap-foot'" role="warn">
+            <assert id="fn-group_parent-assert-1" test="$parent='table-wrap-foot' or $parent='sec'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -1012,7 +1015,9 @@
     <pattern id="list_parent">
         <rule context="list">
             <let name="parent" value="name(..)"/>
-            <assert id="list_parent-assert-1" test="$parent='disp-quote'" role="warn">
+            <assert id="list_parent-assert-1" test="$parent='disp-quote' 
+                or $parent='sec'
+                " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -1448,8 +1453,22 @@
             <assert id="sec_parent-assert-1" test="
                 $parent='body'
                 or $parent='sec'
+                or $parent='back'
+                or $parent='app'
+                or $parent='ack'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="sec-type_parent">
+        <rule context="*[@sec-type]">
+            <assert id="sec-type_parent-assert-1" test="name()='sec'" role="warn">
+                @sec-type on &lt;<value-of select="name()"/>&gt; is ignored.
+            </assert>
+            <assert id="sec-type_parent-assert-2" test="@sec-type='data-availability' or @sec-type='software-availability' or @sec-type='ack'" role="warn">
+                @sec-type="<value-of select="@sec-type"/>" on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -1565,6 +1584,15 @@
             <assert id="sup_parent-assert-1" test="
                 $parent!='element-citation'
             " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="supplementary-material_parent">
+        <rule context="supplementary-material">
+            <let name="parent" value="name(..)"/>
+            <assert id="supplementary-material_parent-assert-1" test="$parent='sec'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
