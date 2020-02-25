@@ -758,21 +758,17 @@
     </x:scenario>
     <x:scenario label="def-head">
       <x:context href="../cases/def-head.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="def-item">
       <x:context href="../cases/def-item.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="def-list">
       <x:context href="../cases/def-list.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="title_parent-assert-1" role="warn"/>
+      <x:expect-assert id="def-list_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="def">
       <x:context href="../cases/def.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
+      <x:expect-assert id="def_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="degrees">
       <x:context href="../cases/degrees.xml"/>
@@ -1305,8 +1301,8 @@
     <x:scenario label="index-term">
       <x:context href="../cases/index-term.xml"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="term_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="inline-formula">
       <x:context href="../cases/inline-formula.xml"/>
@@ -1555,15 +1551,12 @@
     </x:scenario>
     <x:scenario label="list-item">
       <x:context href="../cases/list-item.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="list">
       <x:context href="../cases/list.xml"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="list_parent-assert-1" role="warn"/>
-      <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="long-desc">
       <x:context href="../cases/long-desc.xml"/>
@@ -2800,12 +2793,12 @@
     </x:scenario>
     <x:scenario label="term-head">
       <x:context href="../cases/term-head.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="term">
       <x:context href="../cases/term.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
+      <x:expect-assert id="term_parent-assert-1" role="warn"/>
+      <x:expect-assert id="term_child-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="tex-math">
       <x:context href="../cases/tex-math.xml"/>
