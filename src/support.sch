@@ -56,6 +56,7 @@
                 and name()!='linebreak'
                 and name()!='linebreakstyle'
                 and name()!='linethickness'
+                and name()!='list-type'
                 and name()!='lspace'
                 and name()!='mathbackground'
                 and name()!='mathcoland'
@@ -146,6 +147,7 @@
                     and name()!='linebreak'
                     and name()!='linebreakstyle'
                     and name()!='linethickness'
+                    and name()!='list-type'
                     and name()!='lspace'
                     and name()!='mathbackground'
                     and name()!='mathcoland'
@@ -220,6 +222,11 @@
                 or name()='copyright-statement'
                 or name()='country'
                 or name()='day'
+                or name()='def'
+                or name()='def-head'
+                or name()='def-item'
+                or name()='def-list'
+                or name()='def-term'
                 or name()='disp-formula'
                 or name()='disp-quote'
                 or name()='element-citation'
@@ -246,6 +253,7 @@
                 or name()='license'
                 or name()='license-p'
                 or name()='list'
+                or name()='list-item'
                 or name()='lpage'
                 or name()='mml:math'
                 or name()='mml:mrow'
@@ -313,6 +321,8 @@
                 or name()='table-wrap-foot'
                 or name()='tbody'
                 or name()='td'
+                or name()='term'
+                or name()='term-head'
                 or name()='tex-math'
                 or name()='th'
                 or name()='thead'
@@ -692,6 +702,31 @@
         </rule>
     </pattern>
     
+    <pattern id="def_parent">
+        <rule context="def">
+            <let name="parent" value="name(..)"/>
+            <assert id="def_parent-assert-1" test="$parent='def-item'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="def-list_parent">
+        <rule context="def-list">
+            <let name="parent" value="name(..)"/>
+            <assert id="def-list_parent-assert-1" test="$parent='sec'
+                or $parent='body'
+                or $parent='app'
+                or $parent='boxed-text'
+                or $parent='glossary'
+                or $parent='p'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="disp-formula_child">
         <rule context="disp-formula/*">
             <assert id="disp-formula_child-assert-1" test="name()='alternatives' or name()='mml:math' or name()='tex-math' or name()='label'" role="warn">
@@ -1003,7 +1038,10 @@
                 or $parent='disp-formula' 
                 or $parent='table-wrap' 
                 or $parent='aff'
-                or $parent='fn'" role="warn">
+                or $parent='fn'
+                or $parent='list'
+                or $parent='def-list'
+                " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
             <assert id="label_parent-assert-2" test="count(preceding-sibling::label)=0" role="warn">
@@ -1017,6 +1055,11 @@
             <let name="parent" value="name(..)"/>
             <assert id="list_parent-assert-1" test="$parent='disp-quote' 
                 or $parent='sec'
+                or $parent='body'
+                or $parent='app'
+                or $parent='boxed-text'
+                or $parent='list-item'
+                or $parent='p'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1294,9 +1337,11 @@
                 $parent='abstract'
                 or $parent='body'
                 or $parent='caption'
+                or $parent='def'
                 or $parent='disp-quote'
                 or $parent='sec'
                 or $parent='fn'
+                or $parent='list-item'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1674,6 +1719,33 @@
         </rule>
     </pattern>
     
+    <pattern id="term_parent">
+        <rule context="term">
+            <let name="parent" value="name(..)"/>
+            <assert id="term_parent-assert-1" test="$parent='def-item'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="term_child">
+        <rule context="term/*">
+            <assert id="term_child-assert-1" test="
+                name()='bold'
+                or name()='ext-link'
+                or name()='italic'
+                or name()='monospace'
+                or name()='sc'
+                or name()='sub'
+                or name()='sup'
+                or name()='xref'
+                " role="warn">
+                &lt;<name/>&gt; in &lt;term&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
     <pattern id="tex-math_parent">
         <rule context="tex-math">
             <let name="parent" value="name(..)"/>
@@ -1728,8 +1800,10 @@
             <assert id="title_parent-assert-1" test="
                 $parent='abstract'
                 or $parent='caption'
+                or $parent='def-list'
                 or $parent='fn-group'
                 or $parent='kwd-group'
+                or $parent='list'
                 or $parent='ref-list'
                 or $parent='sec'
             " role="warn">
