@@ -922,14 +922,6 @@
             </assert>
         </rule>
     </pattern>
-    
-    <pattern id="id_parent">
-        <rule context="*[@id]">
-            <assert id="id_parent-assert-1" test="name()='fn'" role="warn">
-                @id on &lt;<value-of select="name()"/>&gt; is ignored.
-            </assert>
-        </rule>
-    </pattern>
 
     <pattern id="iso-8601-date_parent">
         <rule context="*[@iso-8601-date]">
@@ -1857,14 +1849,22 @@
     <pattern id="xref">
         <rule context="xref">
             <let name="parent" value="name(..)"/>
-            <assert id="xref-assert-1" test="
-                @ref-type='aff'
-                or @ref-type='fn'
-                " role="warn">
-                &lt;<name/>&gt; without @ref-type="aff" or @ref-type='fn' is ignored.
-            </assert>
             <assert id="xref-assert-2" test="
-                parent::contrib[@contrib-type='author']
+                $parent = 'contrib'
+                or $parent = 'p'
+                or $parent = 'td'
+                or $parent = 'th'
+                or $parent = 'title'
+                or $parent = 'attrib'
+                or $parent = 'bold'
+                or $parent = 'sup'
+                or $parent = 'italic'
+                or $parent = 'sub'
+                or $parent = 'sc'
+                or $parent = 'monospace'
+                or $parent = 'roman'
+                or $parent = 'strike'
+                or $parent = 'underline'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
