@@ -29,13 +29,12 @@
     </x:scenario>
     <x:scenario label="ack">
       <x:context href="../cases/ack.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="ack_parent-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
+      <x:expect-report id="fig_ancestor-report-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
-      <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="addr-line">
       <x:context href="../cases/addr-line.xml"/>

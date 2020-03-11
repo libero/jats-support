@@ -198,6 +198,7 @@
         <rule context="*">
             <assert id="element-whitelist-assert-1" test="
                 name()='abstract'
+                or name()='ack'
                 or name()='addr-line'
                 or name()='aff'
                 or name()='alt-text'
@@ -366,6 +367,15 @@
                 or @abstract-type='web-summary')" role="info">
                 &lt;<name/> abstract-type="<value-of select="@abstract-type"/>"&gt; is treated as an impact statement.
             </report>
+        </rule>
+    </pattern>
+    
+    <pattern id="ack_parent">
+        <rule context="ack">
+            <let name="parent" value="name(..)"/>
+            <assert id="ack_parent-assert-1" test="$parent='back'" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
         </rule>
     </pattern>
     
@@ -741,6 +751,9 @@
             <assert id="disp-formula_parent-assert-1" test="$parent='p' or $parent='body' or $parent='sec' or $parent='app' or $parent='disp-quote' or $parent='boxed-text'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report id="disp-formula_ancestor-report-1" test="ancestor::ack" role="warn">
+                &lt;<name/>&gt; in &lt;ack&gt; is ignored.
+            </report>
         </rule>
     </pattern>
     
@@ -825,6 +838,9 @@
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report id="fig_ancestor-report-1" test="ancestor::ack" role="warn">
+                &lt;<name/>&gt; in &lt;ack&gt; is ignored.
+            </report>
         </rule>
     </pattern>
     
@@ -832,7 +848,8 @@
         <rule context="fn">
             <let name="parent" value="name(..)"/>
             <assert id="fn_parent-assert-1" test="$parent='fn-group' 
-                or $parent='author-notes'" role="warn">
+                or $parent='author-notes' 
+                or $parent='table-wrap-foot'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
         </rule>
@@ -1327,6 +1344,7 @@
             <let name="parent" value="name(..)"/>
             <assert id="p-assert-1" test="
                 $parent='abstract'
+                or $parent='ack'
                 or $parent='body'
                 or $parent='caption'
                 or $parent='def'
@@ -1632,6 +1650,9 @@
             <assert id="supplementary-material_parent-assert-1" test="$parent='sec'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report id="supplementary-material_ancestor-report-1" test="ancestor::ack" role="warn">
+                &lt;<name/>&gt; in &lt;ack&gt; is ignored.
+            </report>
         </rule>
     </pattern>
 
@@ -1679,6 +1700,9 @@
                 or $parent='app'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report id="table-wrap_ancestor-report-1" test="ancestor::ack" role="warn">
+                &lt;<name/>&gt; in &lt;ack&gt; is ignored.
+            </report>
         </rule>
     </pattern>
     
@@ -1791,6 +1815,7 @@
             <let name="parent" value="name(..)"/>
             <assert id="title_parent-assert-1" test="
                 $parent='abstract'
+                or $parent='ack'
                 or $parent='caption'
                 or $parent='def-list'
                 or $parent='fn-group'
