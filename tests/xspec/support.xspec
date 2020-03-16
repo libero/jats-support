@@ -134,7 +134,12 @@
     </x:scenario>
     <x:scenario label="app-group">
       <x:context href="../cases/app-group.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
+      <x:expect-assert id="app-group_child-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
@@ -145,13 +150,8 @@
     </x:scenario>
     <x:scenario label="app">
       <x:context href="../cases/app.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
-      <x:expect-assert id="fig_parent-assert-1" role="warn"/>
-      <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
-      <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="ref-list_parent-assert-1" role="warn"/>
-      <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="array">
       <x:context href="../cases/array.xml"/>
