@@ -207,6 +207,8 @@
                 or name()='article-id'
                 or name()='article-meta'
                 or name()='article-title'
+                or name()='app'
+                or name()='app-group'
                 or name()='attrib'
                 or name()='author-notes'
                 or name()='award-group'
@@ -487,6 +489,14 @@
                 or $parent='title-group'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="app-group_child">
+        <rule context="app-group/*">
+            <assert id="app-group_child-assert-1" test="name()='app'" role="warn">
+                &lt;<name/>&gt; in &lt;app-group&gt; is ignored.
             </assert>
         </rule>
     </pattern>
@@ -835,6 +845,7 @@
             <assert id="fig_parent-assert-1" test="
                 $parent='body'
                 or $parent='sec'
+                or $parent='app'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -934,6 +945,7 @@
                 $parent='body'
                 or $parent='fig'
                 or $parent='sec'
+                or $parent='app'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1352,6 +1364,7 @@
                 or $parent='sec'
                 or $parent='fn'
                 or $parent='list-item'
+                or $parent='app'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1816,6 +1829,7 @@
             <assert id="title_parent-assert-1" test="
                 $parent='abstract'
                 or $parent='ack'
+                or $parent='app'
                 or $parent='caption'
                 or $parent='def-list'
                 or $parent='fn-group'
