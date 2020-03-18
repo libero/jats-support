@@ -1538,6 +1538,9 @@
             <assert id="sec-type_parent-assert-2" test="@sec-type='data-availability' or @sec-type='software-availability' or @sec-type='ack'" role="warn">
                 @sec-type="<value-of select="@sec-type"/>" on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
+            <report id="sec-type_parent-report-1" test="(@sec-type='data-availability' or @sec-type='software-availability') and not(parent::back)" role="warn">
+                <name/> with @sec-type="<value-of select="@sec-type"/>" in &lt;<value-of select="name(parent::*)"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
 
