@@ -258,6 +258,7 @@
                 or name()='list'
                 or name()='list-item'
                 or name()='lpage'
+                or name()='media'
                 or name()='mml:math'
                 or name()='mml:mrow'
                 or name()='mml:msub'
@@ -584,6 +585,7 @@
             <assert id="caption_parent-assert-1" test="
                 $parent='fig'
                 or $parent='table-wrap'
+                or $parent='supplementary-material'
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1062,6 +1064,7 @@
                 or $parent='fn'
                 or $parent='list'
                 or $parent='def-list'
+                or $parent='supplementary-material'
                 " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
@@ -1093,6 +1096,18 @@
             <assert id="lpage_parent-assert-1" test="$parent='article-meta'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="media_parent">
+        <rule context="media">
+            <let name="parent" value="name(..)"/>
+            <assert id="media_parent-assert-1" test="parent::supplementary-material" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </assert>
+            <report id="media_parent-report-1" test="parent::supplementary-material and preceding-sibling::media" role="warn">
+                Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
+            </report>
         </rule>
     </pattern>
 
@@ -1666,9 +1681,9 @@
             <assert id="supplementary-material_parent-assert-1" test="$parent='sec'" role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
-            <report id="supplementary-material_ancestor-report-1" test="ancestor::ack" role="warn">
-                &lt;<name/>&gt; in &lt;ack&gt; is ignored.
-            </report>
+            <assert id="supplementary-material_ancestor-assert-2" test="parent::sec/parent::back" role="warn">
+                &lt;<name/>&gt; in &lt;<value-of select="name(parent::sec/parent::*)"/>&gt; is ignored.
+            </assert>
         </rule>
     </pattern>
 
@@ -1873,6 +1888,7 @@
                 name()='ext-link'
                 or name()='graphic'
                 or name()='self-uri'
+                or name()='media'
             " role="warn">
                 @xlink:href on &lt;<value-of select="name()"/>&gt; is ignored.
             </assert>
