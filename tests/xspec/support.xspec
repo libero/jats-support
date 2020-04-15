@@ -1567,14 +1567,13 @@
     </x:scenario>
     <x:scenario label="media">
       <x:context href="../cases/media.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="alt-text-assert-2" role="warn"/>
       <x:expect-assert id="caption_parent-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="kwd-group-assert-4" role="warn"/>
+      <x:expect-assert id="media_parent-assert-1" role="warn"/>
       <x:expect-assert id="mimetype_parent-assert-1" role="warn"/>
       <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
-      <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="meta-name">
       <x:context href="../cases/meta-name.xml"/>
@@ -2685,7 +2684,6 @@
     <x:scenario label="supplementary-material">
       <x:context href="../cases/supplementary-material.xml"/>
       <x:expect-assert id="alt-text-assert-2" role="warn"/>
-      <x:expect-assert id="caption_parent-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
       <x:expect-assert id="kwd-group-assert-4" role="warn"/>
@@ -2693,6 +2691,7 @@
       <x:expect-assert id="mime-subtype_parent-assert-1" role="warn"/>
       <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="supplementary-material_parent-assert-1" role="warn"/>
+      <x:expect-assert id="supplementary-material_ancestor-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="support-description">
