@@ -25,7 +25,7 @@
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="ack">
       <x:context href="../cases/ack.xml"/>
@@ -400,7 +400,6 @@
     </x:scenario>
     <x:scenario label="chapter-title">
       <x:context href="../cases/chapter-title.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="chem-struct-wrap">
       <x:context href="../cases/chem-struct-wrap.xml"/>
@@ -423,7 +422,9 @@
     <x:scenario label="citation-alternatives">
       <x:context href="../cases/citation-alternatives.xml"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="city">
       <x:context href="../cases/city.xml"/>
@@ -448,18 +449,15 @@
     <x:scenario label="collab-alternatives">
       <x:context href="../cases/collab-alternatives.xml"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="collab">
       <x:context href="../cases/collab.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="aff_parent-assert-1" role="warn"/>
       <x:expect-assert id="contrib-group-assert-1" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="comment">
       <x:context href="../cases/comment.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="compound-kwd-part">
@@ -490,21 +488,18 @@
     </x:scenario>
     <x:scenario label="conf-date">
       <x:context href="../cases/conf-date.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="conf-loc">
       <x:context href="../cases/conf-loc.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="conf-name">
       <x:context href="../cases/conf-name.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="conf-num">
@@ -699,12 +694,11 @@
     </x:scenario>
     <x:scenario label="date-in-citation">
       <x:context href="../cases/date-in-citation.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="date">
       <x:context href="../cases/date.xml"/>
@@ -713,7 +707,7 @@
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="day/@content-type">
       <x:context href="../cases/day/@content-type.xml"/>
@@ -790,93 +784,118 @@
     </x:scenario>
     <x:scenario label="edition">
       <x:context href="../cases/edition.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@id">
       <x:context href="../cases/element-citation/@id.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@publication-format">
       <x:context href="../cases/element-citation/@publication-format.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@publication-type">
       <x:context href="../cases/element-citation/@publication-type.xml"/>
-      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@publisher-type">
       <x:context href="../cases/element-citation/@publisher-type.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@specific-use">
       <x:context href="../cases/element-citation/@specific-use.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@use-type">
       <x:context href="../cases/element-citation/@use-type.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:actuate">
       <x:context href="../cases/element-citation/@xlink:actuate.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:href">
       <x:context href="../cases/element-citation/@xlink:href.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:role">
       <x:context href="../cases/element-citation/@xlink:role.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:show">
       <x:context href="../cases/element-citation/@xlink:show.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:title">
       <x:context href="../cases/element-citation/@xlink:title.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xlink:type">
       <x:context href="../cases/element-citation/@xlink:type.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xml:base">
       <x:context href="../cases/element-citation/@xml:base.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/@xml:lang">
       <x:context href="../cases/element-citation/@xml:lang.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/article-title">
       <x:context href="../cases/element-citation/article-title.xml"/>
       <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
     </x:scenario>
     <x:scenario label="element-citation/contents">
       <x:context href="../cases/element-citation/contents.xml"/>
       <x:expect-assert id="article-title-assert-1" role="warn"/>
       <x:expect-assert id="bold_parent-assert-1" role="warn"/>
       <x:expect-assert id="day-assert-3" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
-      <x:expect-assert id="ext-link-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="italic_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
       <x:expect-assert id="name-assert-2" role="warn"/>
       <x:expect-assert id="pub-id-assert-3" role="warn"/>
-      <x:expect-assert id="source-assert-1" role="warn"/>
       <x:expect-assert id="sub_parent-assert-1" role="warn"/>
       <x:expect-assert id="sup_parent-assert-1" role="warn"/>
     </x:scenario>
@@ -903,7 +922,8 @@
     </x:scenario>
     <x:scenario label="etal">
       <x:context href="../cases/etal.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="etal_content-assert-1" role="warn"/>
+      <x:expect-report id="etal_content-report-1" role="warn"/>
     </x:scenario>
     <x:scenario label="event-desc">
       <x:context href="../cases/event-desc.xml"/>
@@ -922,7 +942,6 @@
     </x:scenario>
     <x:scenario label="ext-link/@ext-link-type">
       <x:context href="../cases/ext-link/@ext-link-type.xml"/>
-      <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="ext-link/@id">
       <x:context href="../cases/ext-link/@id.xml"/>
@@ -1149,7 +1168,6 @@
     </x:scenario>
     <x:scenario label="gov">
       <x:context href="../cases/gov.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="graphic/@content-type">
@@ -1369,7 +1387,6 @@
     </x:scenario>
     <x:scenario label="issue">
       <x:context href="../cases/issue.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="italic/@id">
@@ -1518,7 +1535,9 @@
     <x:scenario label="license-p">
       <x:context href="../cases/license-p.xml"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
     </x:scenario>
@@ -1586,7 +1605,7 @@
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="mml:math">
       <x:context href="../cases/mml:math.xml"/>
@@ -1685,7 +1704,7 @@
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="note">
       <x:context href="../cases/note.xml"/>
@@ -1754,7 +1773,9 @@
     </x:scenario>
     <x:scenario label="p/contents">
       <x:context href="../cases/p/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
       <x:expect-assert id="p-assert-1" role="warn"/>
@@ -1887,7 +1908,7 @@
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="pub-date/@calendar">
       <x:context href="../cases/pub-date/@calendar.xml"/>
@@ -1956,8 +1977,7 @@
       <x:expect-assert id="month-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-2" role="warn"/>
       <x:expect-assert id="pub-date_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-2" role="warn"/>
+      <x:expect-report id="year-report-1" role="warn"/>
     </x:scenario>
     <x:scenario label="pub-date/contents=--01-02">
       <x:context href="../cases/pub-date/contents=--01-02.xml"/>
@@ -2050,15 +2070,12 @@
     </x:scenario>
     <x:scenario label="publisher-loc">
       <x:context href="../cases/publisher-loc.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="publisher-name">
       <x:context href="../cases/publisher-name.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="publisher">
       <x:context href="../cases/publisher.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
@@ -2070,22 +2087,34 @@
     <x:scenario label="ref/@content-type">
       <x:context href="../cases/ref/@content-type.xml"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref/@id">
       <x:context href="../cases/ref/@id.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref/@specific-use">
       <x:context href="../cases/ref/@specific-use.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref/@xml:base">
       <x:context href="../cases/ref/@xml:base.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref/@xml:lang">
       <x:context href="../cases/ref/@xml:lang.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref/contents">
       <x:context href="../cases/ref/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
     </x:scenario>
     <x:scenario label="ref-count">
       <x:context href="../cases/ref-count.xml"/>
@@ -2116,6 +2145,8 @@
     </x:scenario>
     <x:scenario label="ref-list/contents">
       <x:context href="../cases/ref-list/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-2" role="warn"/>
       <x:expect-assert id="fig_parent-assert-1" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
       <x:expect-assert id="p-assert-1" role="warn"/>
@@ -2134,7 +2165,7 @@
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="related-object">
       <x:context href="../cases/related-object.xml"/>
@@ -2147,7 +2178,7 @@
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
       <x:expect-assert id="xlink-href_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="resource-group">
       <x:context href="../cases/resource-group.xml"/>
@@ -2211,7 +2242,6 @@
     </x:scenario>
     <x:scenario label="season">
       <x:context href="../cases/season.xml"/>
-      <x:expect-assert id="element-whitelist-assert-1" role="warn"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="sec/@disp-level">
@@ -2449,7 +2479,7 @@
       <x:expect-assert id="month-assert-3" role="warn"/>
       <x:expect-assert id="pub-id_parent-assert-1" role="warn"/>
       <x:expect-assert id="source-assert-2" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="strike">
       <x:context href="../cases/strike.xml"/>
@@ -2467,7 +2497,7 @@
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="string-name">
       <x:context href="../cases/string-name.xml"/>
@@ -2741,7 +2771,9 @@
     <x:scenario label="td">
       <x:context href="../cases/td.xml"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
       <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="td_child-assert-1" role="warn"/>
@@ -2775,7 +2807,9 @@
     <x:scenario label="th">
       <x:context href="../cases/th.xml"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="graphic_parent-assert-1" role="warn"/>
       <x:expect-assert id="p-assert-1" role="warn"/>
       <x:expect-assert id="th_child-assert-1" role="warn"/>
@@ -2793,7 +2827,7 @@
       <x:expect-assert id="content-type-assert-1" role="warn"/>
       <x:expect-assert id="day-assert-3" role="warn"/>
       <x:expect-assert id="month-assert-3" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="title/@content-type">
       <x:context href="../cases/title/@content-type.xml"/>
@@ -2815,7 +2849,9 @@
     </x:scenario>
     <x:scenario label="title/contents">
       <x:context href="../cases/title/contents.xml"/>
+      <x:expect-assert id="element-citation-assert-1" role="warn"/>
       <x:expect-assert id="element-citation-assert-2" role="warn"/>
+      <x:expect-assert id="element-citation-assert-3" role="warn"/>
       <x:expect-assert id="title_parent-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="title-group/@id">
@@ -2941,39 +2977,38 @@
     <x:scenario label="year/@calendar">
       <x:context href="../cases/year/@calendar.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@content-type">
       <x:context href="../cases/year/@content-type.xml"/>
       <x:expect-assert id="content-type-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@id">
       <x:context href="../cases/year/@id.xml"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@iso-8601-date">
       <x:context href="../cases/year/@iso-8601-date.xml"/>
-      <x:expect-assert id="iso-8601-date_parent-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@specific-use">
       <x:context href="../cases/year/@specific-use.xml"/>
       <x:expect-report id="attribute-whitelist-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@xml:base">
       <x:context href="../cases/year/@xml:base.xml"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/@xml:lang">
       <x:context href="../cases/year/@xml:lang.xml"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
+      <x:expect-assert id="year-assert-1" role="warn"/>
     </x:scenario>
     <x:scenario label="year/contents">
       <x:context href="../cases/year/contents.xml"/>
+      <x:expect-report id="year-report-1" role="warn"/>
       <x:expect-assert id="year-assert-1" role="warn"/>
-      <x:expect-assert id="year-assert-3" role="warn"/>
     </x:scenario>
   </x:scenario>
 </x:description>
