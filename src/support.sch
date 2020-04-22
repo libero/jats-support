@@ -512,6 +512,18 @@
         </rule>
     </pattern>
     
+    <pattern id="article-title_child">
+        <rule context="article-title/*">
+            <assert test="name()='sub'
+                or name()='sup'
+                or name()='italic'
+                or name()='sc'" 
+                id="article-title_child-assert-1" 
+                role="warn">Extra &lt;<name/>&gt; is ignored.</assert>
+        </rule>
+    </pattern>
+    
+
     <pattern id="app-group_child">
         <rule context="app-group/*">
             <assert id="app-group_child-assert-1" test="name()='app'" role="warn">
@@ -560,6 +572,14 @@
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+        </rule>
+    </pattern>
+    
+    <pattern id="back-sec_child">
+        <rule context="back/sec/*">
+            <assert test="name()='title' or name()='p' or name()='supplementary-material'" 
+                id="back-sec_child-assert-1" 
+                role="warn">&lt;<name/>&gt; in back/sec is ignored.</assert>
         </rule>
     </pattern>
 
@@ -2831,6 +2851,9 @@
             " role="warn">
                 &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.
             </assert>
+            <report test="preceding-sibling::ref-list"
+                id="ref-list_parent-report-1"
+                role="warn">Extra &lt;<name/>&gt; in &lt;<value-of select="$parent"/>&gt; is ignored.</report>
         </rule>
     </pattern>
 
