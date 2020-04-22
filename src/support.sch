@@ -523,6 +523,7 @@
         </rule>
     </pattern>
     
+
     <pattern id="app-group_child">
         <rule context="app-group/*">
             <assert id="app-group_child-assert-1" test="name()='app'" role="warn">
